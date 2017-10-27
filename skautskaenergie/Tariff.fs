@@ -2,17 +2,25 @@ module skautskaenergie.Tariff
 
 [<Measure>] type CZK
 
-type Tariff = 
-    | SingleRateTariff of SingleRateTariff
-    | DoubleRateTariff of DoubleRateTariff
+type Tariff = {
+    Name:TariffName
+    Rating:Rating
+    Medium:Medium
+}
 
-and SingleRateTariff = {
-    Name: TariffName
+and Rating =
+    | SingleRate of SingleRate
+    | DoubleRate of DoubleRate
+
+and Medium = 
+    | Gas
+    | Electricity
+
+and SingleRate = {
     Price: Price
 }
 
-and DoubleRateTariff = {
-    Name: TariffName
+and DoubleRate = {
     PriceHigh: Price
     PriceLow: Price
 }
@@ -20,7 +28,4 @@ and DoubleRateTariff = {
 and TariffName = string
 and Price = decimal<CZK>
 
-let _gas = SingleRateTariff { Name = "Plyn" ; Price = 497m<CZK> }
-let _D25d = DoubleRateTariff { Name = "D25d" ; PriceHigh = 1090m<CZK> ; PriceLow = 765m<CZK> }
-
-let tariffs = [| _gas ; _D25d |]
+let _x = {Name = "abc"; Rating = SingleRate {Price = 123m<CZK>} ; Medium = Gas}

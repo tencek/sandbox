@@ -6,26 +6,24 @@ open System.Linq
 open System.Threading.Tasks
 open Microsoft.AspNetCore.Mvc
 
-open skautskaenergie.Tariff
+open skautskaenergie.TariffFunctions
 
 [<Route("api/[controller]")>]
 type TariffsController () =
     inherit Controller()
 
-    let tariffs = skautskaenergie.Tariff.tariffs
+    let tariffs = LoadTariffs
 
     [<HttpGet>]
     member this.Get() =
-        JsonResult tariffs
+        tariffs |> JsonResult
 
     [<HttpGet("names")>]
     member this.GetNames() =
-        tariffs
-        |> Array.map ( function
-            | SingleRateTariff srt -> srt.Name
-            | DoubleRateTariff drt -> drt.Name)
-        |> JsonResult
+        tariffs |> GetNames |> JsonResult
 
     [<HttpGet("{id}")>]
     member this.Get(id:string) =
-        id
+        match FindByName tariffs id with
+            | Some tariff -> tariff |> JsonResult:>ActionResult
+            | None -> NotFoundResult():>ActionResult

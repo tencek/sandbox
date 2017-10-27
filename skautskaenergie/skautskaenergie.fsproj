@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Include="Tariff.fs" />
+    <Compile Include="TariffFunctions.fs" />
     <Compile Include="Controllers\TariffsController.fs" />
     <Compile Include="Startup.fs" />
     <Compile Include="Program.fs" />
