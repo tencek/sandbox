@@ -9,4 +9,8 @@
     <Compile Include="sandbox.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.2.3" />
+  </ItemGroup>
+
 </Project>
