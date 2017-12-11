@@ -31,6 +31,21 @@ InPocasi().Tables.Table1.Rows
 |> Seq.average
 |> printfn "Průměrná teplota: %A"
 
+let parseDate dateStr =
+    DateTime.Parse(dateStr, )
+
+let fromDate  = parseDate "7.1.2017 10:40:00"
+let toDate = parseDate "9.1.2017 22:35:00"
+
+let dateList (fromDate:DateTime) (toDate:DateTime) = 
+    toDate.Date - fromDate.Date
+    //seq { for i in fromDate .. toDate -> i }
+    //seq { yield fromDate.Date ; yield toDate.Date }
+
+printfn "%A" (toDate.Date - fromDate.Date).Days
+printfn "%A" toDate
+
+dateList fromDate toDate |> printfn "%A"
 
 type Zastavky =  HtmlProvider<"http://www.dszo.cz/komunikace/?page=zastavky">
 
