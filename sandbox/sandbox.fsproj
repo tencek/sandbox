@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="advent-2017-12-08.fsx" />
-    <None Include="advent-2017-12-11.fsx" />
+    <None Include="advent-2017-08.fsx" />
+    <None Include="advent-2017-11.fsx" />
     <None Include="sandbox.fsx" />
   </ItemGroup>
 
