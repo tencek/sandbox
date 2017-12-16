@@ -6,6 +6,7 @@
 open FSharp.Data
 open System.Text.RegularExpressions
 open System
+open System.Web.UI.WebControls
 
 [<Measure>] type degC
 
@@ -56,3 +57,14 @@ Zastavky().Html |> printfn "%A"
 type DSZO = JsonProvider<"""{"data": [["407","2","01:05","ZahradnickĂˇ","BaĹĄova nemocnice","3/2","2125"],["408","2","02:56","Otrokovice, Ĺľel.st.","BaĹĄova nemocnice","2/2","1182"]]}""">
 
 let _buses = DSZO.Load("http://www.dszo.cz/online/tabs2.php").Data
+
+///////////////////////////////////////////////
+
+printfn "================================="
+
+type Linka11 = HtmlProvider<"http://www.dszo.cz/?section=jr&file=jr&linkaid=11">
+Linka11().Tables.Table12.Rows |> Seq.iter ( fun row -> row.ToValueTuple() |> printfn "| ROW: %A" )
+
+type Linka11Gemini = HtmlProvider<"http://www.dszo.cz/jr/workhtml.php?htmlfile=MjAxNy0xMC0xMS8xMWFfMDkuaHRtbA==&version=0">
+Linka11Gemini().Tables.Table5.Rows |> Seq.iter ( fun row -> row |> printfn "| ROW: %A" )
+Linka11Gemini().Tables.Table6.Rows |> Seq.iter ( fun row -> row |> printfn "| ROW: %A" )
