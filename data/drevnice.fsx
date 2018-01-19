@@ -8,6 +8,11 @@ open FSharp.Data
 type Drevnice = 
   HtmlProvider<"http://hydro.chmi.cz/hpps/hpps_prfdata.php?seq=307366", Encoding="utf-8">
 
+Drevnice().Tables.Table8.Rows.[0].``Stav [cm]`` |> printfn "Actual: %A"
 
-Drevnice().Tables.Table8.Rows.[0].``Stav [cm]`` |> printfn "%A"
+Drevnice().Tables.Table8.Rows
+|> Seq.ofArray
+|> Seq.take 10
+|> Seq.rev
+|> Seq.iter (fun row -> printfn "%A: %A cm." row.``Datum a Äas`` row.``Stav [cm]``)
 
