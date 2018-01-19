@@ -47,7 +47,7 @@ let loadTemperatures stanice date =
                 | _ -> None
             | _ -> None
     printfn "Loading data from %s" url
-    System.Threading.Thread.Sleep(1000);
+    System.Threading.Thread.Sleep(1000)
     InPocasi.Load(url).Tables.Table1.Rows
     |> Seq.map (fun row -> (row.Čas, row.Teplota))
     |> Seq.choose tupleToTempWithTs
@@ -58,7 +58,7 @@ let czechCultureInfo() =
 let parseDate culture dateStr =
     DateTime.Parse(dateStr, culture)
 
-let parseDate' = czechCultureInfo() |> parseDate 
+let parseCzechDate = czechCultureInfo() |> parseDate 
 
 let dateRange (fromDate:System.DateTime) (toDate:System.DateTime) = 
     match (toDate.Date - fromDate.Date).Days with
@@ -79,41 +79,18 @@ let getAverageTemperature stanice fromDate toDate =
     |> Seq.filter (fun tempWithTs -> tempWithTs.dateTime >= fromDate && tempWithTs.dateTime <= toDate)
     |> Seq.averageBy (fun tempWithTs -> tempWithTs.temperature)
 
-let dates = [
-    //"29.12.2016 21:13:00";
-    //"7.1.2017 10:40:00  ";
-    //"9.1.2017 22:35:00  ";
-    //"22.1.2017 19:41:00 ";
-    //"4.2.2017 16:38     ";
-    //"19.2.2017 22:54:00 ";
-    //"5.3.2017 0:11:00   ";
-    //"2.4.2017 12:00:00  ";
-    //"4.5.2017 0:25:00   ";
-    "10.5.2017 20:43:00 ";
-    "15.5.2017 22:20:00 ";
-    //"1.7.2017 8:40:00   ";
-    //"6.7.2017 0:55:00   ";
-    //"11.7.2017 13:00:00 ";
-    //"16.7.2017 22:15:00 ";
-    //"24.7.2017 21:36:00 ";
-    //"30.7.2017 23:55:00 ";
-    //"18.9.2017 22:38:00 ";
-    //"2.10.2017 23:48:00 ";
-    //"8.10.2017 22:50:00 ";
-    //"22.10.2017 21:00:00";
-    //"21.11.2017 12:47:00";
-    //"26.11.2017 23:00:00";
-    //"3.12.2017 20:04:00 ";
-    //"9.12.2017 21:07:00 ";
-    //"16.12.2017 22:56:00";
-    //"24.12.2017 1:20:00 ";
-    //"30.12.2017 21:25:00";
-]
+type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=950757578&single=true&output=csv">
+let dates =  
+    (new Data2018()).Rows
+    |> Seq.map (fun row -> row.Datum)
+    |> Seq.rev
+    |> Seq.take 2
+    |> Seq.rev
+
 
 dates
-|> Seq.ofList
-|> Seq.map parseDate'
+|> Seq.map parseCzechDate
 |> Seq.pairwise
-|> Seq.map (fun (fromDate, toDate) -> (fromDate, toDate, getAverageTemperature "zlin_centrum" fromDate toDate))
+|> Seq.map (fun (fromDate, toDate) -> (fromDate, toDate, getAverageTemperature "zlin" fromDate toDate))
 |> Seq.iter (fun (fromDate, toDate, averageTemp) -> printfn "%s - %s: %f °C" (fromDate.ToString()) (toDate.ToString()) averageTemp)
 
