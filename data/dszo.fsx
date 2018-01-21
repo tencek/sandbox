@@ -5,6 +5,8 @@
 
 open FSharp.Data
 
+type Position = { Lat:float; Lng:float }
+
 type Vehicle = 
     {
         Number : int
@@ -14,14 +16,12 @@ type Vehicle =
         Direction : string
         Shift : string
         Driver : int
+        Position : Position option
     }
 
 type DataItem = Vehicle of Vehicle | RawData of string []
 
 type Vehicles = JsonProvider<"http://www.dszo.cz/online/tabs2.php", Encoding="utf-8">
-
-type LatLng = { Lat:float; Lng:float }
-type VehicleWithPos = { Vehicle:Vehicle; Pos:LatLng }
 
 let (|Regex|_|) pattern input =
     let m = System.Text.RegularExpressions.Regex.Match(input, pattern)
@@ -50,6 +50,7 @@ let vehicles =
                 Direction = item.Strings.[4]
                 Shift = item.Strings.[5]
                 Driver = int item.Strings.[6]
+                Position = None
             }
         with
             _exn -> RawData item.Strings
@@ -62,7 +63,11 @@ let vehicles =
     |> Seq.sortBy (fun vehicle -> vehicle.Number)
     |> Seq.map (fun vehicle -> (vehicle.Number, vehicle))
     |> Map.ofSeq
-    |> Map.map (fun number vehicle -> 
-        { Vehicle=vehicle ; Pos=positions.Item number})
+    |> Map.map (fun number vehicle -> { vehicle with Position = positions.Item number |> Some } )
 
-printfn "%A" vehicles
+let oldVehicles = 
+    vehicles
+    |> Map.filter (fun number vehicle -> [170 ; 346 ; 350] |> List.contains number)
+
+printfn "vse: %A" vehicles
+printfn "stare: %A" oldVehicles
