@@ -45,7 +45,7 @@ let vehicles =
             Vehicle {
                 Number = int item.Strings.[0]
                 LineNumber = int item.Strings.[1]
-                Delay = System.TimeSpan.Parse(item.Strings.[2])
+                Delay = System.TimeSpan.Parse("00:"+item.Strings.[2])
                 Station = item.Strings.[3]
                 Direction = item.Strings.[4]
                 Shift = item.Strings.[5]
