@@ -71,3 +71,7 @@ let oldVehicles =
 
 printfn "vse: %A" vehicles
 printfn "stare: %A" oldVehicles
+
+/// load http://www.dszo.cz/komunikace/?page=zastavky
+// Search for function zastavky(stav, mapa)
+/// grep regexp: zast([0-9])+ = new google\.maps\.LatLng\([0-9]+\.[0-9]+,[0-9]+\.[0-9]+\);var cstring\1 ='<div class="googleinfow"><strong>[^<]+<br />
