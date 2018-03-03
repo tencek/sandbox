@@ -53,3 +53,12 @@ let subtractUnsigned (x : uint32) (y : uint32) =
 let result1 = subtractUnsigned 2u 1u
 // This code generates an assertion failure.
 let result2 = subtractUnsigned 1u 2u
+
+let add x = ( fun y -> x + y)
+
+printfn "%A" add
+
+Some 3 |> Option.bind (fun x -> sprintf "%d%d" x x |> Some)
+
+
+[ 1; 2; 3] |> List.map2 (fun x y -> x + y) [ 3 ; 2 ; 1] |> printfn "%A"
