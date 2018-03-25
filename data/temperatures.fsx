@@ -88,9 +88,11 @@ let dates =
     |> Seq.rev
 
 
-dates
-|> Seq.map parseCzechDate
-|> Seq.pairwise
-|> Seq.map (fun (fromDate, toDate) -> (fromDate, toDate, getAverageTemperature "zlin" fromDate toDate))
-|> Seq.iter (fun (fromDate, toDate, averageTemp) -> printfn "%s - %s: %f °C" (fromDate.ToString()) (toDate.ToString()) averageTemp)
-
+seq { yield "zlin" ; yield "zlin_centrum" }
+|> Seq.iter (fun stanice -> 
+    dates
+    |> Seq.map parseCzechDate
+    |> Seq.pairwise
+    |> Seq.map (fun (fromDate, toDate) -> (fromDate, toDate, getAverageTemperature stanice fromDate toDate))
+    |> Seq.iter (fun (fromDate, toDate, averageTemp) -> printfn "%s - %s: %f °C" (fromDate.ToString()) (toDate.ToString()) averageTemp)
+)
