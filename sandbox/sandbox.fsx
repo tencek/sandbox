@@ -62,3 +62,34 @@ Some 3 |> Option.bind (fun x -> sprintf "%d%d" x x |> Some)
 
 
 [ 1; 2; 3] |> List.map2 (fun x y -> x + y) [ 3 ; 2 ; 1] |> printfn "%A"
+
+///////////////////////////////////////////////
+
+let rec sumList list = 
+    match list with
+    | [] -> 0
+    | head::tail -> head + sumList tail
+
+let rec sumList2 sumSoFar list = 
+    match list with
+    | [] -> sumSoFar
+    | head::tail -> sumList2 (sumSoFar + head) tail
+
+[1m .. 1000000m] |> sumList2 0m
+
+//////////////////////////////////////////////
+
+type State = New|Draft|Published|Inactive|Discontinued
+
+let StateToInt state =
+    match state with
+    | New -> 1
+    | Draft -> 2
+    | Inactive -> 3
+    | Discontinued -> 4
+
+let out state = 
+    printfn "state = %O = %d" state (StateToInt state)
+
+out Inactive
+

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="UnitsOfMeasure.fsx" />
+    <None Include="IDisposable.fsx" />
+    <None Include="HtmlProvider.fsx" />
+    <None Include="recursion.fsx" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
