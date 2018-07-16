@@ -93,3 +93,33 @@ let out state =
 
 out Inactive
 
+let hwn n = 
+    [1..n] |> Seq.iter (fun _x -> printfn "Hello World")
+
+hwn 5
+
+
+
+#time "on"
+open System.Collections
+open System.Collections.Generic
+open System.Linq
+
+let AddToList (list:SortedList<int,int>) key = 
+    if 
+        list.ContainsKey(key)
+    then
+        list.[key] <- list.[key] + 1
+    else
+        list.Add(key,1)
+
+let CountListCounts (list:SortedList<int,int>) = 
+    //list |> Seq.fold (fun sum kvp -> sum + kvp.Value) 0
+
+let GetListValue (list:SortedList<int,int>) pos =
+    1
+
+let list = new SortedList<int,int>()
+[1..10] |> Seq.iter (fun i -> [1..10] |> Seq.iter (fun j -> AddToList list j))
+list.Count
+CountListCounts list
