@@ -57,6 +57,7 @@
     <None Include="Script.fsx" />
     <None Include="drevnice.fsx" />
     <None Include="dszo.fsx" />
+    <None Include="Seq.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">
