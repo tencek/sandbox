@@ -30,10 +30,9 @@ type InPocasi = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-histo
 
 InPocasi().Tables.Table1.Rows
 |> Seq.map (fun row -> row.Teplota)
-|> Seq.map(function
+|> Seq.choose(function
     | TemperatureInCelsius temp -> Some temp
     | _ -> None)
-|> Seq.choose(id)
 |> Seq.average
 |> printfn "Průměrná teplota: %A"
 
@@ -57,13 +56,17 @@ let loadTemperatures stanice date =
         printfn "%s" ex.Message
         Seq.empty
 
-let czechCultureInfo() =
+let czechCultureInfo () =
     new CultureInfo("cs-CZ")
 
 let parseDate culture dateStr =
     DateTime.Parse(dateStr, culture)
 
-let parseCzechDate = czechCultureInfo() |> parseDate 
+let parseDouble (culture:IFormatProvider) floatStr = 
+    Double.Parse(floatStr, culture)
+
+let parseCzechDate = czechCultureInfo () |> parseDate 
+let parseCzechDouble = czechCultureInfo () |> parseDouble
 
 let dateRange (fromDate:System.DateTime) (toDate:System.DateTime) = 
     match (toDate.Date - fromDate.Date).Days with
@@ -84,20 +87,23 @@ let getAverageTemperature stanice fromDate toDate =
     |> Seq.filter (fun tempWithTs -> tempWithTs.dateTime >= fromDate && tempWithTs.dateTime <= toDate)
     |> Seq.averageBy (fun tempWithTs -> tempWithTs.temperature)
 
-type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=950757578&single=true&output=csv">
-let dates =  
+type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=950757578&single=true&output=csv", Encoding="utf-8">
+let newDates =  
     (new Data2018()).Rows
-    |> Seq.map (fun row -> row.Datum)
-    |> Seq.rev
-    |> Seq.take 2
-    |> Seq.rev
+    |> Seq.skip 2
+    |> Seq.map (fun row -> (parseCzechDate(row.Datum), row.``Avg(t)``))
+    |> Seq.choose(function
+        | (date, temp) when 
+            temp.Length = 0 &&
+            date > new DateTime (2018, 9, 15) -> Some date
+        | _ -> None)
 
-
-seq { yield "zlin" ; yield "zlin_centrum" }
-|> Seq.iter (fun stanice -> 
-    dates
-    |> Seq.map parseCzechDate
+let tempData =
+    newDates
     |> Seq.pairwise
-    |> Seq.map (fun (fromDate, toDate) -> (fromDate, toDate, getAverageTemperature stanice fromDate toDate))
-    |> Seq.iter (fun (fromDate, toDate, averageTemp) -> printfn "%s - %s: %f °C" (fromDate.ToString()) (toDate.ToString()) averageTemp)
-)
+    |> Seq.collect (fun (fromDate, toDate) ->
+        seq { yield "zlin" ; yield "zlin_centrum" }
+        |> Seq.map (fun stanice -> (fromDate, toDate, stanice, getAverageTemperature stanice fromDate toDate)))
+    |> Seq.cache
+
+tempData |> Seq.iter (fun (fromDate, toDate, stanice, averageTemp) -> printfn "%s - %s: %15s: %f °C" (fromDate.ToString()) (toDate.ToString()) stanice averageTemp)
