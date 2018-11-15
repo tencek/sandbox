@@ -26,7 +26,7 @@ type TemperatureWithTs = {dateTime:DateTime ; temperature:float<degC>}
 let makeUrl stanice (date:DateTime) = 
     sprintf "http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=%s&historie=%s" stanice (date.ToString("MM-dd-yyyy"))
 
-type InPocasi = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-29-2017">
+type InPocasi = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
 
 InPocasi().Tables.Table1.Rows
 |> Seq.map (fun row -> row.Teplota)
@@ -38,19 +38,24 @@ InPocasi().Tables.Table1.Rows
 |> printfn "Průměrná teplota: %A"
 
 let loadTemperatures stanice date =
-    let url = makeUrl stanice date
-    let tupleToTempWithTs ((timeoption:DateTime option), temperature) = 
-        match (timeoption, temperature) with
-            | (Some time, temperature) -> 
-                match temperature with
-                | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second) ; temperature=temp}
+    try
+        let url = makeUrl stanice date
+        let tupleToTempWithTs ((timeoption:DateTime option), temperature) = 
+            match (timeoption, temperature) with
+                | (Some time, temperature) -> 
+                    match temperature with
+                    | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second) ; temperature=temp}
+                    | _ -> None
                 | _ -> None
-            | _ -> None
-    printfn "Loading data from %s" url
-    System.Threading.Thread.Sleep(1000)
-    InPocasi.Load(url).Tables.Table1.Rows
-    |> Seq.map (fun row -> (row.Čas, row.Teplota))
-    |> Seq.choose tupleToTempWithTs
+        printfn "Loading data from %s" url
+        System.Threading.Thread.Sleep(1000)
+        InPocasi.Load(url).Tables.Table1.Rows
+        |> Seq.map (fun row -> (row.Čas, row.Teplota))
+        |> Seq.choose tupleToTempWithTs
+    with
+    | ex -> 
+        printfn "%s" ex.Message
+        Seq.empty
 
 let czechCultureInfo() =
     new CultureInfo("cs-CZ")
