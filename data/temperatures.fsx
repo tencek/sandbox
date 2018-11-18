@@ -23,7 +23,11 @@ let (|TemperatureInCelsius|_|) str =
 
 type TemperatureWithTs = {dateTime:DateTime ; temperature:float<degC>}
 
-let makeUrl stanice (date:DateTime) = 
+type Stanice = Stanice of string
+
+type DateRange = { FromDate:DateTime ; ToDate:DateTime }
+
+let makeUrl (Stanice stanice) (date:DateTime) = 
     sprintf "http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=%s&historie=%s" stanice (date.ToString("MM-dd-yyyy"))
 
 type InPocasi = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
@@ -68,23 +72,23 @@ let parseDouble (culture:IFormatProvider) floatStr =
 let parseCzechDate = czechCultureInfo () |> parseDate 
 let parseCzechDouble = czechCultureInfo () |> parseDouble
 
-let dateRange (fromDate:System.DateTime) (toDate:System.DateTime) = 
-    match (toDate.Date - fromDate.Date).Days with
+let createDateList dateRange = 
+    match (dateRange.ToDate.Date - dateRange.FromDate.Date).Days with
     | days when days > 0 ->
         seq { 0 .. days }
-        |> Seq.map (fun i -> fromDate.Date.AddDays(float i))
+        |> Seq.map (fun i -> dateRange.FromDate.Date.AddDays(float i))
     | days when days < 0 ->
         seq { days .. 0 }
         |> Seq.rev
-        |> Seq.map (fun i -> fromDate.Date.AddDays(float i))
+        |> Seq.map (fun i -> dateRange.FromDate.Date.AddDays(float i))
     | _zero ->
-        Seq.singleton(fromDate.Date)
+        Seq.singleton(dateRange.FromDate.Date)
 
-let getAverageTemperature stanice fromDate toDate =
-    dateRange fromDate toDate
+let getAverageTemperature stanice dateRange =
+    createDateList dateRange
     |> Seq.map (loadTemperatures stanice)
     |> Seq.concat
-    |> Seq.filter (fun tempWithTs -> tempWithTs.dateTime >= fromDate && tempWithTs.dateTime <= toDate)
+    |> Seq.filter (fun tempWithTs -> tempWithTs.dateTime >= dateRange.FromDate && tempWithTs.dateTime <= dateRange.ToDate)
     |> Seq.averageBy (fun tempWithTs -> tempWithTs.temperature)
 
 type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=950757578&single=true&output=csv", Encoding="utf-8">
@@ -102,8 +106,9 @@ let tempData =
     newDates
     |> Seq.pairwise
     |> Seq.collect (fun (fromDate, toDate) ->
-        seq { yield "zlin" ; yield "zlin_centrum" }
-        |> Seq.map (fun stanice -> (fromDate, toDate, stanice, getAverageTemperature stanice fromDate toDate)))
+        let dateRange = { FromDate=fromDate ; ToDate=toDate }
+        seq { yield Stanice "zlin" ; yield Stanice "zlin_centrum" }
+        |> Seq.map (fun stanice -> (dateRange, stanice, getAverageTemperature stanice dateRange)))
     |> Seq.cache
 
-tempData |> Seq.iter (fun (fromDate, toDate, stanice, averageTemp) -> printfn "%s - %s: %15s: %f °C" (fromDate.ToString()) (toDate.ToString()) stanice averageTemp)
+tempData |> Seq.iter (fun (dateRange, (Stanice stanice), averageTemp) -> printfn "%s - %s: %15s: %f °C" (dateRange.FromDate.ToString()) (dateRange.ToDate.ToString()) stanice averageTemp)
