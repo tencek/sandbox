@@ -1,4 +1,4 @@
-﻿#r @"C:\git\sandbox\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+﻿#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
 
 open System.Web
 open System.Text
@@ -24,7 +24,7 @@ let MakeUrl address =
 
 let RequestString url = 
     printfn "%s" url
-    Thread.Sleep 200
+    Thread.Sleep 500
     Http.RequestString(url)
 
 let GetDetailsUrl searchPageContent = 
