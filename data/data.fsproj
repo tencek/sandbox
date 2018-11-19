@@ -52,12 +52,19 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Library1.fs" />
+    <Content Include="Assets\adresy-okoli-400m.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\adresy-okoli-500m.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="temperatures.fsx" />
     <Content Include="packages.config" />
     <None Include="Script.fsx" />
     <None Include="drevnice.fsx" />
     <None Include="dszo.fsx" />
     <None Include="Seq.fsx" />
+    <None Include="Addresses.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">
