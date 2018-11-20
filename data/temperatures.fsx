@@ -92,15 +92,23 @@ let getAverageTemperature stanice dateRange =
     |> Seq.averageBy (fun tempWithTs -> tempWithTs.temperature)
 
 type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=950757578&single=true&output=csv", Encoding="utf-8">
-let newDates =  
+//let newDates =  
+//    (new Data2018()).Rows
+//    |> Seq.skip 2
+//    |> Seq.map (fun row -> (parseCzechDate(row.Datum), row.``Avg(t)``))
+//    |> Seq.choose(function
+//        | (date, temp) when 
+//            temp.Length = 0 &&
+//            date > new DateTime (2018, 9, 15) -> Some date
+//        | _ -> None)
+
+let newDates = 
     (new Data2018()).Rows
     |> Seq.skip 2
-    |> Seq.map (fun row -> (parseCzechDate(row.Datum), row.``Avg(t)``))
-    |> Seq.choose(function
-        | (date, temp) when 
-            temp.Length = 0 &&
-            date > new DateTime (2018, 9, 15) -> Some date
-        | _ -> None)
+    |> Seq.map (fun row -> parseCzechDate(row.Datum))
+    |> Seq.rev
+    |> Seq.take 2
+    |> Seq.rev
 
 let tempData =
     newDates
