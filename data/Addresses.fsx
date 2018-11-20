@@ -92,15 +92,15 @@ let dataFile = __SOURCE_DIRECTORY__ + @"\Assets\adresy-okoli-400m.csv"
 type Adresses = CsvProvider<dataFile, Separators=";">
 
 
-//let addresses = 
-//    (new Adresses()).Rows
-//    |> Seq.map (fun row -> (row.``Název ulice``, row.``Číslo domovní``))
-
 let addresses = 
-    [
-        ("Křiby",4711)
-        //("Křiby",4712) 
-    ]
+    (new Adresses()).Rows
+    |> Seq.map (fun row -> (row.``Název ulice``, row.``Číslo domovní``))
+
+//let addresses = 
+//    [
+//        ("Křiby",4711)
+//        //("Křiby",4712) 
+//    ]
 
 let htmlData = 
     addresses
@@ -119,21 +119,34 @@ let htmlData =
 let numbers = 
     htmlData
     |> Seq.map (fun (address, html) ->
-        (address, (GetNumberOfPeople html), (GetNumberOfFlats html))
+        let people = 
+            match GetNumberOfPeople html with
+            | Some { Min=min ; Max=max } -> min
+            | None -> 0
+        let flats = 
+            match GetNumberOfFlats html with
+            | Some { Min=min ; Max=max } -> min
+            | None -> 0
+        (address, people, flats)
     )
+    |> Seq.cache
 
-let people = 
-    htmlData
-    |> Seq.map (snd >> GetNumberOfPeople)
-    |> Seq.choose id
+numbers
+|> Seq.sortBy (fun (address,_,_) -> (address.Street, address.Number))
+|> Seq.iter (fun (address,people,flats) -> printfn "%s\t%i\t%i\t%i" address.Street address.Number flats people)
 
-let minpeople = people |> Seq.sumBy (fun range -> range.Min)
-let maxpeople = people |> Seq.sumBy (fun range -> range.Max)
+//let people = 
+//    htmlData
+//    |> Seq.map (snd >> GetNumberOfPeople)
+//    |> Seq.choose id
 
-let flats = 
-    htmlData
-    |> Seq.map (snd >> GetNumberOfFlats)
-    |> Seq.choose id
+//let minpeople = people |> Seq.sumBy (fun range -> range.Min)
+//let maxpeople = people |> Seq.sumBy (fun range -> range.Max)
 
-let minflats = flats |> Seq.sumBy (fun range -> range.Min)
-let maxflats = flats |> Seq.sumBy (fun range -> range.Max)
+//let flats = 
+//    htmlData
+//    |> Seq.map (snd >> GetNumberOfFlats)
+//    |> Seq.choose id
+
+//let minflats = flats |> Seq.sumBy (fun range -> range.Min)
+//let maxflats = flats |> Seq.sumBy (fun range -> range.Max)
