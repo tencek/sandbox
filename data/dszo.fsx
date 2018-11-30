@@ -1,7 +1,7 @@
 ﻿// Learn more about F# at http://fsharp.org. See the 'F# Tutorial' project
 // for more guidance on F# programming.
 //#I @"bin\Release"
-#r @"C:\git\sandbox\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
 
 open FSharp.Data
 
