@@ -135,6 +135,12 @@ numbers
 |> Seq.sortBy (fun (address,_,_) -> (address.Street, address.Number))
 |> Seq.iter (fun (address,people,flats) -> printfn "%s\t%i\t%i\t%i" address.Street address.Number flats people)
 
+numbers
+|> Seq.groupBy(fun (address,_,_) -> address.Street)
+|> Seq.map (fun (street, collection) -> (street, collection |> Seq.sumBy (fun (_address, _people, flats) -> flats)))
+|> Seq.sortBy fst
+|> Seq.iter (fun (street,flatCount) -> printfn "%s\t%i" street flatCount)
+
 //let people = 
 //    htmlData
 //    |> Seq.map (snd >> GetNumberOfPeople)
