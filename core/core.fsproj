@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="FSharp.Data.TypeProviders" Version="5.0.0.6" />
+    <PackageReference Include="Hopac" Version="0.4.1" />
   </ItemGroup>
 
 </Project>
