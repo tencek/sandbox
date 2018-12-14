@@ -14,7 +14,7 @@ let trace label x =
 
 type Zastavky =  HtmlProvider<"http://www.dszo.cz/komunikace/?page=zastavky">
 
-Zastavky().Lists.``InformaÄnÃ­ portÃ¡l``.Html |> printfn "%A"
+Zastavky().Lists.``Informační portál``.Html |> printfn "%A"
     
 Zastavky().Html |> printfn "%A"
 
@@ -26,10 +26,10 @@ let _buses = DSZO.Load("http://www.dszo.cz/online/tabs2.php").Data
 
 printfn "================================="
 
-type Linka11 = HtmlProvider<"http://www.dszo.cz/?section=jr&file=jr&linkaid=11">
-Linka11().Tables.Table12.Rows |> Seq.iter ( fun row -> row.ToValueTuple() |> printfn "| ROW: %A" )
+type Linka11 = HtmlProvider<"https://www.dszo.cz/jizdni-rady/?linka=11&typ=trolejbus#jr-bank1">
+Linka11().Tables.``Aktuální jízdní řád``.Rows |> Seq.iter ( fun row -> row.ToValueTuple() |> printfn "| ROW: %A" )
 
-type Linka11Gemini = HtmlProvider<"http://www.dszo.cz/jr/workhtml.php?htmlfile=MjAxNy0xMC0xMS8xMWFfMDkuaHRtbA==&version=0">
+type Linka11Gemini = HtmlProvider<"https://www.dszo.cz/jr/workhtml.php?htmlfile=L2JhbmsxL3Ryb2xlamJ1c3kvMTFhXzA5Lmh0bWw=&grafikon=eCxz">
 Linka11Gemini().Tables.Table5.Rows |> Seq.iter ( fun row -> row |> printfn "| ROW: %A" )
 Linka11Gemini().Tables.Table6.Rows |> Seq.iter ( fun row -> row |> printfn "| ROW: %A" )
 
