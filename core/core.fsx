@@ -28,7 +28,7 @@ let login login password (client:HttpClient) = async {
 let client = createClient ()
 let result = 
     client
-    |> login "kucera2" "Pa13kuC*"
+    |> login "login" "password"
     |> Async.RunSynchronously
 
 let presence = client.GetStringAsync("https://jobabacus.in.edhouse.cz/index.php?Page=Pres") |> Async.AwaitTask |> Async.RunSynchronously
