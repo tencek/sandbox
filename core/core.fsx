@@ -34,3 +34,5 @@ let result =
 let presence = client.GetStringAsync("https://jobabacus.in.edhouse.cz/index.php?Page=Pres") |> Async.AwaitTask |> Async.RunSynchronously
 
 printfn "|||%s|||" presence
+
+

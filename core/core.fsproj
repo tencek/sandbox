@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="combinations.fsx" />
     <None Include="core.fsx" />
     <Compile Include="core.fs" />
     <None Include="assets/abacus.html" />
