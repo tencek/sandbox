@@ -8,6 +8,7 @@
     <None Include="combinations.fsx" />
     <None Include="core.fsx" />
     <Compile Include="core.fs" />
+    <Content Include="assets\skaut-dikydobrovolnikum-jmena.txt" />
     <None Include="assets/abacus.html" />
   </ItemGroup>
 

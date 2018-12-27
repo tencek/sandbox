@@ -10,6 +10,14 @@ open System.Collections.Generic
 
 //type AbacusPresence = HtmlProvider<"">
 
+let names = seq {
+    use sr = new System.IO.StreamReader("assets\skaut-dikydobrovolnikum-jmena.txt")
+    while not sr.EndOfStream do
+    done
+    let c = sr.Read()
+    yield ""
+}
+
 
 let createClient () = 
     new HttpClient()
