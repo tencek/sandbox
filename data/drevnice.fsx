@@ -1,8 +1,8 @@
 ﻿// Learn more about F# at http://fsharp.org. See the 'F# Tutorial' project
 // for more guidance on F# programming.
 //#I @"bin\Release"
-#r @"C:\git\sandbox\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
-#r @"C:\Users\PK250193\.nuget\packages\fsharp.charting\0.91.1\lib\net45\FSharp.Charting.dll"
+#r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
+#r @"..\packages\FSharp.Charting.2.1.0\lib\net45\FSharp.Charting.dll"
 
 open FSharp.Data
 open FSharp.Charting
@@ -18,13 +18,13 @@ let rows =
 
 let tempGraph = 
     rows
-    |> Seq.map (fun row -> (row.``Datum a Äas``, row.``Teplota [Â°C]``))
+    |> Seq.map (fun row -> (row.``Datum a čas``, row.``Teplota [°C]``))
     |> Chart.Line
 
 let levelGraph = 
     rows
 //    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
-    |> Seq.map (fun row -> (row.``Datum a Äas``, row.``Stav [cm]``))
+    |> Seq.map (fun row -> (row.``Datum a čas``, row.``Stav [cm]``))
     |> Chart.Line
 
 Chart.Combine [tempGraph ; levelGraph ]

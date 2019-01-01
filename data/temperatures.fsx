@@ -1,7 +1,7 @@
 ﻿// Learn more about F# at http://fsharp.org. See the 'F# Tutorial' project
 // for more guidance on F# programming.
 //#I @"bin\Release"
-#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
 
 open FSharp.Data
 open System.Text.RegularExpressions
@@ -30,9 +30,15 @@ type DateRange = { FromDate:DateTime ; ToDate:DateTime }
 let makeUrl (Stanice stanice) (date:DateTime) = 
     sprintf "http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=%s&historie=%s" stanice (date.ToString("MM-dd-yyyy"))
 
-type InPocasi = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
+type InPocasiNow = HtmlProvider<"https://www.in-pocasi.cz/meteostanice/stanice.php?stanice=zlin_centrum", Encoding="utf-8">
 
-InPocasi().Tables.Table1.Rows
+InPocasiNow().Tables.Table1.Rows.[0]
+|> (fun row -> (row.``Äas``, row.Teplota))
+|> (fun (time, temp) -> printfn "Teplota v %s byla %s." (time.ToString()) temp)
+
+type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
+
+InPocasiHistory().Tables.Table1.Rows
 |> Seq.map (fun row -> row.Teplota)
 |> Seq.choose(function
     | TemperatureInCelsius temp -> Some temp
@@ -43,16 +49,16 @@ InPocasi().Tables.Table1.Rows
 let loadTemperatures stanice date =
     try
         let url = makeUrl stanice date
-        let tupleToTempWithTs ((timeoption:DateTime option), temperature) = 
+        let tupleToTempWithTs ((timeoption:TimeSpan option), temperature) = 
             match (timeoption, temperature) with
                 | (Some time, temperature) -> 
                     match temperature with
-                    | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second) ; temperature=temp}
+                    | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hours, time.Minutes, time.Seconds) ; temperature=temp}
                     | _ -> None
                 | _ -> None
         printfn "Loading data from %s" url
         System.Threading.Thread.Sleep(1000)
-        InPocasi.Load(url).Tables.Table1.Rows
+        InPocasiHistory.Load(url).Tables.Table1.Rows
         |> Seq.map (fun row -> (row.Čas, row.Teplota))
         |> Seq.choose tupleToTempWithTs
     with
