@@ -1,0 +1,3125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rows>
+		<row>
+			<Bod>1</Bod>
+			<Lat>49.2283254</Lat>
+			<Lng>17.6684482</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště situované ve vnitrobloku v centru města na poklidném místě, bez ruchu hlavních ulic. </Popis>
+			<DetskePrvky>herní sestava se skluzavkou • pružinové houpadlo • kolotoč • kreslící tabule • pískoviště • závěsná houpačka</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, hřiště je ve správě cukrárny Maruška a je veřejně přístupné, provoz hřiště je však vázán na otevírací dobu a pravidla cukrárny</Stav>
+		</row>
+		<row>
+			<Bod>2</Bod>
+			<Lat>49.2276683</Lat>
+			<Lng>17.6707121</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • dvoumístné pružinové houpadlo • kolotoč • houpačka závěsná • pískoviště</DetskePrvky>
+			<SportPrvky>fitness prvek (od 15ti let)</SportPrvky>
+			<Povrch>pryžová dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2010), probíhají pravidelné kontroly a údržba hřiště </Stav>
+		</row>
+		<row>
+			<Bod>6</Bod>
+			<Lat>49.2294482</Lat>
+			<Lng>17.6721335</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>volejbalové sloupky</SportPrvky>
+			<Povrch>asfaltový povrch sportoviště</Povrch>
+			<Oploceni>částečně od železnice</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce povrchu v roce 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>7</Bod>
+			<Lat>49.2303207</Lat>
+			<Lng>17.6720362</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční lanová herní sestava se skluzavkou • pružinové houpadlo • houpačka závěsná • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště,  v roce 2017 instalace nového centrálního herního prvku na hřiště (dokumentace k nahlédnutí na OMZ)</Stav>
+		</row>
+		<row>
+			<Bod>11</Bod>
+			<Lat>49.2296814</Lat>
+			<Lng>17.6749006</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm. Dominantou hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • dvoumístné pružinové houpadlo • houpačka závěsná • pískoviště</DetskePrvky>
+			<SportPrvky>-</SportPrvky>
+			<Povrch>asfaltový povrch sportoviště, na dětském hřišti dopadové plochy z kačírku a trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce povrchu v roce 2009, oplocení 2011), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>12</Bod>
+			<Lat>49.2291472</Lat>
+			<Lng>17.6764841</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • pružinové houpadlo • váhová houpačka • kolotoč</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dopadové plochy ze štěrkopísku a trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>14</Bod>
+			<Lat>49.2291609</Lat>
+			<Lng>17.6776657</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště určeno ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>15</Bod>
+			<Lat>49.2289731</Lat>
+			<Lng>17.6784543</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>volejbalové sloupky</SportPrvky>
+			<Povrch>asfaltový povrch sportoviště</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>16</Bod>
+			<Lat>49.2288172</Lat>
+			<Lng>17.6796274</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>trampolína • lanový balanční prvek (věk 4+) • dvojhrazda (věk 5+) • dvoumístné pružinové houpadlo (věk 3-6 let) • pískoviště </DetskePrvky>
+			<SportPrvky>-</SportPrvky>
+			<Povrch>asfaltový povrch sportoviště, na dětském hřišti trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>18</Bod>
+			<Lat>49.2291332</Lat>
+			<Lng>17.6810004</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • čtyřmístné pružinové houpadlo • houpačka závěsná hnízdo • kreslící tabule • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, na dětském hřišti dopadové plochy z kačírku </Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>19</Bod>
+			<Lat>49.2272436</Lat>
+			<Lng>17.6830242</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • pružinové houpadlo • kovová průlezka • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná instalace nových herních prvků</Stav>
+		</row>
+		<row>
+			<Bod>20</Bod>
+			<Lat>49.2280749</Lat>
+			<Lng>17.6862447</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • houpačka závěsná • pružinové houpadlo • kolotoč  • pískoviště </DetskePrvky>
+			<SportPrvky>volejbalové sloupky</SportPrvky>
+			<Povrch>asfaltový povrch sportoviště, na dětském hřišti dopadové plochy z kačírku a trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, před rekonstrukcí hřiště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>21</Bod>
+			<Lat>49.2272447</Lat>
+			<Lng>17.6904014</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm s velkou travnatou plochou. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • čtyřmístné pružinové houpadlo • houpačka závěsná • kolotoč</DetskePrvky>
+			<SportPrvky>ping - pong stůl</SportPrvky>
+			<Povrch>travnatý povrch sportoviště, na dětském hřišti dopadové plochy z kačírku a trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>22</Bod>
+			<Lat>49.2274726</Lat>
+			<Lng>17.694966</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště u sportovního areálu s velkou travnatou plochou pod korunami vzrostlých stromů. Výhledově plánovaná kompletní rekonstrukce hřiště. </Popis>
+			<DetskePrvky>závěsná houpačka (věk 3+) • kolotoč (5-12 let)</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>23</Bod>
+			<Lat>49.2272234</Lat>
+			<Lng>17.6984732</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo •  váhová houpačka  • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>25</Bod>
+			<Lat>49.2262174</Lat>
+			<Lng>17.699237</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní prvek se skluzavkou • pružinové houpadlo •   váhová houpačka •  závěsná houpačka •  pískoviště   </DetskePrvky>
+			<SportPrvky>-</SportPrvky>
+			<Povrch>trávník, zatravňovací rohož</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>28</Bod>
+			<Lat>49.2257112</Lat>
+			<Lng>17.6983795</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>4x fitness prvek (od 14 let), vestavěné herní branky na malou kopanou, ping - pong stůl</SportPrvky>
+			<Povrch>asfalt, trávník </Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště </Stav>
+		</row>
+		<row>
+			<Bod>32</Bod>
+			<Lat>49.2263527</Lat>
+			<Lng>17.7008755</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>33</Bod>
+			<Lat>49.2407493</Lat>
+			<Lng>17.6683772</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>beton</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>34</Bod>
+			<Lat>49.2259394</Lat>
+			<Lng>17.7015438</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Velké dětské hřiště v parčíku na Bartošově čtvrti. Dominantou dětského hřiště je lanová pyramida a multifunkční herní sestava.  V místě se nachází také menší oplocené hřiště pro mladší děti. </Popis>
+			<DetskePrvky>lanová pyramida • multifunkční sestava •  kolotoč • dvě pružinová houpadla •  herní sestava se skluzavkou • hra s pískem • pískoviště  </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, písek, trávník </Povrch>
+			<Oploceni>částečně (hřiště pro nejmenší)</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2005/6), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>36</Bod>
+			<Lat>49.2251214</Lat>
+			<Lng>17.7026417</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>váhová houpačka • pružinové houpadlo •  sedací prvek krokodýl • pískoviště  </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>38</Bod>
+			<Lat>49.2249804</Lat>
+			<Lng>17.7044027</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>basketbalový koš, ping - pong stůl</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>39</Bod>
+			<Lat>49.2241042</Lat>
+			<Lng>17.7054605</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené dětské hřiště v klidné části Bartošové čtvrti. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • pružinové houpadlo • točidla • váhová houpačka • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>40</Bod>
+			<Lat>49.2242278</Lat>
+			<Lng>17.7059916</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lanová dráha • houpačka závěsná  • kolotoč • kladina</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>43</Bod>
+			<Lat>49.2260331</Lat>
+			<Lng>17.6891251</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště dostupné z žel. zastávky Podvesná. Dominantou dětského hřiště je multifunkční herní sestava.</Popis>
+			<DetskePrvky>multifunkční sestava • herní sestava se skluzavkou • dvě pružinová houpadla • houpačka závěsná • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dopadové plochy z pryže, kačírku a trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční, probíhají pravidelné kontroly a údržba hřiště </Stav>
+		</row>
+		<row>
+			<Bod>46</Bod>
+			<Lat>49.2263642</Lat>
+			<Lng>17.6831938</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dominantou dětského hřiště je multifunkční dřevěná herní sestava se skluzavkou, součástí hřiště jsou dále atraktivní balanční prvky a houpací síť. </Popis>
+			<DetskePrvky>herní sestava se skluzavkou (3-14 let) • houpací síť (3-14 let) • balanční prvek (3-14 let) • bradla (3-14 let) • balanční deska (3-14 let) • pružinové houpadlo (3-14 let) • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dopadové plochy z pryže a trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>47</Bod>
+			<Lat>49.2259314</Lat>
+			<Lng>17.6798163</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • houpačka závěsná  • pružinové houpadlo •  pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>48</Bod>
+			<Lat>49.2232612</Lat>
+			<Lng>17.6879307</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>49</Bod>
+			<Lat>49.226584</Lat>
+			<Lng>17.6771319</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště,  výhledově rekonstrukce sportoviště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>50</Bod>
+			<Lat>49.226141</Lat>
+			<Lng>17.6767675</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • pružinové houpadlo • houpačka závěsná • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dopadové plochy z kačírku a trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>52</Bod>
+			<Lat>49.2265122</Lat>
+			<Lng>17.6730019</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v parčíku na ulici Lorencova. Dominantou dětského hřiště je multifunkční čtyřvěžová sestava se skluzavkou a oblíbená houpačka "hnízdo". V místě se nachází také menší oplocené hřiště pro mladší děti. </Popis>
+			<DetskePrvky>multifunkční sestava se skluzavkou (věk 6+) • kolotoč (věk 3+) • houpačka závěsná "hnízdo" (věk 1+) • balanční prvek (věk 3+) •  skluzavka "beruška" (věk 1+) • pružinové houpadlo (věk 1+) •  kreslící tabule •  pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová štěpka, umělá tráva</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>54</Bod>
+			<Lat>49.2248414</Lat>
+			<Lng>17.6723782</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>houpačka závěsná • pružinové houpadlo • váhová houpačka • dřevěný domeček • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt na sportovišti, dopadové plochy z lité pryže a trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>55</Bod>
+			<Lat>49.2245051</Lat>
+			<Lng>17.6735821</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/ nohejbal</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>57</Bod>
+			<Lat>49.2246724</Lat>
+			<Lng>17.6744214</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/ nohejbal</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>60</Bod>
+			<Lat>49.2250721</Lat>
+			<Lng>17.6776345</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>sloupky na volejbal/ nohejbal</SportPrvky>
+			<Povrch>asfalt (sportoviště), trávník (dětské hřiště)</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce</Stav>
+		</row>
+		<row>
+			<Bod>62</Bod>
+			<Lat>49.2195015</Lat>
+			<Lng>17.6967968</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm. Součástí dětského hriště v přírodním stylu je multifunkční dřevěná lanová sestava a oblíbená houpačka "hnízdo".</Popis>
+			<DetskePrvky>multifunkční herní sestava • svahová skluzavka • pružinové houpadlo • houpačka závěsná "hnízdo" • točidlo • pískoviště </DetskePrvky>
+			<SportPrvky>lajnování malá kopaná, volejbal/nohejbal a streetbal; herní branky na malou kopanou, sloupky na volejbal/nohejbal, koš na streetball POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení po domluvě na místě </SportPrvky>
+			<Povrch>asfalt (sportoviště), kačírek a trávník (dětské hřiště)</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>63</Bod>
+			<Lat>49.2179893</Lat>
+			<Lng>17.6953482</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>64</Bod>
+			<Lat>49.2208246</Lat>
+			<Lng>17.6896995</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, sloupky na volejbal/nohejbal</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, hřiště je ve správě s.k. Sportyzlin.cz a je veřejně přístupné</Stav>
+		</row>
+		<row>
+			<Bod>65</Bod>
+			<Lat>49.2221079</Lat>
+			<Lng>17.6860755</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště s oploceným asfaltovým sportovištěm. Součástí dětského hriště je dřevěný herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • čtyřmístné pružinové houpadlo • houpačka závěsná "pneu" • pískoviště </DetskePrvky>
+			<SportPrvky>hokejové herní branky, herní branky na malou kopanou, koš na streetball</SportPrvky>
+			<Povrch>asfalt (sportoviště), pryžová dlažba (dětské hřiště)</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>66</Bod>
+			<Lat>49.222887</Lat>
+			<Lng>17.6844179</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • houpačka váhová • houpačka závěsná "hnízdo mini" • kreslící tabule</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>70</Bod>
+			<Lat>49.2214238</Lat>
+			<Lng>17.6776827</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště jehož dominantou je dřevěný herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • houpačka závěsná "pneu" • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>71</Bod>
+			<Lat>49.2197997</Lat>
+			<Lng>17.684321</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, hřiště je ve správě volejbalového klubu GMG</Stav>
+		</row>
+		<row>
+			<Bod>73</Bod>
+			<Lat>49.2209456</Lat>
+			<Lng>17.7032228</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>77</Bod>
+			<Lat>49.2210683</Lat>
+			<Lng>17.7008198</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>78</Bod>
+			<Lat>49.2216432</Lat>
+			<Lng>17.7004337</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>váhová houpačka • pružinové houpadlo • kolotoč</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>85</Bod>
+			<Lat>49.2224749</Lat>
+			<Lng>17.7009054</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný domek se skluzavkou • pružinové houpadlo • houpačka závěsná • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>86</Bod>
+			<Lat>49.2228359</Lat>
+			<Lng>17.7002814</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lanová sestava • dvoumístné pružinové houpadlo • dvojité pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>87</Bod>
+			<Lat>49.2230305</Lat>
+			<Lng>17.6992013</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • pružinové houpadlo • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>88</Bod>
+			<Lat>49.2231119</Lat>
+			<Lng>17.6984903</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>89</Bod>
+			<Lat>49.2234588</Lat>
+			<Lng>17.6974797</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v blízkosti Jaroslavického potoka na Obecinách. Dominantou hřiště je dřevěný herní domek se skluzavkou pod korunami vzrostlých stromů. </Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • houpačka váhová  • houpačka závěsná "pneu" • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>90</Bod>
+			<Lat>49.2230944</Lat>
+			<Lng>17.6967013</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>92</Bod>
+			<Lat>49.2240115</Lat>
+			<Lng>17.6961211</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>houpačka závěsná</DetskePrvky>
+			<SportPrvky>lajnování malá kopaná a volejbal/nohejbal; hokejové herní branky, sloupky na volejbal/nohejbal, ping - pong stůl POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>93</Bod>
+			<Lat>49.2243106</Lat>
+			<Lng>17.6949632</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • houpačka váhová  • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>95</Bod>
+			<Lat>49.2243416</Lat>
+			<Lng>17.6940078</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • kolotoč </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná instalace nových herních prvků</Stav>
+		</row>
+		<row>
+			<Bod>96</Bod>
+			<Lat>49.2241643</Lat>
+			<Lng>17.6934262</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>houpačka váhová  • houpačka závěsná "pneu" • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>100</Bod>
+			<Lat>49.2235674</Lat>
+			<Lng>17.6905771</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště s oploceným travnatým sportovištěm. </Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou • pružinové houpadlo • houpačka váhová  • houpačka závěsná "hnízdo mini" • kolotoč </DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční, údržba hřiště ve stávajícím rozsahu</Stav>
+		</row>
+		<row>
+			<Bod>101</Bod>
+			<Lat>49.2295764</Lat>
+			<Lng>17.6923989</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v lokalitě baťových rodinných domků nedaleko krajské nemocnice. Výhledově plánovaná kompletní rekonstrukce hřiště. </Popis>
+			<DetskePrvky>pružinové houpadlo • houpačka váhová  • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově nutná komplexní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>102</Bod>
+			<Lat>49.2308395</Lat>
+			<Lng>17.6911311</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>103</Bod>
+			<Lat>49.2311603</Lat>
+			<Lng>17.6894842</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • čtyřmístné pružinové houpadlo • houpačka váhová  • houpačka závěsná "pneu" • pískoviště</DetskePrvky>
+			<SportPrvky>lajnování malá kopaná, volejbal/nohejbal a tenis; vestavěné herní branky na malou kopanou, sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení po domluvě na místě</SportPrvky>
+			<Povrch>asfalt (sportoviště), kačírek a trávník (dětské hřiště)</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>105</Bod>
+			<Lat>49.2316265</Lat>
+			<Lng>17.6878787</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • houpačka váhová  • houpačka závěsná "pneu" • trojhrazda • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>106</Bod>
+			<Lat>49.2311505</Lat>
+			<Lng>17.6850855</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý herní domek (věk 2+) • herní panel (věk 1+) • pružinové houpadlo (3-6 let) • pískoviště</DetskePrvky>
+			<SportPrvky>1x fitness prvek (od 14 let), vestavěné herní branky</SportPrvky>
+			<Povrch>asfalt (sportoviště), trávník (dětské hřiště)</Povrch>
+			<Oploceni>ano (sportovišě)</Oploceni>
+			<Stav>funkční (rekonstrukce oplocení v roce 2013), probíhají pravidelné kontroly a údržba hřiště, výhledově nutná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>107</Bod>
+			<Lat>49.2295345</Lat>
+			<Lng>17.6843333</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • houpačka závěsná "pneu" • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>umělý trávník, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>109</Bod>
+			<Lat>49.2313539</Lat>
+			<Lng>17.6813228</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční sestava se skluzavkou • pružinové houpadlo • houpačka závěsná "pneu" • pískoviště</DetskePrvky>
+			<SportPrvky>hokejové branky, basketbalový koš</SportPrvky>
+			<Povrch>kačírek, trávník (dětské hřiště), asfalt (sportoviště)</Povrch>
+			<Oploceni>ano (dětské hřiště), ne (sportoviště)</Oploceni>
+			<Stav>funkční (rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>110</Bod>
+			<Lat>49.2310008</Lat>
+			<Lng>17.6796042</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm u bytových domů. Dominantou hřiště je dřevěný herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • 2x pružinové houpadlo • houpačka závěsná "pneu" • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník (dětské hřiště), asfalt (sportoviště)</Povrch>
+			<Oploceni>ano (dětské hřiště), ne (sportoviště)</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 20010-11), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>113</Bod>
+			<Lat>49.2318054</Lat>
+			<Lng>17.6744338</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>115</Bod>
+			<Lat>49.2323556</Lat>
+			<Lng>17.678297</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>hokejové herní branky, sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt (sportoviště), trávník (dětské hřiště)</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště,  výhledově vhodná rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>116</Bod>
+			<Lat>49.2323539</Lat>
+			<Lng>17.679129</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • 2x pružinové houpadlo • váhová houpačka • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano, částečně</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>119</Bod>
+			<Lat>49.2326299</Lat>
+			<Lng>17.6804645</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • pružinové houpadlo • 2x váhová houpačka • kolotoč • trojhrazda • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště,  výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>121</Bod>
+			<Lat>49.23299592</Lat>
+			<Lng>17.68253378</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • 2x pružinové houpadlo • houpačka závěsná "pneu" • houpačka váhová • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>122</Bod>
+			<Lat>49.2333836</Lat>
+			<Lng>17.6843533</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Multifunkční sportoviště doplněné o dětský koutek pro nejmenší v blízkosti Fryštáckého potoka. V místě jsou dvě multifunkční asfaltové plochy a jedno sportoviště s povrchem z lité pryže. Nově jsou na hřišti také workoutové prvky.</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>hokejové herní branky, sloupky na volejbal/nohejbal, koše na basketball a streetball POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>litá pryž, asfalt (sportoviště), trávník (dětské hřiště i workout)</Povrch>
+			<Oploceni>ano, částečně (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>125</Bod>
+			<Lat>49.2328752</Lat>
+			<Lng>17.6776718</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • pískoviště </DetskePrvky>
+			<SportPrvky>sloupky na volejbal/nohejbal POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>trávník (dětské hřiště), asfalt (sportoviště)</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční (kompletní rekonstrukce v roce 2009), probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>126</Bod>
+			<Lat>49.2329384</Lat>
+			<Lng>17.6765617</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>trávník (dětské hřiště), štěrk (sportoviště)</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště,  výhledově vhodná rekonstrukce hřiště a zrušení sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>127</Bod>
+			<Lat>49.2436862</Lat>
+			<Lng>17.6728704</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>kovová prolézačka • pružinové houpadlo • 2x houpačka váhová • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově nutná výměna herních prvků</Stav>
+		</row>
+		<row>
+			<Bod>130</Bod>
+			<Lat>49.2437587</Lat>
+			<Lng>17.6707152</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky na malou kopanou, florbalové herní branky</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>131</Bod>
+			<Lat>49.2434027</Lat>
+			<Lng>17.6700854</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště mezi bytovými domy. Dominantou hřiště je multifunkční dřevěná herní sestava se skluzavkou a závěsnou houpačkou.</Popis>
+			<DetskePrvky>multifunkční dřevěná herní sestava se skluzavkou a závěsnou houpačkou •  pružinové houpadlo • houpačka váhová • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>137</Bod>
+			<Lat>49.2440656</Lat>
+			<Lng>17.667158</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené sportoviště s povrchem z umělé trávy vhodné pro míčové hry.</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky na malou kopanou, koše na basketball a streetball</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>138</Bod>
+			<Lat>49.2441474</Lat>
+			<Lng>17.6667605</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště vybavené kvalitními kovovými prvky pro menší i větší děti a s atraktivním barevným pryžovým povrchem. </Popis>
+			<DetskePrvky>multifunkční lanová sestava s lezeckou stěnou •  lanová pyramida • houpačka závěsná "hnízdo" • balanční prvek • trojmístné pružinové houpadlo • malá skluzavka • kolotoč • kreslící tabule • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>144</Bod>
+			<Lat>49.2425331</Lat>
+			<Lng>17.6676059</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Jedno z komplexu tří hřišť mezi bytovými domy na ulici Moravská na Jižních Svazích určené výhledově pro starší děti. </Popis>
+			<DetskePrvky>2x kolotoč • 2x houpačka váhová</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kamenivo</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>145</Bod>
+			<Lat>49.2422588</Lat>
+			<Lng>17.667619</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené asfaltové sportoviště mezi bytovými domy.</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové branky</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu</Stav>
+		</row>
+		<row>
+			<Bod>146</Bod>
+			<Lat>49.2419726</Lat>
+			<Lng>17.6676191</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Další z komplexu tří hřišť mezi bytovými domy na ulici Moravská na Jižních Svazích určené pro mladší děti. </Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou •  pružinové houpadlo •  kolotoč • houpačka závěsná "pneu" • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>153</Bod>
+			<Lat>49.2394111</Lat>
+			<Lng>17.6662878</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště• tabule</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>156</Bod>
+			<Lat>49.2383508</Lat>
+			<Lng>17.6655946</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Jedno z komplexu tří hřišť mezi bytovými domy určené výhledově pro mladší děti. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>v současnosti bez náplně, výhledově vhodná rekonstrukce hřiště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>158</Bod>
+			<Lat>49.2381176</Lat>
+			<Lng>17.6654431</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>v současnosti bez náplně, výhledově vhodná rekonstrukce hřiště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>159</Bod>
+			<Lat>49.2379125</Lat>
+			<Lng>17.6653957</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Hřiště mezi bytovými domy určené pro starší děti. Hřiště je doplněné o fitness prvky pro dospělé. </Popis>
+			<DetskePrvky>kovová multifunkční herní sestava (věk 6+) </DetskePrvky>
+			<SportPrvky>3x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>pryž</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>162</Bod>
+			<Lat>49.2375834</Lat>
+			<Lng>17.6652191</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/nohejbal; POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu a oplocení sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>170</Bod>
+			<Lat>49.2395672</Lat>
+			<Lng>17.6641706</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>172</Bod>
+			<Lat>49.2398072</Lat>
+			<Lng>17.663199</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště mezi určené pro všechny věkové kategorie. Hřiště je doplněné o fitness prvky pro dospělé a mládež. </Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou •  lanová sestava • 3x pružinové houpadlo •  kolotoč • 2x točidlo • houpačka závěsná • pískoviště </DetskePrvky>
+			<SportPrvky>2x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2010/11), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>174</Bod>
+			<Lat>49.2369275</Lat>
+			<Lng>17.6653095</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>175</Bod>
+			<Lat>49.2365649</Lat>
+			<Lng>17.6641548</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  2x pružinové houpadlo • houpačka závěsná "pneu" • houpačka váhová • bagřík • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2011/12), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>180</Bod>
+			<Lat>49.2375899</Lat>
+			<Lng>17.6598907</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště vybavené kvalitními dřevěnými prvky spíše pro menší děti a s atraktivním barevným pryžovým povrchem. </Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou •  pružinové houpadlo •  kolotoč • točidlo • houpačka závěsná • dvojpískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžové dlaždice, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>185</Bod>
+			<Lat>49.2353782</Lat>
+			<Lng>17.6566822</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  pružinové čtyřmístné houpadlo • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>188</Bod>
+			<Lat>49.2363644</Lat>
+			<Lng>17.659159</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lanová herní sestava se skluzavkou •  pružinové dvoumístné houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>190</Bod>
+			<Lat>49.2367044</Lat>
+			<Lng>17.6619261</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • houpačka váhová • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>191</Bod>
+			<Lat>49.2370819</Lat>
+			<Lng>17.6626669</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/nohejbal; POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>194</Bod>
+			<Lat>49.2358578</Lat>
+			<Lng>17.6593973</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou • houpačka váhová • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>195</Bod>
+			<Lat>49.2342711</Lat>
+			<Lng>17.6574393</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště i jeho oplocení </Stav>
+		</row>
+		<row>
+			<Bod>196</Bod>
+			<Lat>49.2340143</Lat>
+			<Lng>17.656774</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené dětské hřiště v zeleni vzrostlých stromů.  Dominantou hřiště je multifunkční dřevěný herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou a lanovou sítí •  houpačka závěsná "pneu" • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>197</Bod>
+			<Lat>49.2342837</Lat>
+			<Lng>17.6568545</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Nově rekonstruované a oplocené sportoviště s umělou trávou vhodnou pro míčové hry. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, sloupky na volejbal/nohejbal, koše na basketball a streetball POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení na OMZ MMZ</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>202</Bod>
+			<Lat>49.2295013</Lat>
+			<Lng>17.6560111</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodné doplnění hřiště o nový herní prvek </Stav>
+		</row>
+		<row>
+			<Bod>203</Bod>
+			<Lat>49.2327652</Lat>
+			<Lng>17.6566756</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou • 2x pružinové houpadlo •  kolotoč • houpačka váhová • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžové dlaždice, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>207</Bod>
+			<Lat>49.2321132</Lat>
+			<Lng>17.6585105</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2012/13), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>208</Bod>
+			<Lat>49.2324855</Lat>
+			<Lng>17.659059</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>kovová průlezka • skluzavka • pružinové houpadlo •  houpačka závěsná • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově nutná výměna herních prvků</Stav>
+		</row>
+		<row>
+			<Bod>210</Bod>
+			<Lat>49.2317707</Lat>
+			<Lng>17.6594617</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, dlažba</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba </Stav>
+		</row>
+		<row>
+			<Bod>211</Bod>
+			<Lat>49.2311111</Lat>
+			<Lng>17.66</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, dlažba</Povrch>
+			<Oploceni>ne </Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba </Stav>
+		</row>
+		<row>
+			<Bod>212</Bod>
+			<Lat>49.231799</Lat>
+			<Lng>17.6605167</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště vybavené herními prvky pro menší i větší děti. </Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou • herní domek • čtyřmístné pružinové houpadlo • houpačka váhová • houpačka závěsná • hrazda • dvojpískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžové dlaždice, dlažba, kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2009/10), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>214</Bod>
+			<Lat>49.2326465</Lat>
+			<Lng>17.6629038</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště • houpačka závěsná • herní sestava • houpadlo pružinové</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, kačírek</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, v roce 2017 plánovaná kompletní rekonstrukce hřiště (PD k nahlédnutí na Odboru městské zeleně)</Stav>
+		</row>
+		<row>
+			<Bod>216</Bod>
+			<Lat>49.2324207</Lat>
+			<Lng>17.6638547</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na kopanou</SportPrvky>
+			<Povrch>asfalt </Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu a oplocení sportoviště (již v přípravě)</Stav>
+		</row>
+		<row>
+			<Bod>218</Bod>
+			<Lat>49.2319112</Lat>
+			<Lng>17.6624119</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, dlažba</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce pískoviště v roce 2016), probíhají pravidelné kontroly a údržba </Stav>
+		</row>
+		<row>
+			<Bod>219</Bod>
+			<Lat>49.2338909</Lat>
+			<Lng>17.6604201</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>-</DetskePrvky>
+			<SportPrvky>-</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>zpracovává se projekt a plánuje se rekonstrukce</Stav>
+		</row>
+		<row>
+			<Bod>223</Bod>
+			<Lat>49.2340969</Lat>
+			<Lng>17.6617373</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní a lanová sestava se skluzavkou • 2x pružinové houpadlo • houpačka závěsná • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2007/8), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>227</Bod>
+			<Lat>49.2345816</Lat>
+			<Lng>17.6629283</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  lanová herní sestava • houpačka závěsná "pneu" • pružinové houpadlo • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>umělý trávník, dlažba</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>234</Bod>
+			<Lat>49.2340737</Lat>
+			<Lng>17.66772</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>Dětské hřiště vybavené herními prvky pro menší i větší děti. </Popis>
+			<DetskePrvky>herní prvek se skluzavkou • pružinová houpadla •   hra s pískem • houpací síť • pískoviště • balanční prvek</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, beton, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, v roce 2017 kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>235</Bod>
+			<Lat>49.2347953</Lat>
+			<Lng>17.670181</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>Dětské hřiště vybavené herními prvky pro menší i větší děti. </Popis>
+			<DetskePrvky>kolotoč • balanční sestava • lanová průlezka • pružinové sedátko • točidlo • pružinová beruška</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, v roce 2017 kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>237</Bod>
+			<Lat>49.2351197</Lat>
+			<Lng>17.6718052</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní sestava (věk 6+) • sestava se skluzavkou (věk 2+) • točidlo (6-12 let) • houpačka závěsná "hnízdo" (3-14 let) • dvoupískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>238</Bod>
+			<Lat>49.2383592</Lat>
+			<Lng>17.6734799</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>2x kovová průlezka • hrazda • pružinové houpadlo • váhová houpačka • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště určeno ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>239</Bod>
+			<Lat>49.2382895</Lat>
+			<Lng>17.6751379</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý herní domek • váhová houpačka • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ping - pong stůl</SportPrvky>
+			<Povrch>pryžové dlaždice (sportoviště), dlažba, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodné doplnění hřiště o nové herní prvky</Stav>
+		</row>
+		<row>
+			<Bod>240</Bod>
+			<Lat>49.239093</Lat>
+			<Lng>17.6732595</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>2x kovová průlezka • hrazda • pružinové houpadlo • závěsná houpačka • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>písek</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště určeno ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>242</Bod>
+			<Lat>49.2392623</Lat>
+			<Lng>17.6741035</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>svahová skluzavka • pružinové houpadlo • kreslící tabule • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dlažba</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodné doplnění hřiště o nové herní prvky</Stav>
+		</row>
+		<row>
+			<Bod>243</Bod>
+			<Lat>49.2388914</Lat>
+			<Lng>17.6764213</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • čtyřmístné pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2011),  probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>244</Bod>
+			<Lat>49.238504</Lat>
+			<Lng>17.6721178</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>245</Bod>
+			<Lat>49.2384661</Lat>
+			<Lng>17.671217</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>-</DetskePrvky>
+			<SportPrvky>pinpongový stůl</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>246</Bod>
+			<Lat>49.2377625</Lat>
+			<Lng>17.6719039</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • 2x váhová houpačka • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>247</Bod>
+			<Lat>49.2367805</Lat>
+			<Lng>17.6718876</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště • kovová prolézačka </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>248</Bod>
+			<Lat>49.2369084</Lat>
+			<Lng>17.6690701</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště na okraji Centrálního parku v blízkosti 2. segmentového domu s originálním herním prvkem "slonoklouzačka". Prvek skluzavky vychází z kresby žákyně Barbbory Pinosové vytvořené v rámci veřejné akce "Navrhněte si svůj park", jeho podobu následně dopracovala studentka Institutu reklamní tvorby a markteingových komunikací UTB ve Zlíně Ludmila Temelová. Skluzavka byla zkonstruována v roce 2002, kompletní rekonstrukce prvku proběhla v roce 2014. </Popis>
+			<DetskePrvky>skluzavka • kreslící tabule s počítadly</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, písková plocha</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>249</Bod>
+			<Lat>49.2389862</Lat>
+			<Lng>17.6750187</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>250</Bod>
+			<Lat>49.2365314</Lat>
+			<Lng>17.6720141</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, ping - pong stůl</SportPrvky>
+			<Povrch>dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>251</Bod>
+			<Lat>49.237493</Lat>
+			<Lng>17.6720108</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, ping - pong stůl</SportPrvky>
+			<Povrch>dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>252</Bod>
+			<Lat>49.2052049</Lat>
+			<Lng>17.5817233</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm ve vnitrobloku bytových domů. Výhledově plánovaná kompletní rekonstrukce hřiště. </Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" </DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>asfalt, kačírek, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště (dokumentace k nahlédnutí na OMZ)</Stav>
+		</row>
+		<row>
+			<Bod>253</Bod>
+			<Lat>49.204923</Lat>
+			<Lng>17.5815333</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>houpačka váhová • kolotoč • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledověvýhledově hřiště ke zrušení - herní prvky pro nejmenší děti budou výhledově součástí hřiště č. 252</Stav>
+		</row>
+		<row>
+			<Bod>256</Bod>
+			<Lat>49.206261</Lat>
+			<Lng>17.5815883</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • dvoumístné pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>258</Bod>
+			<Lat>49.2067294</Lat>
+			<Lng>17.5840312</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou (3-14 let) • skateová houpačka (3-14 let) • balanční prvek (3-14 let) • dvoumístné pružinové houpadlo (2-6 let) • sedátka s hrazdou (3-14 let) • rotační balanční prvek (3-14 let) • zalomená hrazda (3-14 let)</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>259</Bod>
+			<Lat>49.2065891</Lat>
+			<Lng>17.584372</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, florbalové herní branky </SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce povrchu v roce 2010, oplocení v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>260</Bod>
+			<Lat>49.2056951</Lat>
+			<Lng>17.5850369</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště mezi určené pro všechny věkové kategorie. Hřiště je doplněné o fitness prvky pro dospělé a mládež.  Dominantou dětského hřiště je oblíbená lanová pyramida.</Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou (5-12 let) • lanová pyramida (věk 6+) • závěsná houpačka (2-5 let)  • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>3x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>pryžové dlaždice, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>262</Bod>
+			<Lat>49.2045708</Lat>
+			<Lng>17.5855044</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>263</Bod>
+			<Lat>49.2042016</Lat>
+			<Lng>17.5848081</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>hnízdo se skluzavkou (3-7 let) • houpačka závěsná "hnízdo" (4-13 let) • dvoumístné pružinové houpadlo (věk 2+) • trampolína • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>267</Bod>
+			<Lat>49.2044658</Lat>
+			<Lng>17.5821221</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>fotbalové herní branky</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>272</Bod>
+			<Lat>49.2035545</Lat>
+			<Lng>17.5824314</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční,  probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>276</Bod>
+			<Lat>49.2032101</Lat>
+			<Lng>17.5838033</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou (3-14 let)  • pružinové houpadlo (3-6 let)  • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>umělý trávník, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>281</Bod>
+			<Lat>49.2027971</Lat>
+			<Lng>17.585116</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>282</Bod>
+			<Lat>49.2021889</Lat>
+			<Lng>17.5850537</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>283</Bod>
+			<Lat>49.2019011</Lat>
+			<Lng>17.5873836</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • pružinové houpadlo • váhová houpačka</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>287</Bod>
+			<Lat>49.2063251</Lat>
+			<Lng>17.5874396</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště mezi bytovými domy. Výhledově plánovaná kompletní rekonstrukce hřiště. </Popis>
+			<DetskePrvky>váhová houpačka • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>290</Bod>
+			<Lat>49.2070048</Lat>
+			<Lng>17.5884228</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  kolotoč • pružinové houpadlo • váhová houpačka • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>291</Bod>
+			<Lat>49.2073435</Lat>
+			<Lng>17.5895618</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>294</Bod>
+			<Lat>49.2071068</Lat>
+			<Lng>17.5910183</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v parčíku u MŠ. Výhledově plánovaná kompletní rekonstrukce hřiště. </Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • pružinové houpadlo • váhová houpačka • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště </Stav>
+		</row>
+		<row>
+			<Bod>297</Bod>
+			<Lat>49.2023951</Lat>
+			<Lng>17.5966756</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>298</Bod>
+			<Lat>49.2066263</Lat>
+			<Lng>17.6050246</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>kovová herní sestava se skluzavkou • houpačka závěsná • balanční prvek • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>2x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>pryžové dlaždice, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>300</Bod>
+			<Lat>49.2237808</Lat>
+			<Lng>17.6648762</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště pro všechny věkové kategorie v nově rekonstruovaném parku Komenského v centru města. Dominantou dětského hřiště je oblíbená lanová pyramida a velká houpačka. Součástí hřiště jsou dále atraktivní prolézačky z aktátového dřeva, pružinová houpadla a kolotoče. V blízkosti hřiště se nachází WC. </Popis>
+			<DetskePrvky>lanová pyramida • 2x houpačka závěsná • prolézačky z akátového dřeva • 2x kolotoč • 4x otáčedlo • 3x pružinové houpadlo • zvonkohra</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, písek</Povrch>
+			<Oploceni>částečně (část hřiště pro nejmenší)</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>304</Bod>
+			<Lat>49.2192412</Lat>
+			<Lng>17.6627089</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt, kačírek, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční (kompletní rekonstrukce dětského hřitě v roce 2015), probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště </Stav>
+		</row>
+		<row>
+			<Bod>305</Bod>
+			<Lat>49.2165446</Lat>
+			<Lng>17.6563759</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2011), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>306</Bod>
+			<Lat>49.2163754</Lat>
+			<Lng>17.6537616</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lanová herní sestava </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>308</Bod>
+			<Lat>49.2164175</Lat>
+			<Lng>17.648414</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • čtyřmístné pružinové houpadlo </DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, florbalové herní branky, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>umělý trávník, kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>311</Bod>
+			<Lat>49.2182958</Lat>
+			<Lng>17.6557053</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm určené pro všechny věkové kategorie. Hřiště je doplněné o fitness prvky pro dospělé a mládež.  Dominantou dětského hřiště je herní sestava se skluzavkou a oblíbená houpačka "hnízdo".</Popis>
+			<DetskePrvky>herní sestava se skluzavkou (3-12 let) • houpačka závěsná "hnízdo" (5-12 let) • čtyřmístné pružinové houpadlo (3-12 let) • pískoviště</DetskePrvky>
+			<SportPrvky>2x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>litá pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>312</Bod>
+			<Lat>49.2191976</Lat>
+			<Lng>17.6538698</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo</DetskePrvky>
+			<SportPrvky>malé herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště i oplocení</Stav>
+		</row>
+		<row>
+			<Bod>313</Bod>
+			<Lat>49.2197273</Lat>
+			<Lng>17.6521597</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • čtyřmístné pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2011, oplocení 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>314</Bod>
+			<Lat>49.2202003</Lat>
+			<Lng>17.6472908</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště a instalace nových prvků</Stav>
+		</row>
+		<row>
+			<Bod>315</Bod>
+			<Lat>49.2173424</Lat>
+			<Lng>17.6420229</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm a workoutovou sestavou. Atraktivitou dětského hřiště je velká lanová sestava a sedací prvky v podobě míčů.</Popis>
+			<DetskePrvky>lanová sestava •  houpačka závěsná "hnízdo" • lezecký balvan • trojmístné pružinové houpadlo• workoutová sestava</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení na OMZ MMZ</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2016-7), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>316</Bod>
+			<Lat>49.2151225</Lat>
+			<Lng>17.6367462</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce oplocení 2011, rekonstrukce povrchu v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>318</Bod>
+			<Lat>49.2159817</Lat>
+			<Lng>17.6320527</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště na sídlišti Podhoří. Dominantou hřiště je herní sestava se skluzavkou. V místě se nachází také menší oplocené hřiště pro mladší děti.  </Popis>
+			<DetskePrvky>herní sestava se skluzavkou • houpačka závěsná • houpačka váhová • pružinové houpadlo • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu hřiště</Stav>
+		</row>
+		<row>
+			<Bod>321</Bod>
+			<Lat>49.2166711</Lat>
+			<Lng>17.6323042</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Nově rekonstruované a oplocené sportoviště s umělým pryžovým povrchem vhodným pro míčové hry. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, ping - pong stůl</SportPrvky>
+			<Povrch>litá pryž, dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>323</Bod>
+			<Lat>49.2172003</Lat>
+			<Lng>17.6340888</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště (již v přípravě)</Stav>
+		</row>
+		<row>
+			<Bod>325</Bod>
+			<Lat>49.2179977</Lat>
+			<Lng>17.6385437</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  kolotoč • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční,probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu hřiště a instalace nových prvků</Stav>
+		</row>
+		<row>
+			<Bod>326</Bod>
+			<Lat>49.2357718</Lat>
+			<Lng>17.6472669</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v místní části Zlín - Mladcová v blízkosti fotbalového hřiště. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • houpačka váhová •  pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>337</Bod>
+			<Lat>49.2401394</Lat>
+			<Lng>17.6535657</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná kompletní rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>338</Bod>
+			<Lat>49.240247</Lat>
+			<Lng>17.654094</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Multifunkční sportoviště s dětským hřištěm na okraji bytové zástavby. Nově rekonstruované a oplocené sportoviště s umělým pryžovým povrchem je vhodné především pro míčové hry. </Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení po domluvě na místě</SportPrvky>
+			<Povrch>litá pryž, trávník, kačírek</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce sportoviště v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>341</Bod>
+			<Lat>49.2416494</Lat>
+			<Lng>17.6864875</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce sportoviště v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>343</Bod>
+			<Lat>49.2410838</Lat>
+			<Lng>17.6874101</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště určeno ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>345</Bod>
+			<Lat>49.2358767</Lat>
+			<Lng>17.6871852</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>3x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>trávník, štěpka</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (instalace fitness prvků v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>346</Bod>
+			<Lat>49.2655615</Lat>
+			<Lng>17.6921766</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>ke zrušení</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka •  3x houpačka závěsná • houpačka váhová • dvoumístné pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>fotbalové herní branky</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště určeno ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>348</Bod>
+			<Lat>49.2336017</Lat>
+			<Lng>17.58959</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště na návsi v místní části Zlín - Lhotka. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • 2x pružinové houpadlo • kolotoč • kreslící tabule • lanová dráha • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>349</Bod>
+			<Lat>49.2293737</Lat>
+			<Lng>17.5983723</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště v klidné lokalitě pod lesem v místní části Lhotka - Chlum. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>350</Bod>
+			<Lat>49.2307315</Lat>
+			<Lng>17.6076894</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • houpačka závěsná • čtyřmístné pružinové houpadlo • kolotoč • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>351</Bod>
+			<Lat>49.2382323</Lat>
+			<Lng>17.6696121</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>352</Bod>
+			<Lat>49.2219482</Lat>
+			<Lng>17.7126232</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou (3-12 let) •  houpačka závěsná "hnízdo" (3-12 let) • pružinové houpadlo (3-6 let) • otáčedlo (6-12 let) • trampolína • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>353</Bod>
+			<Lat>49.2223185</Lat>
+			<Lng>17.7118233</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené sportoviště s umělou trávou vhodnou pro míčové hry. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>florbalové herní branky, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>355</Bod>
+			<Lat>49.2327582</Lat>
+			<Lng>17.6866245</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  houpačka závěsná "pneu" • houpačka váhová • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>vestavěné herní branky, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2013), probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>359</Bod>
+			<Lat>49.2002279</Lat>
+			<Lng>17.6670966</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou •  pružinové houpadlo • pískoviště </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>360</Bod>
+			<Lat>49.1997874</Lat>
+			<Lng>17.6673653</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, tenisová stěna, sloupky na tenis/volejbal/nohejbal, POZN.: síť na tenis/volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení po domluvě na místě</SportPrvky>
+			<Povrch>umělý trávník, asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>361</Bod>
+			<Lat>49.2013919</Lat>
+			<Lng>17.6667347</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka •  houpačka závěsná "pneu" • kolotoč • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce hřiště</Stav>
+		</row>
+		<row>
+			<Bod>362</Bod>
+			<Lat>49.2418689</Lat>
+			<Lng>17.6851994</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené sportoviště s asfaltovým povrchem v klidné lokalitě pod lesem. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>365</Bod>
+			<Lat>49.2200464</Lat>
+			<Lng>17.6779908</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou • pružinové houpadlo • kolotoč • pískoviště </DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>369</Bod>
+			<Lat>49.2164631</Lat>
+			<Lng>17.633268</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou •  houpačka závěsná "hnízdo" • houpačka váhová • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (rekonstrukce hřiště v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>371</Bod>
+			<Lat>49.2215324</Lat>
+			<Lng>17.6951519</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka •  kolotoč • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>372</Bod>
+			<Lat>49.2337613</Lat>
+			<Lng>17.6819665</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště • mini domek se skluzavkou </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, rekonstukce r. 2017 vč. oplocení</Stav>
+		</row>
+		<row>
+			<Bod>373</Bod>
+			<Lat>49.2220012</Lat>
+			<Lng>17.7035274</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště v klidné lokalitě na okraji bytové zástavby určené především teenagerům a dospělým. Hřiště je vybaveno jedinečnými parkourovými prvky. Parkour je metoda tréninku, která umožňuje překonávat překážky v městském i přírodním terénu. Obnáší důsledný disciplinovaný trénink s důrazem na fyzickou sílu, výdrž, rovnováhu, kreativitu, plynulost, kontrolu, přesnost a prostorovou orientaci. Na hřišti lze praktikovat i fitness dovednosti.  OD r. 2017 nově postaveno Rákosníčkovo hřiště</Popis>
+			<DetskePrvky>otočná houpačka, prolézačka (2-5 let), houpačka hnízdo (2-5 let ), pružinová kolébačka (2-5 let), pískoviště, houpačka (2-12 let), kolotoč (2-12 let), domeček (2-12 let)</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, parkourová sestava (věk 10+/ u menších prvků věk 6+)</SportPrvky>
+			<Povrch>trávník, pryžová štěpka, kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (instalace parkourové sestavy v roce 2014), Rákosníčkovo hřiště r. 2017, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>377</Bod>
+			<Lat>49.2360916</Lat>
+			<Lng>17.6653987</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště vybavené herními prvky spíše pro menší děti. </Popis>
+			<DetskePrvky>malý herní domek se skluzavkou •  3x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, pryžová dlažba, kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce hřiště v roce 2006), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>378</Bod>
+			<Lat>49.2350521</Lat>
+			<Lng>17.6615576</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>pryžová dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově hřiště ke zrušení </Stav>
+		</row>
+		<row>
+			<Bod>382</Bod>
+			<Lat>49.2195473</Lat>
+			<Lng>17.7108508</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>383</Bod>
+			<Lat>49.2602848</Lat>
+			<Lng>17.7019511</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou •  houpačka váhová • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce hřiště v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>384</Bod>
+			<Lat>49.263308</Lat>
+			<Lng>17.7169547</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště v blízkosti ZŠ v místní části Zlín - Štípa. Atraktivitou dětského hřiště je především lanová dráha, síťová věž a stále více oblíbené zemní trampolíny. Hřiště je doplněné o fitness prvky pro dospělé a mládež. </Popis>
+			<DetskePrvky>otočná houpačka (5-12 let) • síťová věž (věk 4+) • lanová dráha (věk 4+) • dřevěný herní domek se skluzavkou (3-14 let) •  houpačka závěsná "pneu" (3-14 let) • kolotoč (3-14 let)  • 2x trampolína • trojhrazda (věk 5+) </DetskePrvky>
+			<SportPrvky>3x fitness prvek double (od 14 let)</SportPrvky>
+			<Povrch>litá pryž, pryžová dlažba, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce hřiště v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>385</Bod>
+			<Lat>49.2808055</Lat>
+			<Lng>17.756085</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště s dětským hřištěm v místní části Zlín - Velíková. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • houpačka váhová • kolotoč • pružinové houpadlo</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>386</Bod>
+			<Lat>49.2862456</Lat>
+			<Lng>17.7582539</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>387</Bod>
+			<Lat>49.2875339</Lat>
+			<Lng>17.7600471</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěná herní sestava se skluzavkou • houpačka závěsná "pneu" • čtyřmístné pružinové houpadlo</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce dětského hřiště v roce 2009, rekonstrukce povrchu sportoviště v roce 2014), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>388</Bod>
+			<Lat>49.2270497</Lat>
+			<Lng>17.772479</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště s dětským hřištěm v místní části Zlín - Klečůvka. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • houpačka váhová • čtyřmístné pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, pryžová dlažba, asfalt, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce dětského hřiště v roce 2015), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>389</Bod>
+			<Lat>49.2224668</Lat>
+			<Lng>17.748457</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>houpačka váhová • dvoumístné pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>392</Bod>
+			<Lat>49.2046947</Lat>
+			<Lng>17.6841395</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené asfaltové sportoviště v místní části Zlín - Kudlov. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>hokejové herní branky, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní, příp. k zapůjčení po domluvě na místě</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>393</Bod>
+			<Lat>49.204719</Lat>
+			<Lng>17.6847722</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště určené pro všechny věkové kategorie v sousedství ovocného sadu v místní části Zlín - Kudlov. Hřiště je doplněné o fitness prvky pro dospělé a mládež.  Atraktivitou dětského hřiště je oblíbená lanová pyramida a trampolína.</Popis>
+			<DetskePrvky>lanová pyramida (věk 6+) • dřevěný herní domek se skluzavkou (3-14 let) •  houpačka závěsná "hnízdo" (3-14 let) • kolotoč s hnízdem (věk 3+) • trampolína • balanční prvek (věk 4+) • svahová skluzavka (2-8 let) • pružinové houpadlo (3-6 let)</DetskePrvky>
+			<SportPrvky>3x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>pryžové dlaždice, kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce dětského hřiště v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>394</Bod>
+			<Lat>49.2094398</Lat>
+			<Lng>17.7046072</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště se sportovištěm v místní části Zlín - Jaroslavice. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka váhová • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>plně funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>397</Bod>
+			<Lat>49.1992276</Lat>
+			<Lng>17.6562758</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>405</Bod>
+			<Lat>49.2454088</Lat>
+			<Lng>17.6651595</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>2x lanový herní prvek</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, ve správě Junáku - svazu skautů a skautek ČR</Stav>
+		</row>
+		<row>
+			<Bod>407</Bod>
+			<Lat>49.2404031</Lat>
+			<Lng>17.6753154</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek • kolotoč </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>písek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>408</Bod>
+			<Lat>49.2401095</Lat>
+			<Lng>17.6751707</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>3x pružinové houpadlo • 2x pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>písek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>409</Bod>
+			<Lat>49.2401378</Lat>
+			<Lng>17.6741066</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>2x pružinové houpadlo</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>písek</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>412</Bod>
+			<Lat>49.1732518</Lat>
+			<Lng>17.6262051</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště v místní části Zlín - Salaš. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>413</Bod>
+			<Lat>49.2092099</Lat>
+			<Lng>17.6149</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • houpačka váhová • čtyřmístné pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano (sportoviště)</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce dětského hřiště v roce 2010), probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce trávníku</Stav>
+		</row>
+		<row>
+			<Bod>414</Bod>
+			<Lat>49.239117</Lat>
+			<Lng>17.6539433</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>skluzavka • houpačka závěsná "pneu" • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná instalace nových prvků</Stav>
+		</row>
+		<row>
+			<Bod>416</Bod>
+			<Lat>49.2393721</Lat>
+			<Lng>17.6696716</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky> basketbalový koš</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>417</Bod>
+			<Lat>49.2390786</Lat>
+			<Lng>17.6698629</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>418</Bod>
+			<Lat>49.2390716</Lat>
+			<Lng>17.6693879</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou, basketbalový koš</SportPrvky>
+			<Povrch>mlat</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>419</Bod>
+			<Lat>49.239069</Lat>
+			<Lng>17.6688869</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Nové vícegenerační sportoní hřiště v Centrálním parku na Jižních Svazích. Hřiště je doplněné o fitness prvky a také o čtyři workoutové sestavy pro dospělé a mládež k protahovacím a posilovacím cvikům a zvyšování kondice. Atraktivitou hřiště jsou stále více oblíbené zemní trampolíny.  </Popis>
+			<DetskePrvky>lanová sestava (3-14 let) • trampolína • šeptanda</DetskePrvky>
+			<SportPrvky>3x fitness prvek (od 14 let), 4x workoutová sestava (od 15 let)</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (kompletní rekonstrukce dětského hřiště v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>420</Bod>
+			<Lat>49.2396886</Lat>
+			<Lng>17.6690171</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené sportoviště v Centrálním parku na Jižních Svazích s umělou trávou vhodnou zvláště pro míčové hry. </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>herní branky na malou kopanou</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště, výhledově vhodná rekonstrukce povrchu sportoviště</Stav>
+		</row>
+		<row>
+			<Bod>421</Bod>
+			<Lat>49.2398249</Lat>
+			<Lng>17.6693317</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště s tenisovou stěnou v Centrálním parku na Jižních Svazích.  </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>tenisová stěna</SportPrvky>
+			<Povrch>asfalt</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>423</Bod>
+			<Lat>49.2413062</Lat>
+			<Lng>17.6744429</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště s herními prvky pro menší děti v Centrálním parku na Jižních Svazích.  </Popis>
+			<DetskePrvky>malý dřevěný herní domek se skluzavkou • houpačka váhová • 3x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>424</Bod>
+			<Lat>49.2412941</Lat>
+			<Lng>17.673809</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště s herními prvky pro větší děti v Centrálním parku na Jižních Svazích.  </Popis>
+			<DetskePrvky>herní sestava se třemi skluzavkami </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>425</Bod>
+			<Lat>49.2403947</Lat>
+			<Lng>17.6738756</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník, dlažba</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>426</Bod>
+			<Lat>49.2400785</Lat>
+			<Lng>17.6726666</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>dlažba</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>427</Bod>
+			<Lat>49.2406129</Lat>
+			<Lng>17.6719959</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oblíbené dětské hřiště v Centrálním parku na Jižních Svazích.Dominantou dětského hřiště je především lanová pyramida. Hřiště má atraktivní barevný pryžový povrch. </Popis>
+			<DetskePrvky>lanová pyramida • skateová dvouhoupačka • kovová prolézačka • kolotoč • 2x otáčedlo • boulderová stěna</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (rekonstrukce povrchu dětského hřiště v roce 2011), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>428</Bod>
+			<Lat>49.2194205</Lat>
+			<Lng>17.6140175</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště na návsi v místní části Zlín - Louky. Dominantou dětského hřiště je multifunkční herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • houpačka váhová • lanová sestava • kolotoč • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>429</Bod>
+			<Lat>49.2214603</Lat>
+			<Lng>17.6800206</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>mlat</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>430</Bod>
+			<Lat>49.2281364</Lat>
+			<Lng>17.6677355</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>432</Bod>
+			<Lat>49.2696666</Lat>
+			<Lng>17.7320027</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční dřevěná herní sestava skluzavkou • pružinové houpadlo</DetskePrvky>
+			<SportPrvky>2x fitness prvek (od 14 let)</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>433</Bod>
+			<Lat>49.2727268</Lat>
+			<Lng>17.7366143</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční dřevěná herní sestava se skluzavkou • houpačka závěsná "hnízdo" • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>434</Bod>
+			<Lat>49.2409354</Lat>
+			<Lng>17.6705147</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní domek se skluzavkou • 3x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>435</Bod>
+			<Lat>49.2416986</Lat>
+			<Lng>17.6702144</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Dětské hřiště na Jižních Svazích. Dominantou hřiště je multifunkční herní sestava se skluzavkou a houpačkou.  </Popis>
+			<DetskePrvky>herní domek se skluzavkou • houpačka závěsná • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008, realizace pryžového povrchu v roce 2011), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>436</Bod>
+			<Lat>49.2426094</Lat>
+			<Lng>17.6705077</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní sestava se skluzavkou a závěsnou houpačkou • lanová pyramida • horolezecká věž </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>437</Bod>
+			<Lat>49.2387451</Lat>
+			<Lng>17.6721389</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>točidlo • 2x pružinové houpadlo • bagřík • pískové síto • dřevěné skulptury</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, písek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>438</Bod>
+			<Lat>49.2359175</Lat>
+			<Lng>17.6716498</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní domek se skluzavkou • domeček přístřešek • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>439</Bod>
+			<Lat>49.2357917</Lat>
+			<Lng>17.6709996</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>multifunkční herní sestava • balanční talíř na pružinách</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>440</Bod>
+			<Lat>49.2357853</Lat>
+			<Lng>17.6707374</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>441</Bod>
+			<Lat>49.2356075</Lat>
+			<Lng>17.6704812</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>442</Bod>
+			<Lat>49.2016014</Lat>
+			<Lng>17.6533917</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště s dětským hřištěm v místní části Zlín - U Majáku. Oplocené sportoviště s umělou trávou je vhodné zvláště pro míčové hry.  Dominantou dětského hřiště je dřevěný herní domek se skluzavkou a oblíbená houpačka "hnízdo".  </Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná • houpačka závěsná "hnízdo" • houpačka váhová • pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>vestavěné herní branky, 2x florbalové herní branky, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>umělý trávník, kačírek, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2008), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>443</Bod>
+			<Lat>49.2417115</Lat>
+			<Lng>17.6745217</Lng>
+			<TypHriste>S</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Oplocené sportoviště s umělým trávníkem vhodným zvláště pro míčové hry v Centrálním parku na Jižních Svazích.  </Popis>
+			<DetskePrvky>ne</DetskePrvky>
+			<SportPrvky>sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>umělý trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2009), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>444</Bod>
+			<Lat>49.2228129</Lat>
+			<Lng>17.6400974</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>Sportoviště s dětským hřištěm v místní části Zlín - Prštné. Oplocené sportoviště s umělou trávou je vhodné zvláště pro míčové hry.  Dominantou dětského hřiště je dřevěný herní domek se skluzavkou.</Popis>
+			<DetskePrvky>dřevěný herní domek se skluzavkou • houpačka závěsná "pneu" • houpačka váhová • 2x pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>ping - pong stůl, vestavěné herní branky, basketbalový koš, sloupky na volejbal/nohejbal, POZN.: síť na volejbal/nohejbal nutno mít vlastní</SportPrvky>
+			<Povrch>umělý trávník, pryžové dlaždice</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2010), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>446</Bod>
+			<Lat>49.2268302</Lat>
+			<Lng>17.6796126</Lng>
+			<TypHriste>DHS</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>čtyřmístné pružinové houpadlo • pískoviště</DetskePrvky>
+			<SportPrvky>hokejové herní branky</SportPrvky>
+			<Povrch>asfalt, trávník</Povrch>
+			<Oploceni>částečně</Oploceni>
+			<Stav>funkční, probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>447</Bod>
+			<Lat>49.260662</Lat>
+			<Lng>17.6989233</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • 2x pružinové houpadlo • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>pryžová dlažba, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2012), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>449</Bod>
+			<Lat>49.1739446</Lat>
+			<Lng>17.6241276</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lanová sestava • váhová houpačka • dvoumístné pružinové houpadlo</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>trávník</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>450</Bod>
+			<Lat>49.211477</Lat>
+			<Lng>17.7018929</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • dvoumístné pružinové houpadlo • kolotoč</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2013), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>451</Bod>
+			<Lat>49.2417651</Lat>
+			<Lng>17.6719326</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>herní sestava se skluzavkou • lanová a lezecká herní sestava • houpačka závěsná • houpačka závěsná "hnízdo" • kolotoč • pružinové houpadlo </DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>kačírek</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2014 a 2017), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>452</Bod>
+			<Lat>49.2245281</Lat>
+			<Lng>17.7160581</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>lokální</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>lezecká herní sestava (3-14 let) • svahová skluzavka (3-14 let) • houpačka závěsná "hnízdo" (2-6 let) • pružinové houpadlo (2-6 let) •  šeptanda • kreslící tabule • pískoviště</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>litá pryž, trávník</Povrch>
+			<Oploceni>ano</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2016), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+		<row>
+			<Bod>455</Bod>
+			<Lat>49.209256</Lat>
+			<Lng>17.605277</Lng>
+			<TypHriste>DH</TypHriste>
+			<Kategorie>významné</Kategorie>
+			<Popis>-</Popis>
+			<DetskePrvky>balanční prvek - krokodýl, houpací síť, prohazovadla se sedáky, pružinové houpadlo 2x, svahová skluzavka, balanční prvek jezevčík, houpačka hnízdo, visutá lávka, fitness prvek 3x, hmizí domeček</DetskePrvky>
+			<SportPrvky>ne</SportPrvky>
+			<Povrch>tráva, zatravňovací rohože</Povrch>
+			<Oploceni>ne</Oploceni>
+			<Stav>plně funkční (realizace hřiště v roce 2017), probíhají pravidelné kontroly a údržba hřiště</Stav>
+		</row>
+	</rows>
+</Root>
