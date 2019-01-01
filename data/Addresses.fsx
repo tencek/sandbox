@@ -1,4 +1,4 @@
-﻿#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+﻿#r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
 
 open System.Web
 open System.Text
