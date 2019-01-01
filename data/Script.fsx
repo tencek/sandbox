@@ -1,12 +1,11 @@
 ﻿// Learn more about F# at http://fsharp.org. See the 'F# Tutorial' project
 // for more guidance on F# programming.
 //#I @"bin\Release"
-#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
+#r @"System.Xml.Linq"
 
 open FSharp.Data
-open System.Text.RegularExpressions
 open System
-open System.Globalization
 
 let trace label x =
     printfn "%s: %A" label x
@@ -41,3 +40,19 @@ let x =
     Calendar.Load("https://ical-to-json.herokuapp.com/convert.json?url=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fical%2Fzlin6.cz_822fssjj8hlr2khh6tt6v5d1qc%2540group.calendar.google.com%2Fpublic%2Fbasic.ics").Vcalendar.[0].Vevent
     |> Seq.choose (fun event -> event.Rrule)
     |> Seq.iter (fun rule -> printfn "%A" rule)
+
+/////////////////////////////
+
+[<Literal>]
+let HristeCelek = __SOURCE_DIRECTORY__ + @"\Assets\hriste_celek.xml"
+type Hriste = XmlProvider<HristeCelek, Encoding="UTF-8">
+let hriste = Hriste.Load(@"https://www.zlin.eu/data/dataupload/omz/hriste/google_maps/xml/hriste_celek.xml")
+
+hriste.Rows
+|> Seq.map (fun hriste -> hriste.TypHriste)
+|> Seq.distinct
+|> Seq.sort
+|> Seq.iter (printfn "%s")
+
+hriste.Rows
+|> Seq.countBy (fun hriste -> hriste.TypHriste)
