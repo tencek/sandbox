@@ -33,7 +33,7 @@ let makeUrl (Stanice stanice) (date:DateTime) =
 type InPocasiNow = HtmlProvider<"https://www.in-pocasi.cz/meteostanice/stanice.php?stanice=zlin_centrum", Encoding="utf-8">
 
 InPocasiNow().Tables.Table1.Rows.[0]
-|> (fun row -> (row.``Äas``, row.Teplota))
+|> (fun row -> (row.Čas, row.Teplota))
 |> (fun (time, temp) -> printfn "Teplota v %s byla %s." (time.ToString()) temp)
 
 type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
@@ -115,7 +115,7 @@ let newDates =
     |> Seq.skip 2
     |> Seq.map (fun row -> parseCzechDate(row.Datum))
     |> Seq.rev
-    |> Seq.take 2
+    |> Seq.take 4
     |> Seq.rev
 
 let tempData =
