@@ -5,7 +5,7 @@
 
 open FSharp.Data
 
-type Coordinates = { Lat:float; Lng:float }
+type Coordinates = { Lat:float ; Lng:float }
 
 type Vehicle = 
     {
@@ -21,15 +21,16 @@ type Vehicle =
 
 type Vehicles = JsonProvider<"http://www.dszo.cz/online/tabs2.php", Encoding="utf-8">
 
+type Snapshot = { TimeStamp:System.DateTime ; Vehicles:seq<Vehicle> }
+
 let (|Regex|_|) pattern input =
     let m = System.Text.RegularExpressions.Regex.Match(input, pattern)
     if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
     else None
 
-
-let loadVehicles () =
+let createSnapShot () =
     let loadCoordinates () = 
-        let (timestamp, coordinates) = 
+        let (timeStamp, coordinates) = 
             Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
             |> Seq.fold (fun (timestamp, coords) line -> 
                 match line.Trim() with
@@ -45,14 +46,14 @@ let loadVehicles () =
                 | _ -> 
                     (timestamp, coords)
             ) (None, List.empty)
-        match timestamp with
-        | Some timestamp -> 
-            (timestamp, Map.ofList coordinates)
+        match timeStamp with
+        | Some timeStamp -> 
+            (timeStamp, Map.ofList coordinates)
         | None -> 
             printfn "Timestamp not loaded! Using current time..."
             (System.DateTime.Now, Map.ofList coordinates)
 
-    let (timestamp, coordinates) = loadCoordinates ()
+    let (timeStamp, coordinates) = loadCoordinates ()
     let vehicles = 
         Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
         |> Seq.map (fun item -> 
@@ -75,36 +76,46 @@ let loadVehicles () =
         )
         |> Seq.choose id
         |> Seq.sortBy (fun vehicle -> vehicle.Number)
-    (timestamp, vehicles)
+    { TimeStamp=timeStamp ; Vehicles=vehicles }
 
-let vehicles = 
-    loadVehicles ()
-    |> snd
-    |> Seq.map (fun vehicle -> (vehicle.Number, vehicle))
-    |> Map.ofSeq
+//let vehicles = 
+//    loadVehicles ()
+//    |> snd
+//    |> Seq.map (fun vehicle -> (vehicle.Number, vehicle))
+//    |> Map.ofSeq
 
-let oldVehicles = 
-    vehicles
-    |> Map.filter (fun number vehicle -> [170 ; 346 ; 350] |> List.contains number)
+//let oldVehicles = 
+//    vehicles
+//    |> Map.filter (fun number vehicle -> [170 ; 346 ; 350] |> List.contains number)
 
-printfn "vse: %A" vehicles
-printfn "stare: %A" oldVehicles
+//printfn "vse: %A" vehicles
+//printfn "stare: %A" oldVehicles
 
-let outFilePath = @"C:\temp\vehicles.cvs"
-if not <| System.IO.File.Exists(outFilePath) then
-    let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "Date" "Time" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude"
-    System.IO.File.AppendAllLines (outFilePath, Seq.singleton line) 
+let saveSnapshot outFilePath snapshot = 
+    if not <| System.IO.File.Exists(outFilePath) then
+        let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "Date" "Time" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude"
+        System.IO.File.AppendAllLines (outFilePath, Seq.singleton line) 
+
+    let linesOut = 
+        snapshot.Vehicles
+        |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" snapshot.TimeStamp.DayOfWeek (snapshot.TimeStamp.ToShortDateString()) (snapshot.TimeStamp.ToLongTimeString()) v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
+    System.IO.File.AppendAllLines(outFilePath, linesOut)
+
+let saveSnapshot' = saveSnapshot @"C:\temp\vehicles.cvs"
+
+// load 1st, print to file
+let snapshot = createSnapShot ()
+saveSnapshot' snapshot
 
 Seq.initInfinite ( fun _x -> ())
-|> Seq.fold (fun previous _elm -> 
-    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(55000.0))
-    let (timestamp, vehicles) = loadVehicles ()
-    let current = Set.ofSeq vehicles
-    let changes = 
-        (current - previous)
-        |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" timestamp.DayOfWeek timestamp.Date timestamp.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
-    System.IO.File.AppendAllLines(outFilePath, changes)
-    if not <| Seq.isEmpty changes then
-        printfn "%A: %d changes!" <| timestamp <| Seq.length changes
-    //changes |> Seq.iter (printfn "%s")
-    current) ( loadVehicles () |> snd |> Set.ofSeq)
+|> Seq.fold (fun lastTimeStamp _elm -> 
+    try
+        System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
+        let snapshot = createSnapShot ()
+        if snapshot.TimeStamp <> lastTimeStamp then
+            saveSnapshot' snapshot
+        snapshot.TimeStamp
+    with 
+        exn -> 
+            printfn "Some error occured: %A" exn
+            lastTimeStamp) ( snapshot.TimeStamp )
