@@ -5,7 +5,7 @@
 
 open FSharp.Data
 
-type Position = { Lat:float; Lng:float }
+type Coordinates = { Lat:float; Lng:float }
 
 type Vehicle = 
     {
@@ -16,10 +16,8 @@ type Vehicle =
         Direction : string
         Shift : string
         Driver : int
-        Position : Position option
+        Coordinates : Coordinates
     }
-
-type DataItem = Vehicle of Vehicle | RawData of string []
 
 type Vehicles = JsonProvider<"http://www.dszo.cz/online/tabs2.php", Encoding="utf-8">
 
@@ -28,22 +26,22 @@ let (|Regex|_|) pattern input =
     if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
     else None
 
-let loadPositions () = 
-    Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
-    |> Seq.map (fun line -> 
-        match line.Trim() with
-        | Regex @"window\.epoint([0-9]+)=new google\.maps\.LatLng\((.+),(.+)\);" [vehicleNum ; lat ; lng ] -> Some (int vehicleNum, {Lat=float lat ; Lng = float lng})
-        | _ -> None
-    )
-    |> Seq.choose id
-    |> Map.ofSeq
 
 let loadVehicles () =
-    let positions = loadPositions ()
+    let coordinates = 
+        Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
+        |> Seq.map (fun line -> 
+            match line.Trim() with
+            | Regex @"window\.epoint([0-9]+)=new google\.maps\.LatLng\((.+),(.+)\);" [vehicleNum ; lat ; lng ] -> Some (int vehicleNum, {Lat=float lat ; Lng = float lng})
+            | _ -> None
+        )
+        |> Seq.choose id
+        |> Map.ofSeq
+
     Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
     |> Seq.map (fun item -> 
         try
-            Vehicle {
+            {
                 Number = int item.Strings.[0]
                 LineNumber = int item.Strings.[1]
                 Delay = System.TimeSpan.Parse("00:"+item.Strings.[2])
@@ -51,17 +49,15 @@ let loadVehicles () =
                 Direction = item.Strings.[4]
                 Shift = item.Strings.[5]
                 Driver = int item.Strings.[6]
-                Position = None
-            }
+                Coordinates = coordinates.Item (int item.Strings.[0])
+            } |> Some
         with
-            _exn -> RawData item.Strings
+            exn -> 
+                printfn "Data error: %A" exn
+                printfn "Item not parsed: %A" item
+                None
     )
-    |> Seq.map (fun item -> 
-        match item with
-        | Vehicle vehicle ->  vehicle
-        | RawData rawData -> failwithf "XXX: %A" rawData.[0]
-    )
-    |> Seq.map (fun vehicle -> { vehicle with Position = positions.Item vehicle.Number |> Some })
+    |> Seq.choose id
     |> Seq.sortBy (fun vehicle -> vehicle.Number)
 
 let vehicles = 
@@ -80,7 +76,7 @@ Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun previous _elm -> 
     System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(10000.0))
     let now = System.DateTime.Now
-    let current = loadVehicles () |> Set.ofSeq
+    let current =  loadVehicles () |> Set.ofSeq
     (current - previous)
-    |> Seq.iter (fun v -> printfn "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" now.DayOfWeek now.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Position)
-    current) (loadVehicles () |> Set.ofSeq)
+    |> Seq.iter (fun v -> printfn "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" now.DayOfWeek now.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
+    current) ( loadVehicles () |> Set.ofSeq)
