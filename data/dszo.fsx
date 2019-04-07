@@ -28,7 +28,7 @@ let (|Regex|_|) pattern input =
     if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
     else None
 
-let positions = 
+let loadPositions () = 
     Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
     |> Seq.map (fun line -> 
         match line.Trim() with
@@ -38,7 +38,8 @@ let positions =
     |> Seq.choose id
     |> Map.ofSeq
 
-let vehicles = 
+let loadVehicles () =
+    let positions = loadPositions ()
     Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
     |> Seq.map (fun item -> 
         try
@@ -60,10 +61,13 @@ let vehicles =
         | Vehicle vehicle ->  vehicle
         | RawData rawData -> failwithf "XXX: %A" rawData.[0]
     )
+    |> Seq.map (fun vehicle -> { vehicle with Position = positions.Item vehicle.Number |> Some })
     |> Seq.sortBy (fun vehicle -> vehicle.Number)
+
+let vehicles = 
+    loadVehicles ()
     |> Seq.map (fun vehicle -> (vehicle.Number, vehicle))
     |> Map.ofSeq
-    |> Map.map (fun number vehicle -> { vehicle with Position = positions.Item number |> Some } )
 
 let oldVehicles = 
     vehicles
@@ -72,6 +76,12 @@ let oldVehicles =
 printfn "vse: %A" vehicles
 printfn "stare: %A" oldVehicles
 
-/// load http://www.dszo.cz/komunikace/?page=zastavky
-// Search for function zastavky(stav, mapa)
-/// grep regexp: zast([0-9])+ = new google\.maps\.LatLng\([0-9]+\.[0-9]+,[0-9]+\.[0-9]+\);var cstring\1 ='<div class="googleinfow"><strong>[^<]+<br />
+Seq.initInfinite ( fun _x -> ())
+|> Seq.fold (fun previous _elm -> 
+    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(10000.0))
+    let current = loadVehicles () |> Set.ofSeq
+    if current <> previous then
+        printfn "%A: Change!" System.DateTime.Now
+        current
+    else
+        previous ) (loadVehicles () |> Set.ofSeq)
