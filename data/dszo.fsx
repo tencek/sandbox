@@ -28,40 +28,58 @@ let (|Regex|_|) pattern input =
 
 
 let loadVehicles () =
-    let coordinates = 
-        Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
-        |> Seq.map (fun line -> 
-            match line.Trim() with
-            | Regex @"window\.epoint([0-9]+)=new google\.maps\.LatLng\((.+),(.+)\);" [vehicleNum ; lat ; lng ] -> Some (int vehicleNum, {Lat=float lat ; Lng = float lng})
-            | _ -> None
+    let loadCoordinates () = 
+        let (timestamp, coordinates) = 
+            Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
+            |> Seq.fold (fun (timestamp, coords) line -> 
+                match line.Trim() with
+                | Regex @"window\.epoint([0-9]+)=new google\.maps\.LatLng\((.+),(.+)\);" [vehicleNum ; lat ; lng ] -> 
+                    (timestamp, ((int vehicleNum, {Lat=float lat ; Lng = float lng})::coords))
+                | Regex @"Data aktualizována: ([0-9:\. ]+)&nbsp;" [dateTimeStr] -> 
+                    try
+                        (System.DateTime.Parse(dateTimeStr) |> Some, coords)
+                    with
+                        _exn -> 
+                            printfn "Failed to parse %A as date time!" dateTimeStr
+                            (timestamp, coords)
+                | _ -> 
+                    (timestamp, coords)
+            ) (None, List.empty)
+        match timestamp with
+        | Some timestamp -> 
+            (timestamp, Map.ofList coordinates)
+        | None -> 
+            printfn "Timestamp not loaded! Using current time..."
+            (System.DateTime.Now, Map.ofList coordinates)
+
+    let (timestamp, coordinates) = loadCoordinates ()
+    let vehicles = 
+        Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
+        |> Seq.map (fun item -> 
+            try
+                {
+                    Number = int item.Strings.[0]
+                    LineNumber = int item.Strings.[1]
+                    Delay = System.TimeSpan.Parse("00:"+item.Strings.[2])
+                    Station = item.Strings.[3]
+                    Direction = item.Strings.[4]
+                    Shift = item.Strings.[5]
+                    Driver = int item.Strings.[6]
+                    Coordinates = coordinates.Item (int item.Strings.[0])
+                } |> Some
+            with
+                exn -> 
+                    printfn "Data error: %A" exn
+                    printfn "Item not parsed: %A" item
+                    None
         )
         |> Seq.choose id
-        |> Map.ofSeq
-
-    Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
-    |> Seq.map (fun item -> 
-        try
-            {
-                Number = int item.Strings.[0]
-                LineNumber = int item.Strings.[1]
-                Delay = System.TimeSpan.Parse("00:"+item.Strings.[2])
-                Station = item.Strings.[3]
-                Direction = item.Strings.[4]
-                Shift = item.Strings.[5]
-                Driver = int item.Strings.[6]
-                Coordinates = coordinates.Item (int item.Strings.[0])
-            } |> Some
-        with
-            exn -> 
-                printfn "Data error: %A" exn
-                printfn "Item not parsed: %A" item
-                None
-    )
-    |> Seq.choose id
-    |> Seq.sortBy (fun vehicle -> vehicle.Number)
+        |> Seq.sortBy (fun vehicle -> vehicle.Number)
+    (timestamp, vehicles)
 
 let vehicles = 
     loadVehicles ()
+    |> snd
     |> Seq.map (fun vehicle -> (vehicle.Number, vehicle))
     |> Map.ofSeq
 
@@ -75,8 +93,8 @@ printfn "stare: %A" oldVehicles
 Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun previous _elm -> 
     System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
-    let now = System.DateTime.Now
-    let current = loadVehicles () |> Set.ofSeq
+    let (timestamp, vehicles) = loadVehicles ()
+    let current = Set.ofSeq vehicles
     (current - previous)
-    |> Seq.iter (fun v -> printfn "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" now.DayOfWeek now.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
-    current) ( loadVehicles () |> Set.ofSeq)
+    |> Seq.iter (fun v -> printfn "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" timestamp.DayOfWeek timestamp.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
+    current) ( loadVehicles () |> snd |> Set.ofSeq)
