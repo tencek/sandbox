@@ -74,9 +74,9 @@ printfn "stare: %A" oldVehicles
 
 Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun previous _elm -> 
-    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(10000.0))
+    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
     let now = System.DateTime.Now
-    let current =  loadVehicles () |> Set.ofSeq
+    let current = loadVehicles () |> Set.ofSeq
     (current - previous)
     |> Seq.iter (fun v -> printfn "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" now.DayOfWeek now.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
     current) ( loadVehicles () |> Set.ofSeq)
