@@ -97,12 +97,14 @@ if not <| System.IO.File.Exists(outFilePath) then
 
 Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun previous _elm -> 
-    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
+    System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(55000.0))
     let (timestamp, vehicles) = loadVehicles ()
     let current = Set.ofSeq vehicles
     let changes = 
         (current - previous)
         |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" timestamp.DayOfWeek timestamp.Date timestamp.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
     System.IO.File.AppendAllLines(outFilePath, changes)
-    changes |> Seq.iter (printfn "%s")
+    if not <| Seq.isEmpty changes then
+        printfn "%A: %d changes!" <| timestamp <| Seq.length changes
+    //changes |> Seq.iter (printfn "%s")
     current) ( loadVehicles () |> snd |> Set.ofSeq)
