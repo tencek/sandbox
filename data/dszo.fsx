@@ -92,7 +92,7 @@ printfn "stare: %A" oldVehicles
 
 let outFilePath = @"C:\temp\vehicles.cvs"
 if not <| System.IO.File.Exists(outFilePath) then
-    let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "DateTime" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude"
+    let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "Date" "Time" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude"
     System.IO.File.AppendAllLines (outFilePath, Seq.singleton line) 
 
 Seq.initInfinite ( fun _x -> ())
@@ -102,7 +102,7 @@ Seq.initInfinite ( fun _x -> ())
     let current = Set.ofSeq vehicles
     let changes = 
         (current - previous)
-        |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" timestamp.DayOfWeek timestamp.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
+        |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" timestamp.DayOfWeek timestamp.Date timestamp.TimeOfDay v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
     System.IO.File.AppendAllLines(outFilePath, changes)
     changes |> Seq.iter (printfn "%s")
     current) ( loadVehicles () |> snd |> Set.ofSeq)
