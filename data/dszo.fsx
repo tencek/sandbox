@@ -103,19 +103,16 @@ let saveSnapshot outFilePath snapshot =
 
 let saveSnapshot' = saveSnapshot @"C:\temp\vehicles.cvs"
 
-// load 1st, print to file
-let snapshot = createSnapShot ()
-saveSnapshot' snapshot
-
 Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun lastTimeStamp _elm -> 
     try
-        System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
         let snapshot = createSnapShot ()
         if snapshot.TimeStamp <> lastTimeStamp then
             saveSnapshot' snapshot
+        System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(30000.0))
         snapshot.TimeStamp
     with 
         exn -> 
-            printfn "Some error occured: %A" exn
-            lastTimeStamp) ( snapshot.TimeStamp )
+            printfn "%A: Some error occured: %A" System.DateTime.Now exn.Message
+            System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(10000.0))
+            lastTimeStamp) ( System.DateTime.MinValue )
