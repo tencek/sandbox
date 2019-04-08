@@ -60,6 +60,7 @@
     </Content>
     <None Include="Assets\stromypodkontrolou-2016-10-18.json" />
     <Content Include="Assets\hriste_celek.xml" />
+    <Content Include="Assets\dszo-output-sample.csv" />
     <None Include="temperatures.fsx" />
     <None Include="Script.fsx" />
     <None Include="drevnice.fsx" />
