@@ -7,6 +7,8 @@ open FSharp.Data
 
 type Coordinates = { Lat:float ; Lng:float }
 
+type Orientation = Orientation of int
+
 type Vehicle = 
     {
         Number : int
@@ -17,6 +19,7 @@ type Vehicle =
         Shift : string
         Driver : int
         Coordinates : Coordinates
+        Orientation : Orientation
     }
 
 type Vehicles = JsonProvider<"http://www.dszo.cz/online/tabs2.php", Encoding="utf-8">
@@ -30,30 +33,32 @@ let (|Regex|_|) pattern input =
 
 let createSnapShot () =
     let loadCoordinates () = 
-        let (timeStamp, coordinates) = 
+        let (timeStamp, coordinates, orientations) = 
             Http.RequestString("http://www.dszo.cz/online/pokus.php", responseEncodingOverride="utf-8").Split('\n')
-            |> Seq.fold (fun (timestamp, coords) line -> 
+            |> Seq.fold (fun (timestamp, coordinates, orientations) line -> 
                 match line.Trim() with
                 | Regex @"window\.epoint([0-9]+)=new google\.maps\.LatLng\((.+),(.+)\);" [vehicleNum ; lat ; lng ] -> 
-                    (timestamp, ((int vehicleNum, {Lat=float lat ; Lng = float lng})::coords))
+                    (timestamp, ((int vehicleNum, {Lat=float lat ; Lng = float lng})::coordinates), orientations)
+                | Regex @"image([0-9]+) = \{[^\}]*rotation: ([0-9]+),[^\}]}*" [vehicleNum ; orientation] ->
+                    (timestamp, coordinates, (int vehicleNum, Orientation (int orientation))::orientations)
                 | Regex @"Data aktualizována: ([0-9:\. ]+)&nbsp;" [dateTimeStr] -> 
                     try
-                        (System.DateTime.Parse(dateTimeStr) |> Some, coords)
+                        (System.DateTime.Parse(dateTimeStr) |> Some, coordinates, orientations)
                     with
                         _exn -> 
                             printfn "Failed to parse %A as date time!" dateTimeStr
-                            (timestamp, coords)
+                            (timestamp, coordinates, orientations)
                 | _ -> 
-                    (timestamp, coords)
-            ) (None, List.empty)
+                    (timestamp, coordinates, orientations)
+            ) (None, List.empty, List.Empty)
         match timeStamp with
         | Some timeStamp -> 
-            (timeStamp, Map.ofList coordinates)
+            (timeStamp, Map.ofList coordinates, Map.ofList orientations)
         | None -> 
             printfn "Timestamp not loaded! Using current time..."
-            (System.DateTime.Now, Map.ofList coordinates)
+            (System.DateTime.Now, Map.ofList coordinates, Map.ofList orientations)
 
-    let (timeStamp, coordinates) = loadCoordinates ()
+    let (timeStamp, coordinates, orientations) = loadCoordinates ()
     let vehicles = 
         Vehicles.Load("http://www.dszo.cz/online/tabs2.php").Data
         |> Seq.map (fun item -> 
@@ -67,6 +72,7 @@ let createSnapShot () =
                     Shift = item.Strings.[5]
                     Driver = int item.Strings.[6]
                     Coordinates = coordinates.Item (int item.Strings.[0])
+                    Orientation = orientations.Item (int item.Strings.[0])
                 } |> Some
             with
                 exn -> 
@@ -93,15 +99,30 @@ let createSnapShot () =
 
 let saveSnapshot outFilePath snapshot = 
     if not <| System.IO.File.Exists(outFilePath) then
-        let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "Date" "Time" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude"
+        let line = sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" "DayOfWeek" "Date" "Time" "Number" "LineNumber" "Delay" "Station" "Direction" "Shift" "Driver" "Latitude" "Longitude" "Orientation"
         System.IO.File.AppendAllLines (outFilePath, Seq.singleton line) 
 
     let linesOut = 
         snapshot.Vehicles
-        |> Seq.map (fun v -> sprintf "%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A;%A" snapshot.TimeStamp.DayOfWeek (snapshot.TimeStamp.ToShortDateString()) (snapshot.TimeStamp.ToLongTimeString()) v.Number v.LineNumber v.Delay v.Station v.Direction v.Shift v.Driver v.Coordinates.Lat v.Coordinates.Lng)
+        |> Seq.map (fun v -> 
+            let (Orientation orientation) = v.Orientation
+            sprintf "%A;%s;%s;%d;%d;%A;%A;%A;%A;%d;%f;%f;%d"
+                snapshot.TimeStamp.DayOfWeek 
+                (snapshot.TimeStamp.ToShortDateString()) 
+                (snapshot.TimeStamp.ToLongTimeString()) 
+                v.Number 
+                v.LineNumber 
+                v.Delay 
+                v.Station 
+                v.Direction 
+                v.Shift 
+                v.Driver 
+                v.Coordinates.Lat 
+                v.Coordinates.Lng 
+                orientation)
     System.IO.File.AppendAllLines(outFilePath, linesOut)
 
-let saveSnapshot' = saveSnapshot @"C:\temp\vehicles.cvs"
+let saveSnapshot' = saveSnapshot @"C:\temp\vehicles2.csv"
 
 Seq.initInfinite ( fun _x -> ())
 |> Seq.fold (fun lastTimeStamp _elm -> 
