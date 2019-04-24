@@ -56,3 +56,52 @@ hriste.Rows
 
 hriste.Rows
 |> Seq.countBy (fun hriste -> hriste.TypHriste)
+
+let (|Regex|_|) pattern input =
+    let m = System.Text.RegularExpressions.Regex.Match(input, pattern)
+    if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
+    else None
+
+let page = 
+    Http.RequestString (@"https://www.proglas.cz/program/audioarchiv/?fulltext=Don%20Bosco&cycle=17&date_from=&date_to=&page=1#Content", responseEncodingOverride="utf-8")
+
+let lines = 
+    let page = page.Replace("&nbsp;", " ")
+    page.Split('\n')
+    |> Seq.choose (fun line ->
+        line
+        |> function
+        | Regex """<a href="/program/detail-poradu/\?id=([0-9]+)" class="audioarchive-label" title=".*">.*- *(.*) -[^0-9]*([0-9]+)\..*</a>""" [id ; title ; chapter ] -> Some (title.Trim(), int chapter, sprintf @"https://audioarchiv.proglas.cz/mp3/015/audio_%d.mp3" (int id))
+        | _ -> None)
+    |> Seq.sortBy (fun (_title,chapter,_url) -> chapter)
+    |> Seq.map (fun (title,chapter,url) ->
+        (title,chapter,Http.AsyncRequestStream(url)))
+    |> Seq.iter (fun (title,chapter,response) -> 
+        let response = Async.RunSynchronously response
+        let fileName = sprintf @"C:\temp\Don-Bosco-%02d-%s.mp3" chapter title
+        printfn "%s" fileName
+        let outFileStream = IO.File.Create(fileName)
+        response.ResponseStream.CopyTo(outFileStream))
+
+
+let ListChapters = 
+    async {
+        let! indexPages = 
+            seq {1..4}
+            |> Seq.map (fun i ->
+                sprintf @"https://www.proglas.cz/program/audioarchiv/?fulltext=Don%%20Bosco&cycle=17&date_from=&date_to=&page=%d#Content" i)
+            |> Seq.map (fun url->
+                Http.AsyncRequestString(url, responseEncodingOverride="utf-8"))
+            |> Async.Parallel
+        return 
+            indexPages
+            |> Seq.collect (fun indexPage ->
+                let indexPage = indexPage.Replace("&nbsp;", " ")
+                indexPage.Split('\n')
+                |> Seq.choose (
+                    function
+                    | Regex """<a href="/program/detail-poradu/\?id=([0-9]+)" class="audioarchive-label" title=".*">.*- *(.*) -[^0-9]*([0-9]+)\..*</a>""" [id ; title ; chapter ] -> Some (title.Trim(), int chapter, sprintf @"https://audioarchiv.proglas.cz/mp3/015/audio_%d.mp3" (int id))
+                    | _ -> None))
+        }
+
+ListChapters |> Async.RunSynchronously |> Seq.iter (fun chapter -> printfn "%A" chapter)
