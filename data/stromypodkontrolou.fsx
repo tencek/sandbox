@@ -1,5 +1,6 @@
-﻿#r @"..\packages\FSharp.Data.2.4.2\lib\net45\FSharp.Data.dll"
+﻿#r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
 
+open System
 open System.Web
 open System.Text
 open FSharp.Data
@@ -43,3 +44,8 @@ let eastBorder = (trees |> Seq.maxBy (fun marker -> marker.Position.Lng)).Positi
 let northBorder = (trees |> Seq.maxBy (fun marker -> marker.Position.Lat)).Position.Lat
 let southBorder = (trees |> Seq.minBy (fun marker -> marker.Position.Lat)).Position.Lat
 
+trees
+|> Seq.filter(fun tree -> tree.Caption.Contains("vrba")) 
+|> Seq.iter (fun tree -> 
+    //printfn "ver pos = {lat: %f, lng: %f}" tree.Position.Lat tree.Position.Lng
+    printfn "new google.maps.Marker({ position: {lat: %f, lng: %f}, map: map, title: '%s (Zdroj: stromypodkontrolou.cz)'});" tree.Position.Lat tree.Position.Lng tree.Caption)
