@@ -12,7 +12,7 @@ let _z = y.Next ()
 type ColorEnum = Green=0 | Blue=1 // enum
 let blueEnum = ColorEnum.Blue
 match blueEnum with
-| Blue -> printfn "blue" // warning FS0049
+| ColorEnum.Blue -> printfn "blue" // warning FS0049
 | _ -> printfn "something else"
 
 System.Console.WriteLine("{0}",12345)
@@ -114,7 +114,7 @@ let AddToList (list:SortedList<int,int>) key =
         list.Add(key,1)
 
 let CountListCounts (list:SortedList<int,int>) = 
-    //list |> Seq.fold (fun sum kvp -> sum + kvp.Value) 0
+    list |> Seq.fold (fun sum kvp -> sum + kvp.Value) 0
 
 let GetListValue (list:SortedList<int,int>) pos =
     1
@@ -123,3 +123,21 @@ let list = new SortedList<int,int>()
 [1..10] |> Seq.iter (fun i -> [1..10] |> Seq.iter (fun j -> AddToList list j))
 list.Count
 CountListCounts list
+
+type Node = { Label:string ; Children:seq<Node> } 
+
+let getTree n = 
+    let rec getChildren n =
+        seq { 1 .. (n-1) }
+        |> Seq.map (fun n -> { Label=sprintf "%d" n ; Children = getChildren n })
+    { Label=sprintf "%d" n ; Children = getChildren n}
+
+let printGraph root = 
+    let rec printNode parent node = 
+        printfn "%s [label=%s]" node.Label node.Label
+        printfn "%s->%s" parent.Label node.Label
+        node.Children |> Seq.iter (printNode node)
+    printfn "%s [label=%s]" root.Label root.Label
+    root.Children |> Seq.iter (printNode root)
+
+getTree 5 |> printGraph
