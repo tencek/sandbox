@@ -1,4 +1,4 @@
-module Tests
+module Dobble.Tests
 
 open Dobble
 open Dobble.Tools
