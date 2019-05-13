@@ -41,6 +41,16 @@ let x =
     |> Seq.choose (fun event -> event.Rrule)
     |> Seq.iter (fun rule -> printfn "%A" rule)
 
+
+type WikiProvider = HtmlProvider<"https://en.wikipedia.org/wiki/Hebrew_(Unicode_block)">
+WikiProvider().Tables.Block.Rows.[2]
+
+type TZProvider = HtmlProvider<"https://vote.d21.me/vote/tvorimezlin/results">
+TZProvider().Html.Elements ()
+|> Seq.map (fun elm -> elm.Name ())
+|> Seq.iter (printfn "%A")
+    |> Seq.iter (fun rule -> printfn "%A" rule)
+
 /////////////////////////////
 
 [<Literal>]
