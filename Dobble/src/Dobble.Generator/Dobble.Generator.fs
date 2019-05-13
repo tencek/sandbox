@@ -3,7 +3,7 @@ namespace Dobble
 open Dobble
 open FSharp.Data
 
-type OrigGame = CsvProvider<"resources/dobble-original-game.csv", Separators=";">
+type OrigGame = CsvProvider<"resources/dobble-original-game.csv">
 
 module Generator =
    let GenerateEmptyGame () =
