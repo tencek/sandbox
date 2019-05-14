@@ -1,6 +1,6 @@
 namespace Dobble
 
-type Symbol = Symbol of string
+type Symbol = Name of string
 
 type Card = Symbols of Symbol list
 
