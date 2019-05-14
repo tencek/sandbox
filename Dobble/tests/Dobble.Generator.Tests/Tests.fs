@@ -35,18 +35,26 @@ let ``Original game has 8 symbols per card`` () =
 
 let CheckEveryTwoCardsHaveRightOneSymbolInCommon =
    function
-   | Dobble.Cards cards ->
+   | Cards cards ->
       cards
       |> List.collect (fun card ->
          let thisOne = (List.singleton card)
          List.allPairs thisOne (List.except thisOne cards))
-      |> List.forall (fun (Symbols s1, Symbols s2) ->
-         Set.intersect (Set.ofList s1) (Set.ofList s2)
-         |> (fun intersection -> intersection.Count = 1))
+      |> List.forall (fun (card1, card2) ->
+         GetSymbolsInCommon card1 card2
+         |> List.length
+         |> (=) 1)
 
 [<Fact>]
-let ``Every two cards have right one symbol in common`` () =
+let ``Original - Every two cards have right one symbol in common`` () =
    OriginalGame.Value
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
+
+[<Fact>]
+let ``Generated - Every two cards have right one symbol in common`` () =
+   GenerateGame 6 ["dolphin"]
+   |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
+   |> Assert.True
+
 

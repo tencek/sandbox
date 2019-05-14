@@ -20,3 +20,7 @@ module Generator =
          |> List.ofSeq
          |> Cards
 
+
+   let GenerateGame cardCount symbolNames =
+      List.init cardCount (fun _i -> symbolNames |> List.head |> Symbol |> List.singleton |> Symbols )
+      |> Cards
