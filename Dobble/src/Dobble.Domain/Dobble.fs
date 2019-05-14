@@ -2,33 +2,30 @@ namespace Dobble
 
 type Symbol = Name of string
 
-type Card = Symbols of Symbol list
+type Card = Symbols of Set<Symbol>
 
-type Game = Cards of Card list
+type Game = Cards of Set<Card>
 
 module Tools = 
    let GetCardCount game = 
       let (Cards cards) = game
-      cards.Length
+      cards.Count
 
    let CheckSymbolCountPerCard symbolCount game =
       let (Cards cards) = game
       cards
-      |> List.forall ( 
+      |> Set.forall ( 
          fun (Symbols symbols) ->
-            symbols.Length = symbolCount)
+            symbols.Count = symbolCount)
 
    let GetSymbolsInCommon card1 card2 =
       let (Symbols s1, Symbols s2) = (card1, card2)
-      Set.intersect (Set.ofList s1) (Set.ofList s2)
-      |> List.ofSeq
+      Set.intersect s1 s2
 
    let GetTotalSymbolCount game = 
       let (Cards cards) = game
       cards
-      |> List.collect (fun (Symbols symbols) -> symbols)
-      |> List.distinct
-      |> List.length
-
-
+      |> Seq.map (fun (Symbols symbols) -> symbols)
+      |> Set.unionMany
+      |> Set.count
 

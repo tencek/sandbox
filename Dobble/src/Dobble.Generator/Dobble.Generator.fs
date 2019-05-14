@@ -7,21 +7,23 @@ type OrigGame = CsvProvider<"resources/dobble-original-game.csv">
 
 module Generator =
    let GenerateEmptyGame () =
-        Cards List.empty
+        Cards Set.empty
 
    let OriginalGame =
       lazy 
          OrigGame.GetSample().Rows
          |> Seq.map (fun row -> 
             [ row.Symbol1 ; row.Symbol2 ; row.Symbol3 ; row.Symbol4 ; row.Symbol5 ; row.Symbol6 ; row.Symbol7 ; row.Symbol8 ]
-            |> List.map Name
+            |> Set.ofList
+            |> Set.map Name
             |> Symbols
             )
-         |> List.ofSeq
+         |> Set.ofSeq
          |> Cards
 
 
    let GenerateGame cardCount symbolsPerCard symbolNames =
-      let symbols = List.map Name symbolNames
-      List.init cardCount (fun _i -> symbols |> List.head |> List.singleton |> Symbols )
+      let symbols = Seq.map Name symbolNames
+      Seq.init cardCount (fun _i -> symbols |> Seq.head |> Set.singleton |> Symbols )
+      |> Set.ofSeq
       |> Cards
