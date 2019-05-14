@@ -22,5 +22,5 @@ module Generator =
 
 
    let GenerateGame cardCount symbolNames =
-      List.init cardCount (fun _i -> symbolNames |> List.head |> Symbol |> List.singleton |> Symbols )
+      List.init cardCount (fun _i -> symbolNames |> List.head |> Name |> List.singleton |> Symbols )
       |> Cards
