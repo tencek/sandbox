@@ -33,17 +33,16 @@ let ``Original game has 8 symbols per card`` () =
    |> Assert.True
 
 
-let CheckEveryTwoCardsHaveRightOneSymbolInCommon =
-   function
-   | Cards cards ->
-      cards
-      |> List.collect (fun card ->
-         let thisOne = (List.singleton card)
-         List.allPairs thisOne (List.except thisOne cards))
-      |> List.forall (fun (card1, card2) ->
-         GetSymbolsInCommon card1 card2
-         |> List.length
-         |> (=) 1)
+let CheckEveryTwoCardsHaveRightOneSymbolInCommon game =
+   let (Cards cards) = game
+   cards
+   |> List.collect (fun card ->
+      let thisOne = List.singleton card
+      List.allPairs thisOne (List.except thisOne cards))
+   |> List.forall (fun (card1, card2) ->
+      GetSymbolsInCommon card1 card2
+      |> List.length
+      |> (=) 1)
 
 [<Fact>]
 let ``Original - Every two cards have right one symbol in common`` () =
@@ -53,7 +52,7 @@ let ``Original - Every two cards have right one symbol in common`` () =
 
 [<Fact>]
 let ``Generated - Every two cards have right one symbol in common`` () =
-   GenerateGame 6 ["dolphin"]
+   GenerateGame 6 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
