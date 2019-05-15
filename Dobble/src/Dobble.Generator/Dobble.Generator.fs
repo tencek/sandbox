@@ -24,6 +24,31 @@ module Generator =
 
    let GenerateGame cardCount symbolsPerCard symbolNames =
       let symbols = Seq.map Name symbolNames
-      Seq.init cardCount (fun _i -> symbols |> Seq.head |> Set.singleton |> Symbols )
+      Seq.init cardCount (fun i -> symbols |> Seq.item i |> Set.singleton |> Symbols )
       |> Set.ofSeq
       |> Cards
+
+   let CountSymbols cards =
+      cards
+      |> Seq.fold ( fun counts card -> 
+         let (Symbols symbols) = card
+         let newCounts = Seq.countBy (id) symbols
+         Seq.append counts newCounts
+         |> Seq.groupBy ( fun (symbol, _count) -> symbol)
+         |> Seq.map (fun (symbol, counts) -> 
+            let symbolCount = 
+               counts 
+               |> Seq.sumBy (fun (_symbol, count) -> count)
+            (symbol, symbolCount))
+         ) Seq.empty
+
+
+   let GenerateGameTest cardCount symbolsPerCard symbolNames =
+      let symbols = Seq.map Name symbolNames
+      let addNewCard cards =
+         ()
+      seq { 1 .. cardCount}
+      |> Seq.fold (fun cards _i -> 
+         let symbols = symbols |> Seq.head |> Set.singleton
+         let card = Symbols symbols
+         Set.add card cards) Set.empty 

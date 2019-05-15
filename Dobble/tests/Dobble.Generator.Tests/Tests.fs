@@ -55,3 +55,9 @@ let ``Generated - Every two cards have right one symbol in common`` () =
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
+let game = GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
+
+let (Cards generatedCards) = game
+let symbolCounts = 
+   CountSymbols generatedCards
+
