@@ -16,16 +16,16 @@ moon,dragon,t-rex,G-clef,sunglasses,cheese,Jolly Roger,cat
 apple,cactus,car,heart,Jolly Roger,carrot,flash,pencil
 igloo,sun,web,ghost,crosshair,flower,Jolly Roger,zebra
 key,no-entry,pencil,mark,scissors,t-rex,web,dog
-chicken,crosshair,mark,moon,hammer,padlock,drop,cactus
+chicken,crosshair,mark,moon,hammer,padlock,raindrop,cactus
 igloo,bulb,G-clef,no-entry,chicken,dobble,carrot,ice cube
 snowman,cat,bomb,padlock,apple,tree,dobble,web
 carrot,ladybug,nursing bottle,lips,cat,dummy,scissors,crosshair
 crosshair,snowman,spider,flash,anchor,no-entry,sunglasses,clown
-flower,dolphin,carrot,snowflake,tree,drop,dog,sunglasses
+flower,dolphin,carrot,snowflake,tree,raindrop,dog,sunglasses
 moon,anchor,ice cube,nursing bottle,zebra,dog,heart,bomb
 flower,moon,fire,ladybug,knight,dobble,pencil,clown
 cactus,clown,eye,turtle,nursing bottle,snowflake,G-clef,web
-question mark,eye,cat,yin-yang,anchor,igloo,drop,pencil
+question mark,eye,cat,yin-yang,anchor,igloo,raindrop,pencil
 cat,fire,flash,ice cube,snowflake,key,ghost,hammer
 dragon,bomb,clown,exclamation mark,question mark,mark,carrot,ghost
 scissors,flash,bomb,candle,chicken,eye,flower,cheese
@@ -34,23 +34,23 @@ dobble,mark,Jolly Roger,dummy,clover leaf,anchor,candle,snowflake
 no-entry,heart,question mark,cheese,ladybug,padlock,sun,snowflake
 key,cactus,sunglasses,clover leaf,ladybug,bomb,igloo,clock
 spider,yin-yang,lips,ghost,dog,cactus,cheese,dobble
-t-rex,nursing bottle,clock,sun,drop,exclamation mark,flash,dobble
+t-rex,nursing bottle,clock,sun,raindrop,exclamation mark,flash,dobble
 clock,snowman,snowflake,lips,zebra,chicken,pencil,dragon
 ice cube,yin-yang,clock,padlock,clown,scissors,dolphin,Jolly Roger
 hammer,dragon,nursing bottle,apple,no-entry,flower,clover leaf,yin-yang
 question mark,scissors,hammer,turtle,zebra,car,dobble,sunglasses
 maple leaf,pencil,candle,nursing bottle,ghost,sunglasses,padlock,bulb
 car,exclamation mark,flower,G-clef,lips,padlock,key,anchor
-knight,ghost,drop,heart,snowman,scissors,clover leaf,G-clef
+knight,ghost,raindrop,heart,snowman,scissors,clover leaf,G-clef
 ladybug,G-clef,zebra,tree,mark,yin-yang,maple leaf,flash
-ladybug,ice cube,candle,web,drop,car,spider,dragon
+ladybug,ice cube,candle,web,raindrop,car,spider,dragon
 carrot,t-rex,padlock,zebra,eye,clover leaf,spider,fire
 cheese,clover leaf,ice cube,tree,crosshair,pencil,exclamation mark,turtle
 apple,exclamation mark,spider,scissors,moon,igloo,snowflake,maple leaf
 spider,nursing bottle,key,knight,tree,chicken,question mark,Jolly Roger
 eye,dummy,moon,clock,no-entry,tree,ghost,car
-cheese,dummy,apple,zebra,key,drop,clown,bulb
+cheese,dummy,apple,zebra,key,raindrop,clown,bulb
 cat,maple leaf,sun,dog,chicken,car,clown,clover leaf
 lips,web,question mark,dolphin,moon,flash,bulb,clover leaf
-turtle,bomb,lips,drop,Jolly Roger,maple leaf,fire,no-entry
+turtle,bomb,lips,raindrop,Jolly Roger,maple leaf,fire,no-entry
 web,knight,cheese,hammer,maple leaf,anchor,clock,carrot

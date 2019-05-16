@@ -44,13 +44,13 @@ let ``Original game symbol counts`` () =
    let expectedSymbolCounts = 
       [("anchor", 8); ("apple", 8); ("bomb", 8); ("bulb", 7); ("cactus", 7); ("candle", 8); ("car", 8);
       ("carrot", 8); ("cat", 8); ("cheese", 8); ("chicken", 8); ("clock", 8); ("clover leaf", 8); ("clown", 8);
-      ("crosshair", 8); ("dobble", 8); ("dog", 7); ("dolphin", 8); ("dragon", 8); ("drop", 8); ("dummy", 7); 
+      ("crosshair", 8); ("dobble", 8); ("dog", 7); ("dolphin", 8); ("dragon", 8); ("dummy", 7); 
       ("exclamation mark", 7); ("eye", 7); ("fire", 8); ("flash", 8); ("flower", 7); ("G-clef", 8); 
       ("ghost", 8); ("hammer", 7); ("heart", 8); ("ice cube", 7); ("igloo", 8); ("Jolly Roger", 7); ("key", 8);
       ("knight", 8); ("ladybug", 7); ("lips", 8); ("maple leaf", 7); ("mark", 8); ("moon", 8); ("no-entry", 8);
-      ("nursing bottle", 8); ("padlock", 8); ("pencil", 8); ("question mark", 7); ("scissors", 8); 
-      ("snowflake", 8); ("snowman", 6); ("spider", 8); ("sun", 8); ("sunglasses", 8); ("t-rex", 7); 
-      ("tree", 8); ("turtle", 8); ("web", 8); ("yin-yang", 8); ("zebra", 8)]
+      ("nursing bottle", 8); ("padlock", 8); ("pencil", 8); ("question mark", 7); ("raindrop", 8); 
+      ("scissors", 8); ("snowflake", 8); ("snowman", 6); ("spider", 8); ("sun", 8); ("sunglasses", 8); 
+      ("t-rex", 7); ("tree", 8); ("turtle", 8); ("web", 8); ("yin-yang", 8); ("zebra", 8)]
    
    Assert.Equal<(string * int) list>(expectedSymbolCounts, symbolCounts) 
 
@@ -83,6 +83,4 @@ let game = GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";
 let (Cards generatedCards) = game
 let symbolCounts = 
    CountSymbols generatedCards
-
-["A";"b";"a";"C";"c";"B"] |> List.sortBy (fun str -> str.ToLower ())
 
