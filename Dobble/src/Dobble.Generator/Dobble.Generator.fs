@@ -24,7 +24,7 @@ module Generator =
 
    let GenerateGame cardCount symbolsPerCard symbolNames =
       let symbols = Seq.map Name symbolNames
-      Seq.init cardCount (fun i -> symbols |> Seq.item i |> Set.singleton |> Symbols )
+      Seq.init cardCount (fun i -> symbols |> Seq.skip i |> Seq.take 3 |> Set.ofSeq |> Symbols )
       |> Set.ofSeq
       |> Cards
 
