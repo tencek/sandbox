@@ -9,34 +9,37 @@ open Xunit
 let ``Empty game has no card`` () =
    let emptyGameCardCount = 
       GenerateEmptyGame () 
-      |> GetCardCount
+      |> GameCardCount
    Assert.Equal(0, emptyGameCardCount)
 
 [<Fact>]
 let ``Original game has 55 cards`` () =
    let originalGameCardCount = 
       OriginalGame.Value 
-      |> GetCardCount
+      |> GameCardCount
    Assert.Equal(55, originalGameCardCount)
 
 [<Fact>]
 let ``Original game uses 57 symbols`` () =
    let originalTotalSymbolCount = 
       OriginalGame.Value 
-      |> GetTotalSymbolCount
+      |> GameTotalSymbolCount
    Assert.Equal(57, originalTotalSymbolCount)
 
 [<Fact>]
 let ``Original game has 8 symbols per card`` () =
-   OriginalGame.Value
-   |> CheckSymbolCountPerCard 8
-   |> Assert.True
+   let expectedSymbolCount = 8
+   let (Cards cards) = OriginalGame.Value
+   cards
+   |> Set.iter ( 
+      fun (Symbols symbols) ->
+         Assert.Equal(expectedSymbolCount, symbols.Count))
 
 [<Fact>]
 let ``Original game symbol counts`` () =
    let (Cards generatedCards) = OriginalGame.Value
    let symbolCounts = 
-      CountSymbols generatedCards
+      CardsCountSymbols generatedCards
       |> Seq.map (fun ((Name symbolName), count) -> (symbolName, count))
       |> Seq.sortBy (fun (symbolName, _count) -> symbolName.ToLower ())
       |> List.ofSeq
@@ -61,7 +64,7 @@ let CheckEveryTwoCardsHaveRightOneSymbolInCommon game =
       let thisOne = Seq.singleton card
       Seq.allPairs thisOne (Seq.except thisOne cards))
    |> Seq.forall (fun (card1, card2) ->
-      GetSymbolsInCommon card1 card2
+      CardsSymbolsInCommon card1 card2
      |> Seq.length
      |> (=) 1)
 
@@ -82,5 +85,5 @@ let game = GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";
 
 let (Cards generatedCards) = game
 let symbolCounts = 
-   CountSymbols generatedCards
+   CardsCountSymbols generatedCards
 

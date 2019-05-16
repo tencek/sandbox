@@ -6,29 +6,22 @@ open FSharp.Data
 type OrigGame = CsvProvider<"resources/dobble-original-game.csv">
 
 module Tools = 
-   let GetCardCount game = 
+   let GameCardCount game = 
       let (Cards cards) = game
       cards.Count
 
-   let CheckSymbolCountPerCard symbolCount game =
-      let (Cards cards) = game
-      cards
-      |> Set.forall ( 
-         fun (Symbols symbols) ->
-            symbols.Count = symbolCount)
-
-   let GetSymbolsInCommon card1 card2 =
+   let CardsSymbolsInCommon card1 card2 =
       let (Symbols s1, Symbols s2) = (card1, card2)
       Set.intersect s1 s2
 
-   let GetTotalSymbolCount game = 
+   let GameTotalSymbolCount game = 
       let (Cards cards) = game
       cards
       |> Seq.map (fun (Symbols symbols) -> symbols)
       |> Set.unionMany
       |> Set.count
 
-   let CountSymbols cards =
+   let CardsCountSymbols cards =
       cards
       |> Seq.fold ( fun counts card -> 
          let (Symbols symbols) = card
@@ -58,7 +51,6 @@ module Generator =
          |> Set.ofSeq
          |> Cards
 
-
    let GenerateGame cardCount symbolsPerCard symbolNames =
       let symbols = Seq.map Name symbolNames
       Seq.init cardCount (fun i -> symbols |> Seq.skip i |> Seq.take 3 |> Set.ofSeq |> Symbols )
@@ -66,7 +58,8 @@ module Generator =
       |> Cards
 
    let CreateNewCard cards symbols =
-      
+      //cards
+      //|> Seq.fold
       ()
 
    let GenerateGameTest cardCount sym bolsPerCard symbolNames =
