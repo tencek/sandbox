@@ -81,6 +81,14 @@ let ``Generated - Every two cards have right one symbol in common`` () =
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
+[<Fact>]
+let ``Next card after 123|145|246 is 356`` () =
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"]
+   let cards = [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"]] |> List.map (List.map Name >> Set.ofList >> Symbols) 
+   let newCard = CreateNewCard cards symbols
+   let expectedCard =  ["3";"5";"6"] |> List.map Name  |> Set.ofList |> Symbols
+   Assert.Equal(expectedCard, newCard)
+
 let game = GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
 
 let (Cards generatedCards) = game

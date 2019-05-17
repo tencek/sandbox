@@ -36,6 +36,9 @@ module Tools =
          ) Seq.empty
 
 module Generator =
+
+   open Tools
+
    let GenerateEmptyGame () =
         Cards Set.empty
 
@@ -58,11 +61,25 @@ module Generator =
       |> Cards
 
    let CreateNewCard cards symbols =
-      //cards
-      //|> Seq.fold
-      ()
+      cards
+      |> Seq.fold (fun newCard card -> 
+         match (CardsSymbolsInCommon newCard card).Count with
+         | 0 ->
+            let (Symbols currentCardSymbols) = card
+            let (Symbols newCardSymbols) = newCard
+            let newSymbol = 
+               CardsCountSymbols cards
+               |> Seq.filter (fun (symbol, _count) -> Set.contains symbol currentCardSymbols)
+               |> Seq.sortBy (fun (_symbol, count) -> count)
+               |> Seq.head
+               |> fst
+            newCardSymbols 
+            |> Set.add newSymbol
+            |> Symbols
+         | _ -> 
+            newCard) (Symbols Set.empty)
 
-   let GenerateGameTest cardCount sym bolsPerCard symbolNames =
+   let GenerateGameTest cardCount symbolsPerCard symbolNames =
       let symbols = Seq.map Name symbolNames
       let addNewCard cards =
          ()
