@@ -64,9 +64,20 @@ module Generator =
                match (CardsSymbolsInCommon (Symbols newSymbols) card).Count with
                | 0 ->
                   let (Symbols currentCardSymbols) = card
+                  let doNotUseAnyMore =
+                     cards 
+                     |> Set.filter (fun (Symbols symbols) -> 
+                        symbols
+                        |> Set.intersect newSymbols
+                        |> Set.isEmpty
+                        |> not)
+                     |> Seq.collect ( fun (Symbols symbols) -> symbols)
+                     |> Set.ofSeq
                   let newSymbol = 
                      symbolsCount
-                     |> Seq.filter (fun (symbol, _count) -> Set.contains symbol currentCardSymbols)
+                     |> Seq.filter (fun (symbol, _count) -> 
+                        Set.contains symbol currentCardSymbols 
+                        && not (Set.contains symbol doNotUseAnyMore) )
                      |> Seq.sortBy (fun (_symbol, count) -> count)
                      |> Seq.head
                      |> fst
