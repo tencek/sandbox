@@ -85,9 +85,9 @@ let ``Generated - Every two cards have right one symbol in common`` () =
 [<Fact>]
 let ``1st generated card is 123`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = Set.empty 
-   let expectedCard =  ["1";"2";"3"] |> List.map Name  |> Set.ofList |> Symbols
+   let expectedCard =  set ["1";"2";"3"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -96,12 +96,11 @@ let ``1st generated card is 123`` () =
 [<Fact>]
 let ``2nd generated card is 145`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols) 
-      |> Set.ofList 
-   let expectedCard =  ["1";"4";"5"] |> List.map Name  |> Set.ofList |> Symbols
+      set [ set ["1";"2";"3"]] 
+      |> Set.map (Set.map Name >> Symbols) 
+   let expectedCard =  set ["1";"4";"5"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -110,12 +109,13 @@ let ``2nd generated card is 145`` () =
 [<Fact>]
 let ``3rd generated card is 246`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"];["1";"4";"5"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols) 
-      |> Set.ofList 
-   let expectedCard =  ["2";"4";"6"] |> List.map Name  |> Set.ofList |> Symbols
+      set [ 
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]] 
+      |> Set.map (Set.map Name >> Symbols) 
+   let expectedCard =  set ["2";"4";"6"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -124,12 +124,14 @@ let ``3rd generated card is 246`` () =
 [<Fact>]
 let ``4th generated card is 356`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols)
-      |> Set.ofList
-   let expectedCard =  ["3";"5";"6"] |> List.map Name  |> Set.ofList |> Symbols
+      set [ 
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]
+         set ["2";"4";"6"]] 
+      |> Set.map (Set.map Name >> Symbols)
+   let expectedCard =  set ["3";"5";"6"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -138,12 +140,15 @@ let ``4th generated card is 356`` () =
 [<Fact>]
 let ``5th generated card is 167`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"];["3";"5";"6"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols)
-      |> Set.ofList
-   let expectedCard =  ["1";"6";"7"] |> List.map Name  |> Set.ofList |> Symbols
+      set [
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]
+         set ["2";"4";"6"]
+         set ["3";"5";"6"]] 
+      |> Set.map (Set.map Name >> Symbols)
+   let expectedCard = set ["1";"6";"7"] |> Set.map Name  |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -152,12 +157,16 @@ let ``5th generated card is 167`` () =
 [<Fact>]
 let ``6th generated card is 257`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"];["3";"5";"6"];["1";"6";"7"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols)
-      |> Set.ofList
-   let expectedCard =  ["2";"5";"7"] |> List.map Name  |> Set.ofList |> Symbols
+      set [ 
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]
+         set ["2";"4";"6"]
+         set ["3";"5";"6"]
+         set ["1";"6";"7"]] 
+      |> Set.map (Set.map Name >> Symbols)
+   let expectedCard =  set ["2";"5";"7"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -166,12 +175,17 @@ let ``6th generated card is 257`` () =
 [<Fact>]
 let ``7th generated card is 347`` () =
    // arrange
-   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
+   let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> Seq.map Name
    let cards = 
-      [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"];["3";"5";"6"];["1";"6";"7"];["2";"5";"7"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols)
-      |> Set.ofList
-   let expectedCard =  ["3";"4";"7"] |> List.map Name  |> Set.ofList |> Symbols
+      set [ 
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]
+         set ["2";"4";"6"]
+         set ["3";"5";"6"]
+         set ["1";"6";"7"]
+         set ["2";"5";"7"]] 
+      |> Set.map (Set.map Name >> Symbols)
+   let expectedCard =  set ["3";"4";"7"] |> Set.map Name |> Symbols
    // act
    let newCard = CreateNextCard cards 3 symbols
    // assert
@@ -182,9 +196,15 @@ let ``Generated game 7,3`` () =
    // arrange
    let symbolNames = ["1";"2";"3";"4";"5";"6";"7"]
    let expectedGame = 
-      [["1";"2";"3"];["1";"4";"5"];["2";"4";"6"];["3";"5";"6"];["1";"6";"7"];["2";"5";"7"];["3";"4";"7"]] 
-      |> List.map (List.map Name >> Set.ofList >> Symbols)
-      |> Set.ofList
+      set [
+         set ["1";"2";"3"]
+         set ["1";"4";"5"]
+         set ["2";"4";"6"]
+         set ["3";"5";"6"]
+         set ["1";"6";"7"]
+         set ["2";"5";"7"]
+         set ["3";"4";"7"]] 
+      |> Set.map (Set.map Name >> Symbols)
       |> Cards
    // act
    let generatedGame = GenerateGame 7 3 symbolNames
