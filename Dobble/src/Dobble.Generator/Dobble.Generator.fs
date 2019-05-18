@@ -23,6 +23,7 @@ module Tools =
 
    let CardsCountSymbols cards =
       cards
+      |> Set.toSeq
       |> Seq.fold ( fun counts card -> 
          let (Symbols symbols) = card
          let newCounts = Seq.countBy (id) symbols
@@ -54,37 +55,41 @@ module Generator =
          |> Set.ofSeq
          |> Cards
 
+   let CreateNewCard cards symbolsPerCard symbols =
+      let symbolsCount = CardsCountSymbols cards
+      let newSymbols = 
+         cards
+            |> Set.toSeq
+            |> Seq.fold (fun newSymbols card -> 
+               match (CardsSymbolsInCommon (Symbols newSymbols) card).Count with
+               | 0 ->
+                  let (Symbols currentCardSymbols) = card
+                  let newSymbol = 
+                     symbolsCount
+                     |> Seq.filter (fun (symbol, _count) -> Set.contains symbol currentCardSymbols)
+                     |> Seq.sortBy (fun (_symbol, count) -> count)
+                     |> Seq.head
+                     |> fst
+                  Set.add newSymbol newSymbols
+               | _ -> 
+                  newSymbols) Set.empty
+      let fill =
+         symbols 
+         |> Seq.filter (fun symbol -> 
+            symbolsCount
+            |> Seq.map fst
+            |> Seq.contains symbol
+            |> not)
+         |> Seq.take (symbolsPerCard - newSymbols.Count)
+         |> Set.ofSeq
+      
+      Set.union newSymbols fill
+      |> Symbols
+
    let GenerateGame cardCount symbolsPerCard symbolNames =
-      let symbols = Seq.map Name symbolNames
-      Seq.init cardCount (fun i -> symbols |> Seq.skip i |> Seq.take 3 |> Set.ofSeq |> Symbols )
-      |> Set.ofSeq
-      |> Cards
-
-   let CreateNewCard cards symbols =
-      cards
-      |> Seq.fold (fun newCard card -> 
-         match (CardsSymbolsInCommon newCard card).Count with
-         | 0 ->
-            let (Symbols currentCardSymbols) = card
-            let (Symbols newCardSymbols) = newCard
-            let newSymbol = 
-               CardsCountSymbols cards
-               |> Seq.filter (fun (symbol, _count) -> Set.contains symbol currentCardSymbols)
-               |> Seq.sortBy (fun (_symbol, count) -> count)
-               |> Seq.head
-               |> fst
-            newCardSymbols 
-            |> Set.add newSymbol
-            |> Symbols
-         | _ -> 
-            newCard) (Symbols Set.empty)
-
-   let GenerateGameTest cardCount symbolsPerCard symbolNames =
-      let symbols = Seq.map Name symbolNames
-      let addNewCard cards =
-         ()
+      let symbols = symbolNames |> Seq.map Name
       seq { 1 .. cardCount}
       |> Seq.fold (fun cards _i -> 
-         let symbols = symbols |> Seq.head |> Set.singleton
-         let card = Symbols symbols
-         Set.add card cards) Set.empty 
+         let newCard = CreateNewCard cards symbolsPerCard symbols
+         Set.add newCard cards ) Set.empty 
+      |> Cards
