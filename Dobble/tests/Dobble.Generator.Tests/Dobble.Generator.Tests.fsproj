@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dobble.Generator\Dobble.Generator.fsproj" />
+    <ProjectReference Include="..\..\src\Dobble.Original\Dobble.Original.fsproj" />
   </ItemGroup>
 
 </Project>

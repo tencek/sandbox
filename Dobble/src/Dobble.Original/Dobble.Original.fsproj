@@ -5,11 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Dobble.Generator.fs" />
+     <EmbeddedResource Include="resources\dobble-original-game.csv" />
+     <Compile Include="Dobble.Original.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Dobble.Domain\Dobble.Domain.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Data" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup />
