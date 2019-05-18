@@ -234,11 +234,12 @@ let ``Regenerated original game`` () =
    Assert.Equal(Original.Game.Value, generatedGame)
 
 [<Fact>]
+[<Trait("tag", "KnownBug")>]
 let ``Generated game 55,8`` () =
    // arrange
-   let AZ = "ABCDEFGHIJKLMNOPQRSTUVWXZYZ" |> Seq.map string
-   let AAZZ = AZ |> Seq.collect (fun a -> AZ |> Seq.map (fun b -> a+b))
-   let symbolNames = Seq.append AZ AAZZ
+   let ``A-Z`` = "ABCDEFGHIJKLMNOPQRSTUVWXZYZ" |> Seq.map string
+   let ``AA-ZZ`` = ``A-Z`` |> Seq.collect (fun a -> ``A-Z`` |> Seq.map (fun b -> a+b))
+   let symbolNames = Seq.append ``A-Z`` ``AA-ZZ``
    let expectedSymbolsCount = 57
    // act
    let generatedGame = GenerateGame 55 8 symbolNames

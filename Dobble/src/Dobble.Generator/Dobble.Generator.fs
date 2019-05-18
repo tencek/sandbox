@@ -57,7 +57,7 @@ let GenerateGame cardCount symbolsPerCard symbolNames =
       let newCard = CreateNextCard cards symbolsPerCard symbols
       newCard 
       |> (fun (Symbols symbols) -> symbols)
-      |> Set.map ( fun (Name symbolName) -> int symbolName)
+      |> Set.map ( fun (Name symbolName) -> symbolName)
       |> Set.toList
       |> List.sort
       |> printfn "New card: %A"
