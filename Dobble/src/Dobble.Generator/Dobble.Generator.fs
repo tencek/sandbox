@@ -55,7 +55,7 @@ module Generator =
          |> Set.ofSeq
          |> Cards
 
-   let CreateNewCard cards symbolsPerCard symbols =
+   let CreateNextCard cards symbolsPerCard symbols =
       let symbolsCount = CardsCountSymbols cards
       let newSymbols = 
          cards
@@ -90,6 +90,6 @@ module Generator =
       let symbols = symbolNames |> Seq.map Name
       seq { 1 .. cardCount}
       |> Seq.fold (fun cards _i -> 
-         let newCard = CreateNewCard cards symbolsPerCard symbols
+         let newCard = CreateNextCard cards symbolsPerCard symbols
          Set.add newCard cards ) Set.empty 
       |> Cards

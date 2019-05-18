@@ -75,9 +75,8 @@ let ``Original - Every two cards have right one symbol in common`` () =
    |> Assert.True
 
 [<Fact>]
-[<Trait("tag", "KnownBug")>]
 let ``Generated - Every two cards have right one symbol in common`` () =
-   GenerateGame 6 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
+   GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
@@ -88,7 +87,7 @@ let ``1st generated card is 123`` () =
    let cards = Set.empty 
    let expectedCard =  ["1";"2";"3"] |> List.map Name  |> Set.ofList |> Symbols
    // act
-   let newCard = CreateNewCard cards 3 symbols
+   let newCard = CreateNextCard cards 3 symbols
    // assert
    Assert.Equal(expectedCard, newCard)
 
@@ -102,7 +101,7 @@ let ``2nd generated card is 145`` () =
       |> Set.ofList 
    let expectedCard =  ["1";"4";"5"] |> List.map Name  |> Set.ofList |> Symbols
    // act
-   let newCard = CreateNewCard cards 3 symbols
+   let newCard = CreateNextCard cards 3 symbols
    // assert
    Assert.Equal(expectedCard, newCard)
 
@@ -116,7 +115,7 @@ let ``3rd generated card is 246`` () =
       |> Set.ofList 
    let expectedCard =  ["2";"4";"6"] |> List.map Name  |> Set.ofList |> Symbols
    // act
-   let newCard = CreateNewCard cards 3 symbols
+   let newCard = CreateNextCard cards 3 symbols
    // assert
    Assert.Equal(expectedCard, newCard)
 
@@ -130,11 +129,12 @@ let ``4th generated card is 356`` () =
       |> Set.ofList
    let expectedCard =  ["3";"5";"6"] |> List.map Name  |> Set.ofList |> Symbols
    // act
-   let newCard = CreateNewCard cards 3 symbols
+   let newCard = CreateNextCard cards 3 symbols
    // assert
    Assert.Equal(expectedCard, newCard)
 
 [<Fact>]
+[<Trait("tag", "KnownBug")>]
 let ``5th generated card is 167`` () =
    // arrange
    let symbols = ["1";"2";"3";"4";"5";"6";"7"] |> List.map Name
@@ -144,11 +144,12 @@ let ``5th generated card is 167`` () =
       |> Set.ofList
    let expectedCard =  ["1";"6";"7"] |> List.map Name  |> Set.ofList |> Symbols
    // act
-   let newCard = CreateNewCard cards 3 symbols
+   let newCard = CreateNextCard cards 3 symbols
    // assert
    Assert.Equal(expectedCard, newCard)
 
 [<Fact>]
+[<Trait("tag", "KnownBug")>]
 let ``Generated game 7,3`` () =
    // arrange
    let symbolNames = ["1";"2";"3";"4";"5";"6";"7"]
@@ -162,11 +163,4 @@ let ``Generated game 7,3`` () =
    let generatedGame = GenerateGame 7 3 symbolNames
    // assert
    Assert.Equal(expectedGame, generatedGame)
-
-
-let game = GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
-
-let (Cards generatedCards) = game
-let symbolCounts = 
-   CardsCountSymbols generatedCards
 
