@@ -2,7 +2,7 @@ module Dobble.Generator
 
 open Dobble.Tools
 
-let GenerateEmptyGame () =
+let GenerateEmptyDeck () =
       Cards Set.empty
 
 let CreateNextCard cards symbolsPerCard symbols =
@@ -50,7 +50,7 @@ let CreateNextCard cards symbolsPerCard symbols =
    Set.union newSymbols fill
    |> Symbols
 
-let GenerateGame cardCount symbolsPerCard symbolNames =
+let GenerateDeck cardCount symbolsPerCard symbolNames =
    let symbols = symbolNames |> Seq.map Name
    seq { 1 .. cardCount}
    |> Seq.fold (fun cards _i -> 

@@ -4,11 +4,11 @@ type Symbol = Name of string
 
 type Card = Symbols of Set<Symbol>
 
-type Game = Cards of Set<Card>
+type Deck = Cards of Set<Card>
 
 module Tools = 
-   let GameAllSymbols game = 
-      let (Cards cards) = game
+   let DeckAllSymbols deck = 
+      let (Cards cards) = deck
       cards
       |> Set.map (fun (Symbols symbols) -> symbols)
       |> Set.unionMany

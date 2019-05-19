@@ -7,39 +7,39 @@ open Dobble.Generator
 open Xunit
 
 [<Fact>]
-let ``Empty game has no card`` () =
-   let emptyGameCardCount = 
-      GenerateEmptyGame () 
+let ``Empty deck has no card`` () =
+   let emptyDeckCardCount = 
+      GenerateEmptyDeck () 
       |> ( fun (Cards cards) -> cards.Count)
-   Assert.Equal(0, emptyGameCardCount)
+   Assert.Equal(0, emptyDeckCardCount)
 
 [<Fact>]
-let ``Original game has 55 cards`` () =
-   let originalGameCardCount = 
-      Original.Game.Value 
+let ``Original deck has 55 cards`` () =
+   let originalDeckCardCount = 
+      Original.Deck.Value 
       |> ( fun (Cards cards) -> cards.Count)
-   Assert.Equal(55, originalGameCardCount)
+   Assert.Equal(55, originalDeckCardCount)
 
 [<Fact>]
-let ``Original game uses 57 symbols`` () =
+let ``Original deck uses 57 symbols`` () =
    let originalTotalSymbolCount = 
-      Original.Game.Value 
-      |> GameAllSymbols
+      Original.Deck.Value 
+      |> DeckAllSymbols
       |> Set.count
    Assert.Equal(57, originalTotalSymbolCount)
 
 [<Fact>]
-let ``Original game has 8 symbols per card`` () =
+let ``Original deck has 8 symbols per card`` () =
    let expectedSymbolCount = 8
-   let (Cards cards) = Original.Game.Value
+   let (Cards cards) = Original.Deck.Value
    cards
    |> Set.iter ( 
       fun (Symbols symbols) ->
          Assert.Equal(expectedSymbolCount, symbols.Count))
 
 [<Fact>]
-let ``Original game symbol counts`` () =
-   let (Cards generatedCards) = Original.Game.Value
+let ``Original deck symbol counts`` () =
+   let (Cards generatedCards) = Original.Deck.Value
    let symbolCounts = 
       CardsCountSymbols generatedCards
       |> Seq.map (fun ((Name symbolName), count) -> (symbolName, count))
@@ -59,8 +59,8 @@ let ``Original game symbol counts`` () =
    
    Assert.Equal<(string * int) list>(expectedSymbolCounts, symbolCounts) 
 
-let CheckEveryTwoCardsHaveRightOneSymbolInCommon game =
-   let (Cards cards) = game
+let CheckEveryTwoCardsHaveRightOneSymbolInCommon deck =
+   let (Cards cards) = deck
    cards
    |> Seq.collect (fun card ->
       let thisOne = Seq.singleton card
@@ -72,13 +72,13 @@ let CheckEveryTwoCardsHaveRightOneSymbolInCommon game =
 
 [<Fact>]
 let ``Original - Every two cards have right one symbol in common`` () =
-   Original.Game.Value
+   Original.Deck.Value
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
 [<Fact>]
 let ``Generated - Every two cards have right one symbol in common`` () =
-   GenerateGame 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
+   GenerateDeck 7 3 ["dolphin";"spider";"cat";"ladybug";"chicken";"dog";"turtle";"t-rex";"dragon"]
    |> CheckEveryTwoCardsHaveRightOneSymbolInCommon 
    |> Assert.True
 
@@ -192,10 +192,10 @@ let ``7th generated card is 347`` () =
    Assert.Equal(expectedCard, newCard)
 
 [<Fact>]
-let ``Generated game 7,3`` () =
+let ``Generated deck 7,3`` () =
    // arrange
    let symbolNames = ["1";"2";"3";"4";"5";"6";"7"]
-   let expectedGame = 
+   let expectedDeck = 
       set [
          set ["1";"2";"3"]
          set ["1";"4";"5"]
@@ -207,45 +207,45 @@ let ``Generated game 7,3`` () =
       |> Set.map (Set.map Name >> Symbols)
       |> Cards
    // act
-   let generatedGame = GenerateGame 7 3 symbolNames
+   let generatedDeck = GenerateDeck 7 3 symbolNames
    // assert
-   Assert.Equal(expectedGame, generatedGame)
+   Assert.Equal(expectedDeck, generatedDeck)
 
 [<Fact>]
 [<Trait("tag", "KnownBug")>]
-let ``Regenerated original game`` () = 
+let ``Regenerated original deck`` () = 
    // arrange
    let symbolNames = 
-      Original.Game.Value
-      |> GameAllSymbols
+      Original.Deck.Value
+      |> DeckAllSymbols
       |> Set.map (fun (Name symbolName) -> symbolName)
    let symbolsPerCard =
-      Original.Game.Value
+      Original.Deck.Value
       |> (fun (Cards cards) -> 
             cards 
             |> Seq.head 
             |> (fun (Symbols symbols) -> symbols.Count))
    let cardCount = 
-      Original.Game.Value
+      Original.Deck.Value
       |> (fun (Cards cards) -> cards.Count)
    //act
-   let generatedGame = GenerateGame cardCount symbolsPerCard symbolNames
+   let generatedDeck = GenerateDeck cardCount symbolsPerCard symbolNames
    // assert
-   Assert.Equal(Original.Game.Value, generatedGame)
+   Assert.Equal(Original.Deck.Value, generatedDeck)
 
 [<Fact>]
 [<Trait("tag", "KnownBug")>]
-let ``Generated game 55,8`` () =
+let ``Generated deck 55,8`` () =
    // arrange
    let ``A-Z`` = "ABCDEFGHIJKLMNOPQRSTUVWXZYZ" |> Seq.map string
    let ``AA-ZZ`` = ``A-Z`` |> Seq.collect (fun a -> ``A-Z`` |> Seq.map (fun b -> a+b))
    let symbolNames = Seq.append ``A-Z`` ``AA-ZZ``
    let expectedSymbolsCount = 57
    // act
-   let generatedGame = GenerateGame 55 8 symbolNames
+   let generatedDeck = GenerateDeck 55 8 symbolNames
    let generatedSymbolsCount = 
-      generatedGame 
-      |> GameAllSymbols
+      generatedDeck 
+      |> DeckAllSymbols
       |> Set.count
    // assert
    Assert.Equal(expectedSymbolsCount, generatedSymbolsCount)
