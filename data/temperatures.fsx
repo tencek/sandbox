@@ -31,7 +31,7 @@ let czechCultureInfo () =
    new CultureInfo("cs-CZ")
 
 let makeUrl (Stanice stanice) (date:DateTime) = 
-    sprintf "http://www.in-pocasi.cz/aktualni-pocasi/%s/?historie=%s" stanice (date.ToString("yyyy-dd-MM", czechCultureInfo()))
+    sprintf "http://www.in-pocasi.cz/aktualni-pocasi/%s/?historie=%s" stanice (date.ToString("yyyy-MM-dd", czechCultureInfo()))
 
 type InPocasiNow = HtmlProvider<"http://www.in-pocasi.cz/aktualni-pocasi/zlin_centrum/", Encoding="utf-8">
 
