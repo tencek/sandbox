@@ -2,7 +2,6 @@
 // for more guidance on F# programming.
 //#I @"bin\Release"
 #r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
-#r @"..\packages\FSharp.Data.3.0.0\lib\netstandard2.0\FSharp.Data.dll"
 
 open FSharp.Data
 open System.Text.RegularExpressions
@@ -28,20 +27,21 @@ type Stanice = Stanice of string
 
 type DateRange = { FromDate:DateTime ; ToDate:DateTime }
 
+let czechCultureInfo () =
+   new CultureInfo("cs-CZ")
+
 let makeUrl (Stanice stanice) (date:DateTime) = 
-    sprintf "http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=%s&historie=%s" stanice (date.ToString("MM-dd-yyyy"))
+    sprintf "http://www.in-pocasi.cz/aktualni-pocasi/%s/?historie=%s" stanice (date.ToString("yyyy-MM-dd", czechCultureInfo()))
 
-type InPocasiNow = HtmlProvider<"https://www.in-pocasi.cz/meteostanice/stanice.php?stanice=zlin_centrum", Encoding="utf-8">
+type InPocasiNow = HtmlProvider<"http://www.in-pocasi.cz/aktualni-pocasi/zlin_centrum/", Encoding="utf-8">
 
-InPocasiNow().Tables.Table1.Rows.[0]
-|> (fun row -> (row.Čas, row.Teplota))
+InPocasiNow().Tables.Zlín.Rows.[0]
+|> (fun row -> (row.``Čas měření``, row.Teplota))
 |> (fun (time, temp) -> printfn "Teplota v %s byla %s." (time.ToString()) temp)
 
-type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
+type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/aktualni-pocasi/zlin/?historie=2018-11-11", Encoding="utf-8">
 
-InPocasiHistory().Lists.``In Počasí``
-
-InPocasiHistory().Tables.Table1.Rows
+InPocasiHistory().Tables.``Zlín - Štípa - 11.11.2018``.Rows
 |> Seq.map (fun row -> row.Teplota)
 |> Seq.choose(function
     | TemperatureInCelsius temp -> Some temp
@@ -52,28 +52,22 @@ InPocasiHistory().Tables.Table1.Rows
 let loadTemperatures stanice date =
     try
         let url = makeUrl stanice date
-        let tupleToTempWithTs ((timeoption:TimeSpan option), temperature) = 
-            match (timeoption, temperature) with
-                | (Some time, temperature) -> 
-                    match temperature with
-                    | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hours, time.Minutes, time.Seconds) ; temperature=temp}
-                    | _ -> None
-                | _ -> None
+        let tupleToTempWithTs ((time:TimeSpan), temperature) = 
+            match temperature with
+            | TemperatureInCelsius temp -> Some {dateTime = new DateTime(date.Year, date.Month, date.Day, time.Hours, time.Minutes, time.Seconds) ; temperature=temp}
+            | _ -> None
         printfn "Loading data from %s" url
         System.Threading.Thread.Sleep(1000)
-        InPocasiHistory.Load(url).Tables.Table1.Rows
-        |> Seq.map (fun row -> (row.Čas, row.Teplota))
+        InPocasiHistory.Load(url).Tables.``Zlín - Štípa - 11.11.2018``.Rows
+        |> Seq.map (fun row -> (row.``Čas měření``, row.Teplota))
         |> Seq.choose tupleToTempWithTs
     with
     | ex -> 
         printfn "%s" ex.Message
         Seq.empty
 
-let czechCultureInfo () =
-    new CultureInfo("cs-CZ")
-
 let parseDate culture dateStr =
-    DateTime.Parse(dateStr, culture)
+   DateTime.Parse(dateStr, culture)
 
 let parseDouble (culture:IFormatProvider) floatStr = 
     Double.Parse(floatStr, culture)
@@ -130,4 +124,4 @@ let tempData =
         |> Seq.map (fun stanice -> (dateRange, stanice, getAverageTemperature stanice dateRange)))
     |> Seq.cache
 
-tempData |> Seq.iter (fun (dateRange, (Stanice stanice), averageTemp) -> printfn "%s - %s: %15s: %f °C" (dateRange.FromDate.ToString()) (dateRange.ToDate.ToString()) stanice averageTemp)
+tempData |> Seq.iter (fun (dateRange, (Stanice stanice), averageTemp) -> printfn "%s - %s: %15s: %f °C" (dateRange.FromDate.ToString(czechCultureInfo())) (dateRange.ToDate.ToString(czechCultureInfo())) stanice averageTemp)
