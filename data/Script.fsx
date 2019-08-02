@@ -26,7 +26,7 @@ let _buses = DSZO.Load("http://www.dszo.cz/online/tabs2.php").Data
 printfn "================================="
 
 type Linka11 = HtmlProvider<"https://www.dszo.cz/jizdni-rady/?linka=11&typ=trolejbus#jr-bank1">
-Linka11().Tables.``Aktuální jízdní řád``.Rows |> Seq.iter ( fun row -> row.ToValueTuple() |> printfn "| ROW: %A" )
+Linka11().Tables.``Od 1.4.2020``.Rows |> Seq.iter ( fun row -> row.ToValueTuple() |> printfn "| ROW: %A" )
 
 type Linka11Gemini = HtmlProvider<"https://www.dszo.cz/jr/workhtml.php?htmlfile=L2JhbmsxL3Ryb2xlamJ1c3kvMTFhXzA5Lmh0bWw=&grafikon=eCxz">
 Linka11Gemini().Tables.Table5.Rows |> Seq.iter ( fun row -> row |> printfn "| ROW: %A" )

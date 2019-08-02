@@ -2,6 +2,7 @@
 // for more guidance on F# programming.
 //#I @"bin\Release"
 #r @"..\packages\FSharp.Data.3.0.0\lib\net45\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.3.0.0\lib\netstandard2.0\FSharp.Data.dll"
 
 open FSharp.Data
 open System.Text.RegularExpressions
@@ -37,6 +38,8 @@ InPocasiNow().Tables.Table1.Rows.[0]
 |> (fun (time, temp) -> printfn "Teplota v %s byla %s." (time.ToString()) temp)
 
 type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/meteostanice/stanice-historie.php?stanice=zlin&historie=11-01-2018", Encoding="utf-8">
+
+InPocasiHistory().Lists.``In Počasí``
 
 InPocasiHistory().Tables.Table1.Rows
 |> Seq.map (fun row -> row.Teplota)
