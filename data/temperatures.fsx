@@ -33,15 +33,18 @@ let czechCultureInfo () =
 let makeUrl (Stanice stanice) (date:DateTime) = 
     sprintf "http://www.in-pocasi.cz/aktualni-pocasi/%s/?historie=%s" stanice (date.ToString("yyyy-MM-dd", czechCultureInfo()))
 
+
 type InPocasiNow = HtmlProvider<"http://www.in-pocasi.cz/aktualni-pocasi/zlin_centrum/", Encoding="utf-8">
 
 InPocasiNow().Tables.Zlín.Rows.[0]
 |> (fun row -> (row.``Čas měření``, row.Teplota))
 |> (fun (time, temp) -> printfn "Teplota v %s byla %s." (time.ToString()) temp)
 
-type InPocasiHistory = HtmlProvider<"http://www.in-pocasi.cz/aktualni-pocasi/zlin/?historie=2018-11-11", Encoding="utf-8">
+[<Literal>]
+let historyDataFile = __SOURCE_DIRECTORY__ + @"\Assets\historicke-udaje.html"
+type InPocasiHistory = HtmlProvider<historyDataFile, Encoding="utf-8">
 
-InPocasiHistory().Tables.``Zlín - Štípa - 11.11.2018``.Rows
+InPocasiHistory().Tables.Data.Rows
 |> Seq.map (fun row -> row.Teplota)
 |> Seq.choose(function
     | TemperatureInCelsius temp -> Some temp
@@ -58,7 +61,10 @@ let loadTemperatures stanice date =
             | _ -> None
         printfn "Loading data from %s" url
         System.Threading.Thread.Sleep(1000)
-        InPocasiHistory.Load(url).Tables.``Zlín - Štípa - 11.11.2018``.Rows
+        Http.RequestString(url)
+        |> ( fun webpage -> Regex.Replace(webpage, @"\<h1\>[^<]*\<\/h1\>", "<H1>Data</H1>", RegexOptions.Multiline))
+        |> InPocasiHistory.Parse
+        |> (fun historyData -> historyData.Tables.Data.Rows)
         |> Seq.map (fun row -> (row.``Čas měření``, row.Teplota))
         |> Seq.choose tupleToTempWithTs
     with
@@ -112,7 +118,7 @@ let newDates =
     |> Seq.skip 2
     |> Seq.map (fun row -> parseCzechDate(row.Datum))
     |> Seq.rev
-    |> Seq.take 4
+    |> Seq.take 5
     |> Seq.rev
 
 let tempData =
