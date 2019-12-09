@@ -113,13 +113,23 @@ type Data2018 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4
 
 type Data2019 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=615668307&single=true&output=csv", Encoding="utf-8">
 
+//let newDates = 
+//   [ "16.11.2019 19:17" ; "24.11.2019 21:03" ]
+//   |> Seq.map parseCzechDate
+
+//let newDates = 
+//   (new Data2019()).Rows
+//   |> Seq.skip 11
+//   |> Seq.map (fun row -> parseCzechDate(row.Datum))
+//   |> Seq.take 2
+
 let newDates = 
-    (new Data2019()).Rows
-    |> Seq.skip 2
-    |> Seq.map (fun row -> parseCzechDate(row.Datum))
-    |> Seq.rev
-    |> Seq.take 5
-    |> Seq.rev
+   (new Data2019()).Rows
+   |> Seq.skip 2
+   |> Seq.map (fun row -> parseCzechDate(row.Datum))
+   |> Seq.rev
+   |> Seq.take 3
+   |> Seq.rev
 
 let tempData =
     newDates
