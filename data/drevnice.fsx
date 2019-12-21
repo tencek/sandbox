@@ -14,18 +14,26 @@ Drevnice().Tables.Table8.Rows.[0].``Stav [cm]`` |> printfn "Actual: %A"
 
 let rows = 
     Drevnice().Tables.Table8.Rows
+    |> Seq.rev
     |> Seq.cache
 
 let tempGraph = 
     rows
     |> Seq.map (fun row -> (row.``Datum a čas``, row.``Teplota [°C]``))
-    |> Chart.Line
+    |> (fun data -> Chart.Line (data, Name="Teplota [°C]"))
 
 let levelGraph = 
     rows
 //    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
     |> Seq.map (fun row -> (row.``Datum a čas``, row.``Stav [cm]``))
-    |> Chart.Line
+    |> (fun data -> Chart.Line (data, Name="Stav [cm]"))
 
-Chart.Combine [tempGraph ; levelGraph ]
+let flowGraph = 
+   rows
+//    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
+   |> Seq.map (fun row -> (row.``Datum a čas``, row.``Průtok [m3s-1]``))
+   |> (fun data -> Chart.Line (data, Name="Průtok [m3s-1]"))
+
+Chart.Combine [tempGraph ; levelGraph ; flowGraph]
+|> Chart.WithLegend (Title="Dřevnice (Zlín)")
 |> Chart.Show
