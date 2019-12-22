@@ -7,29 +7,30 @@
 open FSharp.Data
 open FSharp.Charting
 
-type Drevnice = 
-  HtmlProvider<"http://hydro.chmi.cz/hpps/hpps_prfdata.php?seq=307366", Encoding="utf-8">
+[<Literal>]
+let drevniceDataFile = __SOURCE_DIRECTORY__ + @"\Assets\drevnice.html"
+type Drevnice = HtmlProvider<drevniceDataFile, Encoding="utf-8">
 
-Drevnice().Tables.Table8.Rows.[0].``Stav [cm]`` |> printfn "Actual: %A"
+let currentData = 
+   Drevnice.Load("http://hydro.chmi.cz/hpps/hpps_prfdata.php?seq=307366").Tables.Table8.Rows
+   |> Seq.rev
+   |> Seq.cache
 
-let rows = 
-    Drevnice().Tables.Table8.Rows
-    |> Seq.rev
-    |> Seq.cache
+currentData |> Seq.last |>  (fun row -> row.``Stav [cm]``) |> printfn "Actual: %A"
 
 let tempGraph = 
-    rows
+    currentData
     |> Seq.map (fun row -> (row.``Datum a čas``, row.``Teplota [°C]``))
     |> (fun data -> Chart.Line (data, Name="Teplota [°C]"))
 
 let levelGraph = 
-    rows
+    currentData
 //    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
     |> Seq.map (fun row -> (row.``Datum a čas``, row.``Stav [cm]``))
     |> (fun data -> Chart.Line (data, Name="Stav [cm]"))
 
 let flowGraph = 
-   rows
+   currentData
 //    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
    |> Seq.map (fun row -> (row.``Datum a čas``, row.``Průtok [m3s-1]``))
    |> (fun data -> Chart.Line (data, Name="Průtok [m3s-1]"))

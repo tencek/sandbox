@@ -62,6 +62,7 @@
     <Content Include="Assets\hriste_celek.xml" />
     <Content Include="Assets\dszo-output-sample.csv" />
     <None Include="Assets\historicke-udaje.html" />
+    <None Include="Assets\drevnice.html" />
     <None Include="temperatures.fsx" />
     <None Include="Script.fsx" />
     <None Include="drevnice.fsx" />
