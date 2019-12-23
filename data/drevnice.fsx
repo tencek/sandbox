@@ -10,6 +10,12 @@ open FSharp.Charting
 [<Literal>]
 let drevniceDataFile = __SOURCE_DIRECTORY__ + @"\Assets\drevnice.html"
 type Drevnice = HtmlProvider<drevniceDataFile, Encoding="utf-8">
+type Row = Drevnice.Table8.Row
+
+let createChartLine (rowMapFunc:Row -> #value) title (data:seq<Row>) = 
+   data
+   |> Seq.map (fun row -> (row.``Datum a čas``, rowMapFunc row))
+   |> (fun data -> Chart.Line (data, Name=title))
 
 let currentData = 
    Drevnice.Load("http://hydro.chmi.cz/hpps/hpps_prfdata.php?seq=307366").Tables.Table8.Rows
@@ -18,23 +24,12 @@ let currentData =
 
 currentData |> Seq.last |>  (fun row -> row.``Stav [cm]``) |> printfn "Actual: %A"
 
-let tempGraph = 
-    currentData
-    |> Seq.map (fun row -> (row.``Datum a čas``, row.``Teplota [°C]``))
-    |> (fun data -> Chart.Line (data, Name="Teplota [°C]"))
-
-let levelGraph = 
-    currentData
-//    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
-    |> Seq.map (fun row -> (row.``Datum a čas``, row.``Stav [cm]``))
-    |> (fun data -> Chart.Line (data, Name="Stav [cm]"))
-
-let flowGraph = 
-   currentData
-//    |> Seq.filter (fun row -> row.``Stav [cm]`` > 28)
-   |> Seq.map (fun row -> (row.``Datum a čas``, row.``Průtok [m3s-1]``))
-   |> (fun data -> Chart.Line (data, Name="Průtok [m3s-1]"))
-
-Chart.Combine [tempGraph ; levelGraph ; flowGraph]
+[ 
+   createChartLine (fun row -> row.``Teplota [°C]``) "Teplota [°C]"
+   createChartLine (fun row -> row.``Stav [cm]``) "Stav [cm]"
+   createChartLine (fun row -> row.``Průtok [m3s-1]``) "Průtok [m3s-1]"
+]
+|> Seq.map ( fun createChartLine -> createChartLine currentData)
+|> Chart.Combine
 |> Chart.WithLegend (Title="Dřevnice (Zlín)")
 |> Chart.Show
