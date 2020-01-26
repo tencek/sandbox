@@ -123,13 +123,15 @@ type Data2019 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4
 //   |> Seq.map (fun row -> parseCzechDate(row.Datum))
 //   |> Seq.take 2
 
+type Data2020 = CsvProvider<"https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Orw8HCbYBHemHKfm7Pkoy2bLmAcjhGLM9e1wqA5xiEY-7cKkPLQ0kvNAS9ygm4TJ2nW_5i0tY1ot/pub?gid=413454607&single=true&output=csv", Encoding="utf-8", Culture="cz-CZ", Schema="Datum=string">
+
 let newDates = 
-   (new Data2019()).Rows
-   |> Seq.skip 2
+   (new Data2020()).Rows
+   |> Seq.skip 1
    |> Seq.map (fun row -> parseCzechDate(row.Datum))
-   |> Seq.rev
-   |> Seq.take 3
-   |> Seq.rev
+   //|> Seq.rev
+   //|> Seq.take 3
+   //|> Seq.rev
 
 let tempData =
     newDates
