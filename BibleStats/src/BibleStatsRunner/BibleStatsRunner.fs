@@ -14,12 +14,12 @@ let Calendar2020Url = @"http://www.katolik.cz/kalendar/kal_rok.asp?r=2020"
 type Calendar2020 = HtmlProvider<CalendarSample, Encoding="utf-8">
 
 let convert (str:string) =
-   let cp1250 = Encoding.GetEncoding("windows-1252")
+   let cp1250 = Encoding.GetEncoding("windows-1250")
    let cp1250Bytes = cp1250.GetBytes(str)
-   let unicodeBytes = Encoding.Convert(cp1250, Encoding.UTF8,cp1250Bytes)
+   let utf8Bytes = Encoding.Convert(cp1250, Encoding.UTF8,cp1250Bytes)
    // Convert the new byte[] into a char[] and then into a string.
-   let mutable unicodeChars = Array.create (Encoding.UTF8.GetCharCount(unicodeBytes, 0, unicodeBytes.Length)) ' '
-   Encoding.UTF8.GetChars(unicodeBytes, 0, unicodeBytes.Length, unicodeChars, 0) |> ignore
+   let mutable unicodeChars = Array.create (Encoding.UTF8.GetCharCount(utf8Bytes, 0, utf8Bytes.Length)) ' '
+   Encoding.UTF8.GetChars(utf8Bytes, 0, utf8Bytes.Length, unicodeChars, 0) |> ignore
    new string(unicodeChars)
 
 let replace (str:string) =
