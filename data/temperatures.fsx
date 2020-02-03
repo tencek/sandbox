@@ -129,9 +129,9 @@ let newDates =
    (new Data2020()).Rows
    |> Seq.skip 1
    |> Seq.map (fun row -> parseCzechDate(row.Datum))
-   //|> Seq.rev
-   //|> Seq.take 3
-   //|> Seq.rev
+   |> Seq.rev
+   |> Seq.take 3
+   |> Seq.rev
 
 let tempData =
     newDates
