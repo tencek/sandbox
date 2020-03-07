@@ -63,6 +63,7 @@
     <Content Include="Assets\dszo-output-sample.csv" />
     <None Include="Assets\historicke-udaje.html" />
     <None Include="Assets\drevnice.html" />
+    <None Include="Assets\registrace-all-anonymized.csv" />
     <None Include="temperatures.fsx" />
     <None Include="Script.fsx" />
     <None Include="drevnice.fsx" />
@@ -72,6 +73,7 @@
     <None Include="stromypodkontrolou.fsx" />
     <Content Include="packages.config" />
     <None Include="Dalnice.fsx" />
+    <None Include="registrace.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Charting">
