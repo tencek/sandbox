@@ -22,7 +22,19 @@ let currentData =
    |> Seq.rev
    |> Seq.cache
 
-currentData |> Seq.last |>  (fun row -> row.``Stav [cm]``) |> printfn "Actual: %A"
+currentData 
+   |> Seq.last 
+   |>  (fun row -> row.``Stav [cm]``)
+   |> printfn "Actual: %d cm"
+
+currentData 
+   |> Seq.maxBy (fun row -> row.``Stav [cm]``) 
+   |> (fun row -> (row.``Stav [cm]``, row.``Datum a čas``)) 
+   |> ( fun (level, date) -> printfn "Top: %d cm at %s" level date)
+
+currentData
+   |> Seq.windowed 3
+   |> Seq.filter (fun [|a;b;c|] -> true)
 
 [ 
    createChartLine (fun row -> row.``Teplota [°C]``) "Teplota [°C]"
