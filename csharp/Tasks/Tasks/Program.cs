@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Tasks
 {
@@ -6,17 +8,28 @@ namespace Tasks
    {
       static void Main(string[] args)
       {
-         Console.WriteLine("Hello World!");
+         Console.WriteLine("Please register");
 
-         TaskWrapper taskWrapper = new TaskWrapper();
+         using (var taskWrapper = new TaskWrapper())
+         {
+            while (true)
+            {
+               var line = Console.ReadLine();
+               if (string.IsNullOrEmpty(line))
+               {
+                  break;
+               }
 
-         while (Console.ReadKey().Key != ConsoleKey.Enter) { }
-
-         taskWrapper.Start();
-
-         while (Console.ReadKey().Key != ConsoleKey.Escape) { }
-
-         taskWrapper.Stop();
+               if (line.StartsWith("-"))
+               {
+                  taskWrapper.Unregister(line.Substring(1));
+               }
+               else
+               {
+                  taskWrapper.Register(line);
+               }
+            }
+         }
       }
    }
 }
