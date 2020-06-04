@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Tasks
 {
-   class TaskWrapper : IDisposable
+   internal class TaskWrapper : IDisposable
    {
 
       public void Register(string name)

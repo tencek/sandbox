@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Tasks
 {
-   class Program
+   static class Program
    {
-      static void Main(string[] args)
+      public static void Main()
       {
          Console.WriteLine("Please register");
 
@@ -30,6 +28,8 @@ namespace Tasks
                }
             }
          }
+
+         Console.WriteLine("Good bye!");
       }
    }
 }
