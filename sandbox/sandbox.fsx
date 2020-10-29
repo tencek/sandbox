@@ -141,3 +141,21 @@ let printGraph root =
     root.Children |> Seq.iter (printNode root)
 
 getTree 5 |> printGraph
+
+#time "off"
+
+let a = new DateTime(2020, 10, 25, 1, 30, 0, DateTimeKind.Local)
+let b = new DateTime(2020, 10, 25, 2, 00, 0, DateTimeKind.Local)
+let c = new DateTime(2020, 10, 25, 2, 30, 0, DateTimeKind.Local)
+let d = new DateTime(2020, 10, 25, 3, 00, 0, DateTimeKind.Local)
+let e = new DateTime(2020, 10, 25, 3, 30, 0, DateTimeKind.Local)
+
+c.Subtract(a)
+c.ToUniversalTime().Subtract(a.ToUniversalTime())
+
+a.IsDaylightSavingTime () |> sprintf "%A"
+b.IsDaylightSavingTime () |> sprintf "%A"
+c.IsDaylightSavingTime () |> sprintf "%A"
+d.IsDaylightSavingTime () |> sprintf "%A"
+e.IsDaylightSavingTime () |> sprintf "%A"
+
