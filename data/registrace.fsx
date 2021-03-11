@@ -28,6 +28,11 @@ let dataMaxYear =
    |> Seq.map (fun row -> row.Registrace) 
    |> Seq.max
 
+let countsByYear = 
+   dataOfInterest 
+   |> Seq.countBy (fun row -> row.Registrace) 
+   |> Seq.sortBy fst
+
 let dataById = dataOfInterest |> Seq.groupBy (fun row -> row.Id)
 
 let allMembers = 
