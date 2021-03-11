@@ -124,10 +124,6 @@ let myOptions =
       MaskPatternOption = MaskPattern Mask7
    }
 
-type IManageableLogger = int
-
-type Command = Register of IManageableLogger | Unregister of IManageableLogger | LogLevelsUpdated | NodeModulesUpdated
-
 let x = 123 
 let y = Random x
 let _z = y.Next ()
