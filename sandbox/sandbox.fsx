@@ -1,6 +1,127 @@
 ﻿
 open System
 
+module QRGen =
+
+   type ErrorCorrectionLevel =
+      | Low07
+      | Medium15
+      | Quartile25
+      | High30
+
+   type EncodingMode =
+      | Numeric
+      | Alphanumeric
+      | Byte
+      | Kanji
+      | ECI
+
+   type Size = 
+      | Px21
+      | Px25
+      | Px29
+      | Px33
+      | Px37
+      | Px41
+      | Px45
+      | Px49
+      | Px53
+      | Px57
+      | Px61
+      | Px65
+      | Px69
+      | Px73
+      | Px77
+      | Px81
+      | Px85
+      | Px89
+      | Px93
+      | Px97
+      | Px101
+      | Px105
+      | Px109
+      | Px113
+      | Px117
+      | Px121
+      | Px125
+      | Px129
+      | Px133
+      | Px137
+      | Px141
+      | Px145
+      | Px149
+      | Px153
+      | Px157
+      | Px161
+      | Px165
+      | Px169
+      | Px173
+      | Px177
+
+   type MaskPattern = 
+      | Mask0
+      | Mask1
+      | Mask2
+      | Mask3
+      | Mask4
+      | Mask5
+      | Mask6
+      | Mask7
+
+   type ErrorCorrectionLevelOption =
+      | ErrorCorrectionLevel of ErrorCorrectionLevel
+      | HighestPossible
+   
+   type EncodingModeOption =
+      | EncodingMode of EncodingMode
+      | EncodingByContent
+
+   type SizeOption =
+      | Size of Size
+      | SmallestPossible
+
+   type MaskPatternOption = 
+      | MaskPattern of MaskPattern
+      | MaskByMinimumPenalty
+
+   type GenerationStrategy = 
+      | MinimumSize of ErrorCorrectionLevel
+      | MaximumErrorCorrectioLevel of Size
+      | Fixed of ErrorCorrectionLevel * Size
+
+   type InsuffcientSpaceBehavior =
+      | TruncateInput
+      | Error
+
+   type Options = 
+      {
+         GenerationStrategy : GenerationStrategy
+         EncodingModeOption : EncodingModeOption
+         MaskPatternOption : MaskPatternOption
+      }
+
+   type QrGenError = string
+
+   let DefaultOptions = 
+      { 
+         GenerationStrategy = MinimumSize ErrorCorrectionLevel.Quartile25
+         EncodingModeOption = EncodingByContent
+         MaskPatternOption = MaskByMinimumPenalty
+      }
+
+   type IGenerate = Options * string -> Result<bool,QrGenError>
+
+open QRGen
+
+let defaultOptions = QRGen.DefaultOptions
+
+let myOptions = 
+   { 
+      GenerationStrategy = Fixed (ErrorCorrectionLevel.High30 , Size.Px101)
+      EncodingModeOption = EncodingMode Alphanumeric
+      MaskPatternOption = MaskPattern Mask7
+   }
+
 let x = 123 
 let y = Random x
 let _z = y.Next ()

@@ -1,97 +1,165 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Concurrent;
+//using System.Collections.Generic;
+//using System.Dynamic;
+//using System.Threading;
+//using System.Threading.Tasks;
+//using System.Timers;
+//using Timer = System.Timers.Timer;
 
-namespace Tasks
-{
-   internal class TaskWrapper : IDisposable
-   {
+//namespace Tasks
+//{
+//   public enum CommandType
+//   {
+//      Register, Unregister
+//   }
 
-      public void Register(string name)
-      {
-         lock (_namesLock)
-         {
-            _names.Add(name);
-         }
+//   public class Command
+//   {
 
-         if (_task == null || _task.IsCompleted)
-         {
-            Start();
-         }
-      }
+//      public Command (CommandType type, string value)
+//      {
+//         Type = type;
+//         Value = value;
+//      }
 
-      public void Unregister(string name)
-      {
-         lock (_namesLock)
-         {
-            _names.Remove(name);
-         }
-      }
+//      public CommandType Type { get; }
+//      public string Value { get; }
+//   }
 
-      public void Dispose()
-      {
-         if (_task != null)
-         {
-            Stop();
-         }
-      }
+//   public class CommandReader
+//   {
+//      private readonly ConcurrentQueue<Command> _commandQueue;
 
-      private void Start()
-      {
-         CancellationToken cancellationToken = _cancellationTokenSource.Token;
-         _task = Task.Run(async () =>
-            {
-               while (true)
-               {
-                  bool empty;
-                  Console.Write("Names: ");
-                  lock (_namesLock)
-                  {
-                     foreach (var name in _names)
-                     {
-                        Console.Write($"{name}, ");
-                     }
+//      public CommandReader(ConcurrentQueue<Command> commandQueue)
+//      {
+//         _commandQueue = commandQueue;
+//      }
 
-                     empty = _names.Count == 0;
-                  }
-                  Console.WriteLine();
+//      public void Start()
+//      {
+//         CancellationToken cancellationToken = cts.Token;
+//         _task = Task.Run(async () =>
+//         {
+//            while (true)
+//            {
+//               Console.Write("Names: ");
+//               lock (_namesLock)
+//               {
+//                  foreach (var name in _names)
+//                  {
+//                     Console.Write($"{name}, ");
+//                  }
+//               }
+//               Console.WriteLine();
 
-                  if (empty)
-                  {
-                     break;
-                  }
+//               await Task.Delay(checkInterval, cancellationToken);
+//               cancellationToken.ThrowIfCancellationRequested();
+//            }
+//         }, cts.Token);
+//      }
+//   }
 
-                  await Task.Delay(TimeSpan.FromSeconds(1.5), cancellationToken);
-                  cancellationToken.ThrowIfCancellationRequested();
-               }
-            }, _cancellationTokenSource.Token);
-      }
+//   internal class TaskWrapper : IDisposable
+//   {
 
-      private void Stop()
-      {
-         if (_task != null)
-         {
-            Console.WriteLine("Stopping...");
-            _cancellationTokenSource.Cancel();
-            Console.WriteLine("Waiting...");
-            try
-            {
-               _task.Wait();
-            }
-            catch (AggregateException exception)
-            {
-               foreach (var e in exception.InnerExceptions)
-                  Console.WriteLine($"{e.Message}");
-            }
-         }
+//      public void Register(string name)
+//      {
+//         commandQueue.Enqueue(new Command(CommandType.Register, name));
 
-         _task = null;
-      }
+//         lock (_namesLock)
+//         {
+//            _names.Add(name);
+//         }
 
-      private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
-      private Task _task;
-      private readonly HashSet<string> _names = new HashSet<string>();
-      private readonly object _namesLock = new object();
-   }
-}
+//         _timer = new System.Timers.Timer {Interval = TimeSpan.FromSeconds(3.0).TotalMilliseconds};
+//         _timer.Elapsed += Timer_Elapsed;
+//         _timer.Start();
+
+
+//         if (_task == null || _task.IsCompleted || _task.IsCanceled)
+//         {
+//            StartTask(_cancellationTokenSource, TimeSpan.FromSeconds(3.0));
+//         }
+//      }
+
+//      private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+//      {
+//         throw new NotImplementedException();
+//      }
+
+//      public void Unregister(string name)
+//      {
+//         commandQueue.Enqueue(new Command(CommandType.Unregister, name));
+//         bool empty = default;
+//         lock (_namesLock)
+//         {
+//            _names.Remove(name);
+//            empty = _names.Count == 0;
+//         }
+
+//         if (empty)
+//         {
+//            StopTask();
+//         }
+//      }
+
+//      public void Dispose()
+//      {
+//         StopTask();
+//         _cancellationTokenSource.Dispose();
+//      }
+
+//      private void StartTask(CancellationTokenSource cts, TimeSpan checkInterval)
+//      {
+//         CancellationToken cancellationToken = cts.Token;
+//         _task = Task.Run(async () =>
+//            {
+//               while (true)
+//               {
+//                  Console.Write("Names: ");
+//                  lock (_namesLock)
+//                  {
+//                     foreach (var name in _names)
+//                     {
+//                        Console.Write($"{name}, ");
+//                     }
+//                  }
+//                  Console.WriteLine();
+
+//                  await Task.Delay(checkInterval, cancellationToken);
+//                  cancellationToken.ThrowIfCancellationRequested();
+//               }
+//            }, cts.Token);
+//      }
+
+//      private void StopTask()
+//      {
+//         if (_task != null)
+//         {
+//            Console.WriteLine("Stopping...");
+//            _cancellationTokenSource.Cancel();
+//            Console.WriteLine("Waiting...");
+//            try
+//            {
+//               _task.Wait();
+//            }
+//            catch (AggregateException exception)
+//            {
+//               foreach (var e in exception.InnerExceptions)
+//                  Console.WriteLine($"{e.Message}");
+//            }
+//         }
+
+//         _task = null;
+//      }
+
+//      private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+//      private Task _task;
+//      private readonly HashSet<string> _names = new HashSet<string>();
+//      private readonly object _namesLock = new object();
+//      private System.Timers.Timer _timer;
+
+//      private readonly ConcurrentQueue<Command> commandQueue = new ConcurrentQueue<Command>();
+//   }
+//}
