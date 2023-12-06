@@ -44,21 +44,20 @@ impl Loader for InPocasi {
         ]
     }
 
+    /// TODO - error handling
     fn get_temperatures(&self, location: &Location, date_range: &DateRange) -> Vec<DegC> {
-        let future_data = dates_in_range2(date_range)
+        let futures = dates_in_range2(date_range)
             .iter()
             .map(|date| make_url(location, date))
             .map(|url| load_html_async(url))
             .collect::<Vec<_>>();
-        let future_data = futures::future::join_all(future_data);
+        let future_data = futures::future::join_all(futures);
         let data = self.runtime.block_on(future_data);
         // let errors = data.iter().filter(|result| result.is_err());
-        let only_data = data
-            .into_iter()
+        data.into_iter()
             .filter(|result| result.is_ok())
             .map(|result| result.unwrap())
-            .collect::<Vec<_>>();
-        only_data
+            .collect::<Vec<_>>()
             .iter()
             .flat_map(read_temp_data)
             .collect::<Vec<_>>()
