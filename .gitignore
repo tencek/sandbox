@@ -286,4 +286,8 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-rust/temperature_library/target/.rustc_info.json
+
+# Rust
+.rustc_info.json
+Cargo.lock
+**/target/
