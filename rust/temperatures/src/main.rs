@@ -41,7 +41,8 @@ fn main() {
     let date = NaiveDate::from_ymd(2020, 12, 1);
     let url = make_url(stanice, date);
 
-    match block_on(load_html(url)) {
+    let runtime = tokio::runtime::Runtime::new().unwrap();
+    match runtime.block_on(load_html(url)) {
         Ok(html) => {
             let first_table = Selector::parse("table").unwrap();
             let first_row = Selector::parse("tr").unwrap();
