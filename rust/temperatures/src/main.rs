@@ -28,14 +28,14 @@ async fn load_html(url: String) -> Result<Html, reqwest::Error> {
 use temp::DegC;
 
 fn main() {
-    let temp1 = DegC::from_str("2E34E-3°C");
+    let temp1 = DegC::from_str("2E34°C");
 
     match temp1 {
         Ok(temp) => println!("Temp: {}", temp),
         Err(err) => eprintln!("Error: {}", err),
     }
 
-    myasync::mymain();
+    //myasync::mymain();
 
     let stanice = Stanice("zlin_centrum".to_string());
     let date = NaiveDate::from_ymd(2020, 12, 1);
